@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="login_primary">#2A9D8F</color>
+    <color name="login_secondary_text">#8A8D90</color>
+    <color name="login_input_background">#F5F7FA</color>
+    <color name="login_hint">#9AA0A6</color>
+    <color name="login_input_border">#E0E5EC</color>
+    <color name="course_wizard_top_background">#6A1B9A</color>
+</resources>

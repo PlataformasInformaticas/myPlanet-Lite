@@ -1,0 +1,144 @@
+/**
+ * Author: Walfre López Prado
+ * Email: loppra@plataformasinformaticas.com
+ * Creation date: 2026-01-05
+ */
+
+package com.pi.ole.myplanet.lite
+
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
+import android.widget.ImageButton
+import android.content.pm.ActivityInfo
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
+import androidx.media3.common.MediaItem
+import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
+import androidx.media3.ui.PlayerView
+import com.pi.ole.myplanet.lite.dashboard.DashboardServerPreferences
+import com.pi.ole.myplanet.lite.profile.ProfileCredentialsStore
+import okhttp3.Credentials
+import androidx.media3.datasource.DefaultHttpDataSource
+
+class FullscreenPlayerActivity : AppCompatActivity() {
+
+    private var player: ExoPlayer? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
+        setContentView(R.layout.activity_fullscreen_player)
+        hideSystemBars()
+
+        val mediaUrls = intent.getStringArrayListExtra(EXTRA_MEDIA_URLS).orEmpty()
+        val startIndex = intent.getIntExtra(EXTRA_START_INDEX, 0)
+        val startPosition = intent.getLongExtra(EXTRA_START_POSITION, 0L)
+        val authHeader = intent.getStringExtra(EXTRA_AUTH_HEADER) ?: resolveAuthHeader()
+
+        if (mediaUrls.isEmpty()) {
+            finish()
+            return
+        }
+
+        val playerView: PlayerView = findViewById(R.id.fullscreenPlayerView)
+        findViewById<ImageButton>(R.id.fullscreenExitButton).setOnClickListener {
+            showSystemBars()
+            finish()
+        }
+        player = ExoPlayer.Builder(this)
+            .setMediaSourceFactory(DefaultMediaSourceFactory(buildHttpDataSourceFactory(authHeader)))
+            .build()
+            .also { exo ->
+                playerView.player = exo
+                val items = mediaUrls.map { MediaItem.fromUri(it) }
+                exo.setMediaItems(items, startIndex, startPosition)
+                exo.prepare()
+                exo.playWhenReady = true
+            }
+    }
+
+    private fun hideSystemBars() {
+        val controller = WindowInsetsControllerCompat(window, window.decorView)
+        controller.hide(WindowInsetsCompat.Type.systemBars())
+        controller.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+    }
+
+    private fun showSystemBars() {
+        WindowInsetsControllerCompat(window, window.decorView).show(WindowInsetsCompat.Type.systemBars())
+    }
+
+    private fun buildHttpDataSourceFactory(authorizationHeader: String?): DefaultHttpDataSource.Factory {
+        val factory = DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(true)
+        authorizationHeader?.let { factory.setDefaultRequestProperties(mapOf("Authorization" to it)) }
+        return factory
+    }
+
+    private fun resolveAuthHeader(): String? {
+        val credentials = ProfileCredentialsStore.getStoredCredentials(applicationContext)
+        val baseUrl = DashboardServerPreferences.getServerBaseUrl(applicationContext)
+        return if (credentials != null && !baseUrl.isNullOrBlank()) {
+            Credentials.basic(credentials.username, credentials.password)
+        } else {
+            null
+        }
+    }
+
+    override fun finish() {
+        deliverPlaybackResult()
+        super.finish()
+    }
+
+    override fun onStop() {
+        deliverPlaybackResult()
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        player?.release()
+        player = null
+    }
+
+    private fun deliverPlaybackResult() {
+        player?.let { exo ->
+            val result = Intent().apply {
+                putExtra(EXTRA_RESULT_INDEX, exo.currentMediaItemIndex)
+                putExtra(EXTRA_RESULT_POSITION, exo.currentPosition)
+                putExtra(EXTRA_RESULT_PLAY_WHEN_READY, exo.playWhenReady)
+            }
+            setResult(RESULT_OK, result)
+        }
+    }
+
+    companion object {
+        private const val EXTRA_MEDIA_URLS = "extra_media_urls"
+        private const val EXTRA_START_INDEX = "extra_start_index"
+        private const val EXTRA_START_POSITION = "extra_start_position"
+        private const val EXTRA_AUTH_HEADER = "extra_auth_header"
+        const val EXTRA_RESULT_INDEX = "extra_result_index"
+        const val EXTRA_RESULT_POSITION = "extra_result_position"
+        const val EXTRA_RESULT_PLAY_WHEN_READY = "extra_result_play_when_ready"
+
+        fun createIntent(
+            context: Context,
+            mediaUrls: ArrayList<String>,
+            startIndex: Int,
+            startPositionMs: Long,
+            authorizationHeader: String?
+        ): Intent {
+            return Intent(context, FullscreenPlayerActivity::class.java).apply {
+                putStringArrayListExtra(EXTRA_MEDIA_URLS, mediaUrls)
+                putExtra(EXTRA_START_INDEX, startIndex)
+                putExtra(EXTRA_START_POSITION, startPositionMs)
+                putExtra(EXTRA_AUTH_HEADER, authorizationHeader)
+            }
+        }
+    }
+}

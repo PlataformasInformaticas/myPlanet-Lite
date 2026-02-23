@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/dashboard_card_corner_radius"
+    app:cardElevation="0dp"
+    app:strokeColor="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="@dimen/dashboard_card_inner_padding">
+
+        <TextView
+            android:id="@+id/teamInitials"
+            android:layout_width="@dimen/dashboard_team_badge_size"
+            android:layout_height="@dimen/dashboard_team_badge_size"
+            android:background="@drawable/dashboard_team_badge_background"
+            android:gravity="center"
+            android:textColor="?attr/colorOnPrimary"
+            android:textStyle="bold"
+            tools:text="EQ" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/teamName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorOnSurface"
+                android:textStyle="bold"
+                tools:text="Equipo de Guatemala" />
+
+            <TextView
+                android:id="@+id/teamMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.72"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="12sp"
+                tools:text="18 integrantes" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/teamLeaderBadge"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/dashboard_teams_leader_badge"
+                android:padding="8dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_crown_24" />
+
+            <ImageButton
+                android:id="@+id/teamAction"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/dashboard_teams_join_team"
+                android:padding="8dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_group_join_24" />
+
+            <ImageButton
+                android:id="@+id/teamBookmark"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/dashboard_teams_bookmark"
+                android:padding="8dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_bookmark_24" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

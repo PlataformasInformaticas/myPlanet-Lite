@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboardDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".DashboardActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/dashboardRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/dashboardAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dashboardTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/dashboard_top_bar_height"
+            android:elevation="4dp"
+            android:paddingStart="@dimen/dashboard_horizontal_padding"
+            android:paddingTop="@dimen/dashboard_top_padding"
+            android:paddingEnd="@dimen/dashboard_horizontal_padding"
+            android:paddingBottom="@dimen/dashboard_top_bar_bottom_padding"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <ImageView
+                android:id="@+id/dashboardAvatar"
+                android:layout_width="@dimen/dashboard_avatar_size"
+                android:layout_height="@dimen/dashboard_avatar_size"
+                android:background="@drawable/avatar_placeholder_background"
+                android:clipToOutline="true"
+                android:contentDescription="@string/dashboard_avatar_content_description"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/dashboardSettings"
+                android:layout_width="@dimen/dashboard_icon_button_size"
+                android:layout_height="@dimen/dashboard_icon_button_size"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/dashboard_settings_content_description"
+                android:padding="@dimen/dashboard_icon_padding"
+                android:src="@drawable/ic_settings_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/dashboardLogo"
+                android:layout_width="@dimen/dashboard_logo_size"
+                android:layout_height="@dimen/dashboard_logo_size"
+                android:contentDescription="@string/dashboard_logo_content_description"
+                android:scaleType="centerInside"
+                android:src="@drawable/ole_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/dashboardTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dashboard_horizontal_padding"
+            android:paddingEnd="@dimen/dashboard_horizontal_padding"
+            android:paddingBottom="@dimen/dashboard_section_spacing"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:tabIndicatorFullWidth="false"
+            android:background="@color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/dashboardViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <FrameLayout
+            android:id="@+id/dashboardSurveysContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <FrameLayout
+            android:id="@+id/dashboardTeamMembersContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <FrameLayout
+            android:id="@+id/dashboardCoursesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <LinearLayout
+            android:id="@+id/dashboardBottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dashboard_horizontal_padding"
+            android:paddingEnd="@dimen/dashboard_horizontal_padding"
+            android:paddingBottom="12dp"
+            android:paddingTop="8dp"
+            app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior">
+
+            <ImageView
+                android:id="@+id/dashboardHomeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:contentDescription="@string/dashboard_home"
+                android:src="@drawable/ic_home_24" />
+
+            <ImageView
+                android:id="@+id/dashboardSurveysIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:contentDescription="@string/dashboard_surveys_title"
+                android:src="@drawable/ic_surveys_24" />
+
+            <ImageView
+                android:id="@+id/dashboardTeamMembersIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:contentDescription="@string/dashboard_team_members_title"
+                android:src="@drawable/ic_team_members_24" />
+
+            <ImageView
+                android:id="@+id/dashboardCoursesIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:contentDescription="@string/dashboard_courses_title"
+                android:src="@drawable/ic_courses_24" />
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/dashboardProfileDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        app:itemIconPadding="@dimen/dashboard_drawer_item_icon_padding"
+        app:itemTextAppearance="@style/TextAppearance.MyPlanet.DashboardDrawerItem"
+        app:headerLayout="@layout/drawer_dashboard_profile_header"
+        app:menu="@menu/menu_dashboard_profile_drawer" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/dashboardSettingsDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        app:itemIconPadding="@dimen/dashboard_drawer_item_icon_padding"
+        app:itemTextAppearance="@style/TextAppearance.MyPlanet.DashboardDrawerItem"
+        app:headerLayout="@layout/drawer_dashboard_settings_header"
+        app:menu="@menu/menu_dashboard_settings_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

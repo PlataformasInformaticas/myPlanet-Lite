@@ -1,0 +1,615 @@
+<resources>
+    <string name="app_name">myPlanet Lite</string>
+    <string name="app_name_prefix">myPlanet</string>
+    <string name="app_name_suffix">Lite</string>
+    <string name="app_version">الإصدار %1$s</string>
+    <string name="login_username_label">اسم المستخدم</string>
+    <string name="login_password_label">كلمة المرور</string>
+    <string name="login_action">تسجيل الدخول</string>
+    <string name="login_username_error">أدخل اسم المستخدم الخاص بك</string>
+    <string name="login_password_error">يجب أن تتكون كلمة المرور من 4 أحرف على الأقل</string>
+    <string name="login_invalid_credentials">اسم المستخدم أو كلمة المرور غير صحيح</string>
+    <string name="login_generic_error">تعذّر تسجيل الدخول. حاول مرة أخرى.</string>
+    <string name="logo">الشعار</string>
+    <string name="login_signup_prompt">ليس لديك حساب؟</string>
+    <string name="login_signup_action">سجّل</string>
+    <string name="login_privacy_policy_prompt">اطلع على <font color="@color/login_primary">سياسة الخصوصية</font></string>
+    <string name="login_survey_translation_consent_title">ترجمة الاستبيانات</string>
+    <string name="login_survey_translation_consent_description">لتقديم ترجمات للاستبيانات، نحتاج إلى موافقتك على معالجة النص بأمان.</string>
+    <string name="login_survey_translation_consent_accept">تفعيل الترجمات وقبول سياسة خصوصية الترجمات</string>
+    <string name="login_survey_translation_consent_policy">مراجعة سياسة خصوصية الترجمات</string>
+    <string name="login_server_label">اختر خادمًا</string>
+    <string name="login_server_error">اختر أو أدخل خادمًا</string>
+    <string name="login_remember_action">تذكرني</string>
+    <string name="server_planet_xela">Planet Xela</string>
+    <string name="server_planet_guatemala">Planet Guatemala</string>
+    <string name="server_planet_san_pablo">Planet San Pablo</string>
+    <string name="server_planet_somalia">Planet Somalia</string>
+    <string name="server_planet_learning">التعلم</string>
+    <string name="server_planet_earth">كوكب الأرض</string>
+    <string name="server_planet_vi">Planet VI</string>
+    <string name="server_planet_uriur">Uriur</string>
+    <string name="server_configuration_title">تكوين الخادم</string>
+    <string name="server_configuration_url_hint">عنوان الخادم</string>
+    <string name="server_configuration_name_hint">اسم الخادم</string>
+    <string name="server_configuration_country_hint">العَلَم</string>
+    <string name="server_configuration_save">حفظ</string>
+    <string name="server_configuration_url_error">أدخل عنوان الخادم</string>
+    <string name="server_configuration_name_error">أدخل اسم الخادم</string>
+    <string name="server_configuration_country_error">اختر علماً</string>
+    <string name="server_configuration_add_button">إضافة</string>
+    <string name="server_configuration_added">تمت إضافة الخادم إلى القائمة</string>
+    <string name="server_configuration_duplicate_error">الخادم موجود بالفعل في القائمة</string>
+    <string name="server_option_configure">إضافة خادم…</string>
+    <string name="server_option_clear">مسح الخوادم</string>
+    <string name="language_selector_content_description">اختيار اللغة</string>
+    <string name="language_selector_title">اختر اللغة</string>
+    <string name="language_name_english">English</string>
+    <string name="language_name_spanish">Español</string>
+    <string name="language_name_french">Français</string>
+    <string name="language_name_portuguese">البرتغالية</string>
+    <string name="language_name_arabic">العربية</string>
+    <string name="language_name_somali">Soomaali</string>
+    <string name="language_name_nepali">नेपाली</string>
+    <string name="language_name_hindi">हिन्दी</string>
+    <string name="powered_by_plataformas_informaticas" translatable="false"><![CDATA[Powered by <a href="http://plataformasinformaticas.com">Plataformas Informáticas</a>]]></string>
+    <string name="signup_navigate_back">عودة</string>
+    <string name="signup_header_title">Planet</string>
+    <string name="signup_header_message">أكمل هذه الخطوات لتكون جزءًا من مجتمع التعلّم.</string>
+    <string name="signup_username_label">@string/login_username_label</string>
+    <string name="signup_password_label">@string/login_password_label</string>
+    <string name="signup_confirm_password_label">تأكيد كلمة المرور</string>
+    <string name="signup_first_name_label">الاسم الأول</string>
+    <string name="signup_middle_name_label">الاسم الأوسط</string>
+    <string name="signup_last_name_label">اسم العائلة</string>
+    <string name="signup_language_label">اللغة</string>
+    <string name="signup_gender_label">الجنس</string>
+    <string name="signup_birth_date_label">تاريخ الميلاد</string>
+    <string name="signup_level_label">المستوى</string>
+    <string name="signup_email_label">البريد الإلكتروني</string>
+    <string name="signup_email_error_invalid">أدخل بريدًا إلكترونيًا صالحًا</string>
+    <string name="signup_password_error_mismatch">يجب أن تتطابق كلمات المرور</string>
+    <string name="signup_password_error_length">يجب أن تتكون كلمة المرور من 6 أحرف على الأقل</string>
+    <string name="signup_username_error_invalid">أدخل اسم مستخدم يبدأ بحرف ويستخدم الأحرف والأرقام فقط</string>
+    <string name="signup_first_name_error_required">أدخل اسمك الأول</string>
+    <string name="signup_last_name_error_required">أدخل اسم عائلتك</string>
+    <string name="signup_birth_date_error_required">اختر تاريخ ميلادك</string>
+    <string name="signup_gender_error_required">اختر خيارًا للجنس</string>
+    <string name="signup_phone_label">رقم الجوال</string>
+    <string name="signup_phone_error_invalid">أدخل رقم جوال صالحًا</string>
+    <string name="signup_language_error_required">اختر لغة</string>
+    <string name="signup_level_error_required">اختر مستوى</string>
+    <string name="signup_birth_date_picker_title">اختر تاريخ الميلاد</string>
+    <string name="signup_next_action">التالي</string>
+    <string name="signup_back_action">السابق</string>
+    <string name="signup_accept_action">موافقة</string>
+    <string name="signup_connection_checking">جارٍ التحقق من اتصال الخادم…</string>
+    <string name="signup_connection_error_retry">تعذّر الاتصال بالخادم. اضغط لإعادة المحاولة.</string>
+    <string name="signup_connection_error_input">تعذّر الاتصال بالخادم.</string>
+    <string name="signup_username_checking">جارٍ التحقق من توفر اسم المستخدم…</string>
+    <string name="signup_username_error_taken">اسم المستخدم هذا مستخدم بالفعل.</string>
+    <string name="dashboard_offline_mode_only_surveys">وضع عدم الاتصال: تتوفر الاستبيانات فقط.</string>
+    <string name="dashboard_online_mode_restored">تمت استعادة الاتصال: تم تمكين كل اللوحات.</string>
+    <string name="dashboard_survey_download">تنزيل</string>
+    <string name="dashboard_survey_downloaded">تم التنزيل</string>
+    <string name="dashboard_survey_download_success">تم حفظ الاستبيان للاستخدام بدون اتصال.</string>
+    <string name="dashboard_survey_download_error">تعذر حفظ الاستبيان للاستخدام بدون اتصال.</string>
+    <string name="dashboard_surveys_tab_outbox">قيد الانتظار</string>
+    <string name="dashboard_surveys_outbox_empty">لا توجد عمليات إرسال معلقة.</string>
+    <string name="dashboard_survey_submission_saved_offline">تم حفظ الإرسال في صندوق الصادر للمزامنة.</string>
+    <string name="dashboard_outbox_saved_at">تم الحفظ دون اتصال في %1$s</string>
+    <string name="dashboard_outbox_unknown_survey">استبيان</string>
+    <string name="dashboard_outbox_unknown_team">فريق</string>
+    <string name="dashboard_outbox_detail_intro">هذه هي الإجابات التي أدخلتها. راجعها واضغط إرسال عندما تكون جاهزًا.</string>
+    <string name="dashboard_outbox_send">إرسال</string>
+    <string name="dashboard_outbox_send_placeholder">سيكون المزامنة متاحة قريبًا.</string>
+    <string name="dashboard_outbox_no_answers">لم يتم تسجيل أي إجابات.</string>
+    <string name="dashboard_outbox_no_answer">لا توجد إجابة</string>
+    <string name="dashboard_outbox_preview_title">معاينة</string>
+    <string name="dashboard_outbox_unknown_question">السؤال %1$d</string>
+    <string name="dashboard_outbox_missing_entry">لم يتم العثور على الإرسال المعلق.</string>
+    <string name="dashboard_outbox_birthdate_format">تاريخ الميلاد: %1$s</string>
+    <string name="dashboard_outbox_age_format">العمر: %1$d</string>
+    <string name="dashboard_outbox_gender_format">الجنس: %1$s</string>
+    <string name="dashboard_outbox_language_format">اللغة: %1$s</string>
+    <string name="dashboard_outbox_level_format">المستوى: %1$s</string>
+    <string name="dashboard_outbox_phone_format">الهاتف: %1$s</string>
+    <string name="dashboard_outbox_email_format">البريد الإلكتروني: %1$s</string>
+    <string name="dashboard_outbox_participant_details">بيانات المشارك</string>
+    <string name="dashboard_outbox_offline_cannot_send">اتصل بالإنترنت لإرسال هذا الإرسال.</string>
+    <string name="dashboard_outbox_unable_to_verify_rev">تعذر التحقق من إصدار الاستبيان على الخادم.</string>
+    <string name="dashboard_outbox_send_success">تم إرسال الإرسال بنجاح.</string>
+    <string name="dashboard_outbox_send_failed">تعذر إرسال الإرسال. حاول مرة أخرى.</string>
+    <string name="dashboard_outbox_rev_mismatch_title">تم تغيير الاستبيان</string>
+    <string name="dashboard_outbox_rev_mismatch_message">تم تغيير هذا الاستبيان على الخادم، لذا لا يمكن مزامنته. هل تريد حذفه أم الاحتفاظ به في الأرشيف؟</string>
+    <string name="dashboard_outbox_delete_submission">حذف الإرسال</string>
+    <string name="dashboard_outbox_keep_submission">الاحتفاظ مؤرشفًا</string>
+    <string name="dashboard_outbox_deleted">تم حذف الإرسال.</string>
+    <string name="dashboard_outbox_delete_confirm_message">هل تريد حذف هذا الرد المعلّق؟ لا يمكن التراجع عن هذا الإجراء.</string>
+    <string name="dashboard_outbox_delete_failed">تعذّر حذف الإرسال. حاول مرة أخرى.</string>
+    <string name="dashboard_outbox_back">رجوع</string>
+
+    <string name="signup_step_username_title">اختر اسم المستخدم</string>
+    <string name="signup_step_username_subtitle">ابدأ بحرف. استخدم الأحرف والأرقام فقط.</string>
+    <string name="signup_step_names_title">ما اسمك؟</string>
+    <string name="signup_step_names_subtitle">أدخل اسمك الحقيقي.</string>
+    <string name="signup_step_birth_date_title">متى وُلدت؟</string>
+    <string name="signup_step_birth_date_subtitle">اختر تاريخ ميلادك.</string>
+    <string name="signup_step_gender_title">ما الجنس الذي تتعرف به؟</string>
+    <string name="signup_step_gender_subtitle">اختر الخيار الأنسب لك.</string>
+    <string name="signup_step_contact_title">كيف نتواصل معك؟</string>
+    <string name="signup_step_contact_subtitle">قدّم بريدك الإلكتروني ورقم جوالك.</string>
+    <string name="signup_step_password_title">أنشئ كلمة مرور</string>
+    <string name="signup_step_password_subtitle">استخدم ستة أحرف أو أرقام على الأقل.</string>
+    <string name="signup_step_language_title">اللغة والمستوى</string>
+    <string name="signup_step_language_subtitle">اختر اللغة والمستوى الذي تفضله.</string>
+    <string name="signup_step_license_title">اقبل الترخيص</string>
+    <string name="signup_step_license_subtitle">راجع الشروط قبل إنشاء حسابك.</string>
+    <string name="signup_license_title">اتفاقية ترخيص المستخدم النهائي (EULA)</string>
+    <string name="signup_license_subtitle">منظمة Open Learning Exchange
+التطبيقات: Planet وmyPlanet وmyPlanetLite</string>
+    <string name="signup_license_section1_title">1. قبول الاتفاقية</string>
+    <string name="signup_license_section1_body">باختيار "قبول" داخل هذا التطبيق على نظام أندرويد، فإنك تؤكد أنك قرأت وفهمت ووافقت على الشروط المنصوص عليها في اتفاقية ترخيص المستخدم النهائي هذه ("الاتفاقية").
+
+إذا كنت لا توافق، فيجب عليك اختيار "إلغاء" والتوقف عن استخدام التطبيق.</string>
+    <string name="signup_license_section2_title">2. الملكية</string>
+    <string name="signup_license_section2_body">تعد منظمة Open Learning Exchange ("OLE") مالكة لتطبيقات Planet وmyPlanet وmyPlanetLite، بما في ذلك المحتوى والتصميم والرمز والمواد المرتبطة بها.</string>
+    <string name="signup_license_section3_title">3. الترخيص بالاستخدام</string>
+    <string name="signup_license_section3_body">تمنح OLE المستخدم ترخيصًا محدودًا وشخصيًا وغير حصري وغير قابل للتحويل لتثبيت هذا التطبيق على نظام أندرويد واستخدامه حصريًا للأغراض التي تسمح بها مؤسستك أو منظمتك.</string>
+    <string name="signup_license_section4_title">4. البيانات والأمن والخصوصية</string>
+    <string name="signup_license_section4_point1">4.1 يجب أن تجمع التطبيقات البيانات الشخصية اللازمة للمصادقة والتشغيل والمزامنة ومعالجتها.</string>
+    <string name="signup_license_section4_point2">4.2 يتم تشفير جميع البيانات التي تنقلها التطبيقات أو تخزنها وفقًا لمعايير الأمان المعمول بها.</string>
+    <string name="signup_license_section4_point3">4.3 يقر المستخدم بأن استخدام التطبيقات يتضمن هذه المعالجة الآمنة.</string>
+    <string name="signup_license_section5_title">5. إلغاء الحساب</string>
+    <string name="signup_license_section5_body">إذا قرر المستخدم إلغاء الاشتراك أو حذف حسابه، فعليه التواصل مباشرةً مع أحد المسؤولين داخل منصة Planet، والذي سيتولى إغلاق الوصول أو حذف البيانات وفقًا للإجراءات المعتمدة.</string>
+    <string name="signup_license_section6_title">6. التزامات المستخدم</string>
+    <string name="signup_license_section6_intro">يتعهد المستخدم بما يلي:</string>
+    <string name="signup_license_section6_point1">• استخدام التطبيق بمسؤولية ووفقًا للأنظمة المعمول بها.</string>
+    <string name="signup_license_section6_point2">• الحفاظ على أمان بيانات تسجيل الدخول الممنوحة له.</string>
+    <string name="signup_license_section6_point3">• الإبلاغ عن أي إساءة استخدام أو سلوك مريب للمسؤول المؤسسي.</string>
+    <string name="signup_license_section7_title">7. تعديلات الاتفاقية</string>
+    <string name="signup_license_section7_body">يجوز لـ OLE تحديث هذه الشروط عند الضرورة. ويُعد الاستمرار في استخدام التطبيق بعد أي تعديل قبولاً بالإصدار المحدَّث من الاتفاقية.</string>
+    <string name="signup_license_section8_title">8. التأكيد</string>
+    <string name="signup_license_section8_intro">بالنقر على "قبول"، فإنك تقر بأن:</string>
+    <string name="signup_license_section8_point1">• قرأت هذه الاتفاقية.</string>
+    <string name="signup_license_section8_point2">• تفهم نطاقها.</string>
+    <string name="signup_license_section8_point3">• توافق تمامًا على شروطها وأحكامها.</string>
+    <string name="signup_license_auto_login_label">استخدام هذه البيانات لملء نموذج تسجيل الدخول</string>
+
+    <string name="signup_gender_option_male">ذكر</string>
+    <string name="signup_gender_option_female">أنثى</string>
+
+    <string-array name="signup_gender_options_language_en">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_es">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_fr">
+        <item>Masculin</item>
+        <item>Féminin</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_ar">
+        <item>ذكر</item>
+        <item>أنثى</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_so">
+        <item>Lab</item>
+        <item>Dhedig</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_ne">
+        <item>पुरुष</item>
+        <item>महिला</item>
+    </string-array>
+
+    <string name="signup_level_option_beginner">مبتدئ</string>
+    <string name="signup_level_option_intermediate">متوسط</string>
+    <string name="signup_level_option_advanced">متقدم</string>
+    <string name="signup_level_option_expert">خبير</string>
+
+    <string-array name="signup_language_options">
+        <item>@string/language_name_english</item>
+        <item>@string/language_name_spanish</item>
+        <item>@string/language_name_french</item>
+        <item>@string/language_name_portuguese</item>
+        <item>@string/language_name_arabic</item>
+        <item>@string/language_name_somali</item>
+        <item>@string/language_name_nepali</item>
+        <item>@string/language_name_hindi</item>
+    </string-array>
+
+    <string-array name="signup_level_options">
+        <item>@string/signup_level_option_beginner</item>
+        <item>@string/signup_level_option_intermediate</item>
+        <item>@string/signup_level_option_advanced</item>
+        <item>@string/signup_level_option_expert</item>
+    </string-array>
+    <string-array name="signup_level_options_language_en">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+        <item>Expert</item>
+    </string-array>
+    <string-array name="signup_level_options_language_es">
+        <item>Principiante</item>
+        <item>Intermedio</item>
+        <item>Avanzado</item>
+        <item>Experto</item>
+    </string-array>
+    <string-array name="signup_level_options_language_fr">
+        <item>Débutant</item>
+        <item>Intermédiaire</item>
+        <item>Avancé</item>
+        <item>Expert</item>
+    </string-array>
+    <string-array name="signup_level_options_language_ar">
+        <item>مبتدئ</item>
+        <item>متوسط</item>
+        <item>متقدم</item>
+        <item>خبير</item>
+    </string-array>
+    <string-array name="signup_level_options_language_so">
+        <item>Bilow</item>
+        <item>Dhexdhexaad</item>
+        <item>Sareeye</item>
+        <item>Khabiir</item>
+    </string-array>
+    <string-array name="signup_level_options_language_ne">
+        <item>प्रारम्भिक</item>
+        <item>मध्यम</item>
+        <item>उन्नत</item>
+        <item>विशेषज्ञ</item>
+    </string-array>
+    <string name="server_status_checking">جارٍ التحقق من حالة الخادم…</string>
+    <string name="server_status_connected">تم الاتصال بالخادم</string>
+    <string name="server_status_disconnected">انقطع الاتصال بالخادم</string>
+    <string name="server_status_disconnected_retry">انقطع الاتصال بالخادم. اضغط لإعادة المحاولة.</string>
+    <string name="dashboard_logo_content_description">شعار myPlanet</string>
+    <string name="dashboard_settings_content_description">فتح الإعدادات</string>
+    <string name="dashboard_settings_title">الإعدادات</string>
+    <string name="dashboard_settings_menu_language">اللغة</string>
+    <string name="dashboard_settings_menu_survey_translation">ترجمة الاستبيانات تلقائيًا</string>
+    <string name="dashboard_settings_menu_voice_batch_size">عدد الأصوات لكل تحميل</string>
+    <string name="dashboard_settings_survey_translation_enabled">تم تفعيل ترجمة الاستبيانات</string>
+    <string name="dashboard_settings_survey_translation_disabled">تم إيقاف ترجمة الاستبيانات</string>
+    <string name="dashboard_survey_translation_notice">يستخدم هذا التطبيق الذكاء الاصطناعي لترجمة المحتوى. بمتابعتك، فإنك توافق على سياسة الخصوصية الخاصة بنا.</string>
+    <string name="dashboard_survey_translation_applied_notice">تمت ترجمة هذا الاستبيان باستخدام الذكاء الاصطناعي.</string>
+    <string name="dashboard_survey_translation_consent_accept">موافقة</string>
+    <string name="dashboard_survey_translation_consent_cancel">إلغاء</string>
+    <string name="dashboard_settings_voice_batch_size_title">اختر عدد الأصوات للتحميل في المرة الواحدة</string>
+    <string name="dashboard_settings_voice_batch_size_option">%1$d صوت</string>
+    <string name="dashboard_avatar_content_description">صورة ملف المستخدم</string>
+    <string name="dashboard_voices_title">الأصوات</string>
+    <string name="dashboard_teams_title">فرقي</string>
+    <string name="dashboard_teams_my_title">فرقي</string>
+    <string name="dashboard_teams_my_description">المجموعات التي أنت عضو فيها ويمكنك المشاركة فيها.</string>
+    <string name="dashboard_teams_select_team_hint">اختر فريقًا من القائمة لعرض معلوماته.</string>
+    <string name="dashboard_teams_explore_title">استكشاف الفرق</string>
+    <string name="dashboard_teams_explore_description">المجموعات المتاحة التي يمكنك الانضمام إليها.</string>
+    <string name="dashboard_teams_join_prompt">أنت لست ضمن أي فريق بعد. يمكنك الانضمام إلى أحدها للبدء.</string>
+    <string name="dashboard_teams_no_server">اتصل بخادم لعرض فرقك.</string>
+    <string name="dashboard_teams_no_user">تعذر تحديد المستخدم الخاص بك. يرجى تسجيل الدخول مرة أخرى.</string>
+    <string name="dashboard_teams_no_credentials">لم نعثر على بيانات تسجيل الدخول. يرجى تسجيل الدخول مرة أخرى.</string>
+    <string name="dashboard_teams_error_loading">تعذر تحميل فرقك. حاول مرة أخرى لاحقًا.</string>
+    <string name="dashboard_teams_member_unknown">عدد الأعضاء غير متاح</string>
+    <string name="dashboard_teams_unknown_name">فريق بدون اسم</string>
+    <string name="dashboard_teams_default_initials">فف</string>
+    <string name="dashboard_teams_bookmark">وضع إشارة مرجعية على الفريق</string>
+    <string name="dashboard_teams_join_team">انضم إلى الفريق</string>
+    <string name="dashboard_teams_join_pending">تم إرسال طلب الانضمام</string>
+    <string name="dashboard_teams_cancel_join_title">إلغاء طلب الانضمام؟</string>
+    <string name="dashboard_teams_cancel_join_message">هل تريد إلغاء طلب الانضمام إلى هذا الفريق؟</string>
+    <string name="dashboard_teams_cancel_join_confirm">إلغاء الطلب</string>
+    <string name="dashboard_teams_leave_team">غادر الفريق</string>
+    <string name="dashboard_teams_leader_badge">أنت قائد الفريق</string>
+    <plurals name="dashboard_teams_member_count">
+        <item quantity="zero">%d عضو</item>
+        <item quantity="one">%d عضو</item>
+        <item quantity="two">%d عضوان</item>
+        <item quantity="few">%d أعضاء</item>
+        <item quantity="many">%d عضوًا</item>
+        <item quantity="other">%d عضو</item>
+    </plurals>
+    <string name="dashboard_home">الرئيسية</string>
+    <string name="dashboard_team_members_title">أعضاء الفريق</string>
+    <string name="dashboard_team_members_empty">لا يوجد أي أعضاء في هذا الفريق بعد.</string>
+    <string name="dashboard_team_members_error_loading">تعذر تحميل أعضاء الفريق الآن.</string>
+    <string name="dashboard_team_members_leader_role">قائد</string>
+    <string name="dashboard_team_members_member_role">عضو</string>
+    <string name="dashboard_team_members_missing_credentials">سجّل الدخول لعرض أعضاء الفريق.</string>
+    <string name="dashboard_team_members_missing_server">عيّن خادماً لعرض أعضاء الفريق.</string>
+    <string name="dashboard_team_members_unknown">عضو غير معروف</string>
+    <string name="dashboard_team_members_unknown_username">اسم المستخدم غير معروف</string>
+    <string name="dashboard_team_members_profile_unavailable">ملف هذا العضو غير متوفر.</string>
+    <string name="dashboard_team_members_remove_action">إزالة</string>
+    <string name="dashboard_team_members_remove_cancel">إلغاء</string>
+    <string name="dashboard_team_members_remove_confirmation_title">إزالة عضو</string>
+    <string name="dashboard_team_members_remove_confirmation_message">إزالة %1$s من الفريق؟</string>
+    <string name="dashboard_team_members_remove_success">%1$s تمت إزالته من الفريق.</string>
+    <string name="dashboard_team_members_remove_error">تعذر إزالة %1$s. حاول مرة أخرى.</string>
+    <string name="dashboard_team_members_remove_content_description">إزالة العضو من الفريق</string>
+    <string name="dashboard_team_members_avatar_content_description">صورة عضو الفريق</string>
+    <string name="dashboard_invite_members_title">ادعُ أشخاصًا إلى هذا الفريق</string>
+    <string name="dashboard_invite_members_subtitle">أضف المستخدمين إلى الفريق بالضغط على زر +.</string>
+    <string name="dashboard_invite_members_search_hint">ابحث عن أعضاء الفريق...</string>
+    <string name="dashboard_invite_members_add">إضافة</string>
+    <string name="dashboard_invite_members_cancel">إغلاق</string>
+    <string name="dashboard_invite_members_load_error">تعذر تحميل المستخدمين لدعوتهم في الوقت الحالي.</string>
+    <string name="dashboard_invite_members_add_success">%1$s تمت إضافته إلى الفريق.</string>
+    <string name="dashboard_invite_members_add_error">تعذر إضافة %1$s إلى الفريق.</string>
+    <string name="dashboard_invite_members_add_error_generic">لا يمكن إضافة هذا المستخدم الآن.</string>
+    <string name="dashboard_team_members_search_empty">لا يوجد أعضاء يطابقون بحثك.</string>
+    <string name="dashboard_post_image_content_description">صورة المحتوى</string>
+    <string name="dashboard_post_comments_content_description">@string/dashboard_post_detail_comments_title</string>
+    <string name="dashboard_image_preview_content_description">صورة بملء الشاشة</string>
+    <string name="dashboard_profile_menu_profile">@string/profile_title</string>
+    <string name="dashboard_profile_menu_teams">الفرق</string>
+    <string name="dashboard_profile_menu_logout">تسجيل الخروج</string>
+    <string name="teams_title">الفرق</string>
+    <string name="profile_title">الملف الشخصي</string>
+    <string name="profile_description">راجع وعدّل معلوماتك الشخصية.</string>
+    <string name="profile_section_account">الحساب</string>
+    <string name="profile_section_personal">البيانات الشخصية</string>
+    <string name="profile_section_contact">معلومات الاتصال</string>
+    <string name="profile_section_learning">تفضيلات التعلّم</string>
+    <string name="profile_username_label">@string/login_username_label</string>
+    <string name="profile_avatar_label">الصورة الرمزية</string>
+    <string name="profile_avatar_hint">اختر صورة لمعاينة شكلها في الإطارات الدائرية والمربعة.</string>
+    <string name="profile_avatar_preview_circle_label">دائري</string>
+    <string name="profile_avatar_preview_square_label">مربّع</string>
+    <string name="profile_avatar_preview_circle_content_description">معاينة دائرية للصورة الرمزية</string>
+    <string name="profile_avatar_preview_square_content_description">معاينة مربعة للصورة الرمزية</string>
+    <string name="profile_avatar_change_button">اختيار صورة</string>
+    <string name="profile_avatar_picker_error">تعذّر تحميل هذه الصورة. جرّب ملفًا آخر.</string>
+    <string name="profile_avatar_crop_title">ضبط الصورة الرمزية</string>
+    <string name="profile_loading_message">جارٍ تحديث معلوماتك&#8230;</string>
+    <string name="profile_refresh_failed_toast">تعذّر تحديث ملفك الشخصي. سيتم عرض المعلومات المحفوظة.</string>
+    <string name="profile_save_button">احفظ التغييرات</string>
+    <string name="profile_save_success_toast">تم تحديث ملفك الشخصي.</string>
+    <string name="profile_save_failed_toast">تعذّر حفظ تغييراتك. حاول مرة أخرى.</string>
+    <string name="profile_birth_date_picker_title">@string/signup_birth_date_error_required</string>
+    <string name="profile_field_first_name">@string/signup_first_name_label</string>
+    <string name="profile_field_middle_name">@string/signup_middle_name_label</string>
+    <string name="profile_field_last_name">@string/signup_last_name_label</string>
+    <string name="profile_field_email">@string/signup_email_label</string>
+    <string name="profile_field_phone">رقم الهاتف</string>
+    <string name="profile_field_language">@string/signup_language_label</string>
+    <string name="profile_field_birth_date">@string/signup_birth_date_label</string>
+    <string name="dashboard_team_member_profile_title">ملف العضو</string>
+    <string name="dashboard_team_member_profile_navigation_content_description">رجوع</string>
+    <string name="dashboard_team_member_profile_username_format">@%1$s</string>
+    <string name="dashboard_team_member_profile_identity_section">الهوية</string>
+    <string name="dashboard_team_member_profile_name_label">الاسم</string>
+    <string name="dashboard_team_member_profile_username_label">اسم المستخدم</string>
+    <string name="dashboard_team_member_profile_contact_section">معلومات الاتصال</string>
+    <string name="dashboard_team_member_profile_email_label">البريد الإلكتروني</string>
+    <string name="dashboard_team_member_profile_phone_label">رقم الهاتف</string>
+    <string name="dashboard_team_member_profile_email_action">إرسال بريد إلكتروني</string>
+    <string name="dashboard_team_member_profile_phone_action">اتصال</string>
+    <string name="dashboard_team_member_profile_preferences_section">التفضيلات</string>
+    <string name="dashboard_team_member_profile_language_label">اللغة</string>
+    <string name="dashboard_team_member_profile_level_label">المستوى</string>
+    <string name="dashboard_team_member_profile_gender_label">الجنس</string>
+    <string name="dashboard_team_member_profile_birth_date_label">تاريخ الميلاد</string>
+    <string name="dashboard_team_member_profile_not_available">غير متوفر</string>
+    <string name="dashboard_team_member_profile_error">تعذر تحميل ملف العضو.</string>
+    <string name="profile_field_gender">@string/signup_gender_label</string>
+    <string name="profile_field_level">مستوى التعلّم</string>
+    <string name="dashboard_profile_name_placeholder">اسمك</string>
+    <string name="dashboard_profile_username_placeholder">&#64;اسم_المستخدم</string>
+    <string name="dashboard_profile_username_format">&#64;%1$s</string>
+    <string name="dashboard_add_voice_content_description">إضافة صوت جديد</string>
+    <string name="dashboard_voices_empty">لا توجد منشورات لعرضها بعد.</string>
+    <string name="dashboard_voices_no_server">سجّل الدخول لعرض أصوات المجتمع.</string>
+    <string name="dashboard_voices_error">تعذّر تحميل أحدث الأصوات.</string>
+    <string name="dashboard_voices_error_toast">تعذّر تحميل المزيد من الأصوات.</string>
+    <string name="dashboard_surveys_title">الاستبيانات</string>
+    <string name="dashboard_surveys_header_title">استطلاعات الفريق</string>
+    <string name="dashboard_surveys_header_description">استعرض استطلاعات فريقك أو الاستطلاعات المستوردة من المجتمع.</string>
+    <string name="dashboard_surveys_tab_team">الفريق</string>
+    <string name="dashboard_surveys_tab_adopted">مستوردة</string>
+    <string name="dashboard_surveys_empty_team">لم ينشئ فريقك أي استطلاعات بعد.</string>
+    <string name="dashboard_surveys_empty_adopted">لا توجد استطلاعات مستوردة بعد.</string>
+    <string name="dashboard_surveys_error_loading">تعذّر تحميل الاستطلاعات الآن.</string>
+    <string name="dashboard_surveys_missing_server">اختر خادمًا لتحميل الاستطلاعات.</string>
+    <string name="dashboard_surveys_missing_team">اختر فريقًا لتحميل الاستطلاعات.</string>
+    <string name="dashboard_surveys_missing_credentials">سجّل الدخول لتحميل الاستطلاعات.</string>
+    <string name="dashboard_surveys_metadata">أُنشئت في %1$s · أُكملت %2$d مرات</string>
+    <string name="dashboard_surveys_unknown_date">تاريخ غير معروف</string>
+    <string name="dashboard_survey_wizard_step_counter">الخطوة %1$d من %2$d</string>
+    <string name="dashboard_survey_wizard_participant_basics_title">البيانات الأساسية للمستجيب</string>
+    <string name="dashboard_survey_wizard_gender_label">اختر جنس المستجيب</string>
+    <string name="dashboard_survey_wizard_birth_year_label">سنة الميلاد</string>
+    <string name="dashboard_survey_wizard_birth_year_required">أدخل سنة الميلاد للمتابعة.</string>
+    <string name="dashboard_survey_wizard_additional_info_label">تفاصيل إضافية (اختياري)</string>
+    <string name="dashboard_survey_wizard_names_title">اسم المستجيب</string>
+    <string name="dashboard_survey_wizard_first_name_label">الاسم الأول (اختياري)</string>
+    <string name="dashboard_survey_wizard_middle_name_label">الاسم الأوسط (اختياري)</string>
+    <string name="dashboard_survey_wizard_last_name_label">اسم العائلة (اختياري)</string>
+    <string name="dashboard_survey_wizard_birthdate_title">تاريخ الميلاد</string>
+    <string name="dashboard_survey_wizard_birth_date_label">تاريخ الميلاد (اختياري)</string>
+    <string name="dashboard_survey_wizard_contact_title">بيانات الاتصال</string>
+    <string name="dashboard_survey_wizard_email_label">البريد الإلكتروني (اختياري)</string>
+    <string name="dashboard_survey_wizard_phone_label">رقم الهاتف (اختياري)</string>
+    <string name="dashboard_survey_wizard_language_level_title">اللغة والمستوى</string>
+    <string name="dashboard_survey_wizard_language_label">اللغة (اختياري)</string>
+    <string name="dashboard_survey_wizard_level_label">المستوى (اختياري)</string>
+    <string name="dashboard_survey_wizard_previous">السابق</string>
+    <string name="dashboard_survey_wizard_next">التالي</string>
+    <string name="dashboard_survey_wizard_finish">إنهاء</string>
+    <string name="dashboard_survey_wizard_input_required">أدخل إجابة للمتابعة.</string>
+    <string name="dashboard_survey_wizard_choice_required">اختر خيارًا واحدًا على الأقل للمتابعة.</string>
+    <string name="dashboard_survey_wizard_rating_required">اختر تقييمًا للمتابعة.</string>
+    <string name="dashboard_survey_wizard_completed">اكتملت الاستبانة.</string>
+    <string name="dashboard_survey_wizard_submission_failed">تعذّر حفظ إجاباتك. حاول مرة أخرى.</string>
+    <string name="dashboard_survey_wizard_other_option">أخرى</string>
+    <string name="dashboard_survey_wizard_other_hint">أدخل إجابة أخرى</string>
+    <string name="dashboard_survey_wizard_empty_questions">لا توجد أسئلة في هذه الاستبانة بعد.</string>
+    <string name="create_voice_title">إنشاء صوت</string>
+    <string name="create_voice_editor_label">شارك صوتك</string>
+    <string name="create_voice_hint">صوت بتنسيق Markdown</string>
+    <string name="create_voice_menu_post">نشر</string>
+    <string name="create_voice_primary_action">نشر الصوت</string>
+    <string name="create_voice_preview_label">معاينة</string>
+    <string name="create_voice_preview_placeholder">ابدأ بالكتابة لترى كيف سيظهر صوتك.</string>
+    <string name="create_voice_empty_error">اكتب بعض النص قبل النشر.</string>
+    <string name="create_voice_post_success">تم نشر صوتك.</string>
+    <string name="create_voice_post_error">تعذّر نشر صوتك. حاول مرة أخرى.</string>
+    <string name="create_voice_missing_credentials">تعذّر الوصول إلى بيانات اعتمادك المحفوظة. يرجى تسجيل الدخول مرة أخرى.</string>
+    <string name="create_voice_missing_server">يرجى اختيار خادم قبل إنشاء صوت.</string>
+    <string name="create_voice_format_bold_description">عريض</string>
+    <string name="create_voice_format_italic_description">مائل</string>
+    <string name="create_voice_format_heading_description">عنوان</string>
+    <string name="create_voice_format_bullet_description">قائمة منقّطة</string>
+    <string name="create_voice_format_numbered_description">قائمة مرقمة</string>
+    <string name="create_voice_format_quote_description">اقتباس</string>
+    <string name="create_voice_format_link_description">إدراج رابط</string>
+
+    <string name="create_voice_link_dialog_title">إدراج رابط</string>
+    <string name="create_voice_link_title_hint">عنوان الرابط</string>
+    <string name="create_voice_link_url_hint">رابط URL</string>
+    <string name="create_voice_link_insert_button">إدراج</string>
+    <string name="create_voice_link_required_fields">يرجى إدخال عنوان ورابط URL.</string>
+    <string name="create_voice_format_image_description">إضافة صورة</string>
+    <string name="create_voice_format_placeholder">نص</string>
+    <string name="create_voice_image_processing_error">تعذّر معالجة هذه الصورة. جرّب ملفًا آخر.</string>
+    <string name="create_voice_image_upload_error">تعذّر تحميل صورك. حاول مرة أخرى.</string>
+    <string name="permission_required_message">مطلوبة أذونات الإنترنت والصور والكاميرا للمتابعة.</string>
+    <string name="create_voice_confirm_title">@string/create_voice_primary_action</string>
+    <string name="create_voice_confirm_message">هل تريد نشر هذا الصوت؟</string>
+    <string name="create_voice_confirm_positive">نشر</string>
+    <string name="create_voice_confirm_negative">إلغاء</string>
+
+    <string name="edit_voice_title">تعديل الصوت</string>
+    <string name="edit_voice_editor_label">حدّث صوتك</string>
+    <string name="edit_voice_menu_update">@string/profile_save_button</string>
+    <string name="edit_voice_primary_action">حفظ الصوت</string>
+    <string name="edit_voice_confirm_title">تحديث الصوت</string>
+    <string name="edit_voice_confirm_message">هل تريد تحديث هذا الصوت؟</string>
+    <string name="edit_voice_confirm_positive">@string/server_configuration_save</string>
+    <string name="edit_voice_update_success">تم تحديث الصوت بنجاح.</string>
+    <string name="edit_voice_update_error">تعذّر تحديث الصوت، حاول مرة أخرى.</string>
+    <string name="edit_voice_missing_document">تعذّر تعديل هذا الصوت الآن.</string>
+    <string name="dashboard_post_detail_title">صوت</string>
+    <string name="dashboard_post_detail_comments_title">التعليقات</string>
+    <string name="dashboard_post_detail_comments_empty">لا توجد تعليقات بعد.</string>
+    <string name="dashboard_post_detail_comments_error">تعذّر تحميل التعليقات.</string>
+    <string name="dashboard_post_action_reply">الرد</string>
+    <string name="dashboard_post_action_edit">تعديل</string>
+    <string name="dashboard_post_action_delete">حذف</string>
+    <string name="dashboard_post_action_share">مشاركة</string>
+    <string name="dashboard_post_reply_hint">اكتب ردك…</string>
+    <string name="dashboard_post_reply_send">إرسال</string>
+    <string name="dashboard_post_reply_empty">يرجى كتابة رد قبل الإرسال.</string>
+    <string name="dashboard_post_reply_error">تعذّر نشر الرد، يرجى المحاولة مرة أخرى.</string>
+    <string name="dashboard_post_reply_success">تم نشر الرد بنجاح.</string>
+    <string name="dashboard_post_reply_missing_credentials">بيانات الاعتماد لنشر الرد مفقودة.</string>
+    <string name="dashboard_post_reply_preview_label">@string/create_voice_preview_label</string>
+    <string name="dashboard_post_reply_preview_placeholder">ستظهر معاينة ردك هنا.</string>
+    <string name="dashboard_post_replying_to">جارٍ الرد على @%1$s</string>
+    <string name="dashboard_post_actions_menu_content_description">المزيد من إجراءات المنشور</string>
+    <string name="dashboard_comment_actions_menu_content_description">إجراءات أخرى للتعليق</string>
+    <string name="dashboard_comment_edit_hint">حدّث تعليقك</string>
+    <string name="dashboard_comment_edit_helper">تحرير التعليق الحالي</string>
+    <string name="dashboard_comment_edit_send">تحديث</string>
+    <string name="dashboard_comment_edit_success">تم تحديث التعليق.</string>
+    <string name="dashboard_comment_edit_error">تعذر تحديث التعليق.</string>
+    <string name="dashboard_post_action_edit_toast">سيكون إجراء التعديل متاحًا قريبًا.</string>
+    <string name="dashboard_post_action_delete_toast">سيكون إجراء الحذف متاحًا قريبًا.</string>
+    <string name="dashboard_post_action_share_toast">سيكون إجراء المشاركة متاحًا قريبًا.</string>
+    <string name="dashboard_post_delete_success">تم حذف الصوت بنجاح.</string>
+    <string name="dashboard_post_delete_error">تعذر حذف هذا الصوت. يرجى المحاولة مرة أخرى.</string>
+    <string name="dashboard_comment_delete_success">تم حذف التعليق.</string>
+    <string name="dashboard_comment_delete_error">تعذّر حذف التعليق.</string>
+    <string name="dashboard_share_post_title">صوت - Planet - %1$s</string>
+    <string name="dashboard_share_post_server_fallback">MyPlanetLite</string>
+    <string name="dashboard_share_post_chooser_title">مشاركة الصوت</string>
+    <string name="dashboard_share_post_fallback">تمت المشاركة من MyPlanetLite</string>
+    <string name="share_post">مشاركة المنشور</string>
+    <string name="dashboard_relative_time_seconds">منذ بضع ثوانٍ</string>
+    <string name="dashboard_relative_time_minute">منذ دقيقة واحدة</string>
+    <string name="dashboard_relative_time_minutes">منذ %1$d دقيقة</string>
+    <string name="dashboard_relative_time_hour">منذ ساعة واحدة</string>
+    <string name="dashboard_relative_time_hours">منذ %1$d ساعة</string>
+    <string name="dashboard_relative_time_day">منذ يوم واحد</string>
+    <string name="dashboard_relative_time_days">منذ %1$d يومًا</string>
+    <string name="dashboard_relative_time_month">منذ شهر واحد</string>
+    <string name="dashboard_relative_time_months">منذ %1$d شهرًا</string>
+    <string name="dashboard_relative_time_year">منذ سنة واحدة</string>
+    <string name="dashboard_relative_time_years">منذ %1$d سنة</string>
+
+    <string name="search_hint">ابحث</string>
+    <string name="add_member_button_description">إضافة عضو</string>
+    <string name="dashboard_courses_title">الدورات</string>
+    <string name="dashboard_courses_tab_mine">دوراتي</string>
+    <string name="dashboard_courses_tab_all">الدورات</string>
+    <string name="dashboard_courses_tab_team">دورات الفريق</string>
+    <string name="dashboard_courses_content_description_icon">أيقونة الدورة</string>
+    <string name="dashboard_course_progress_value">التقدّم: %1$d%%</string>
+    <string name="dashboard_courses_sample_name_creativity">التفكير الإبداعي</string>
+    <string name="dashboard_courses_sample_name_digital_marketing">التسويق الرقمي</string>
+    <string name="dashboard_courses_sample_name_leadership">أساسيات القيادة</string>
+    <string name="dashboard_courses_sample_name_data">مبادئ البيانات</string>
+    <string name="dashboard_courses_sample_name_communication">التواصل الفعّال</string>
+    <string name="dashboard_courses_sample_name_finance">أساسيات التمويل</string>
+    <string name="dashboard_courses_sample_name_english">الإنجليزية للعمل</string>
+    <string name="dashboard_courses_sample_name_coding">مقدمة في البرمجة</string>
+    <string name="dashboard_courses_header_title">ماذا تريد أن تتعلم اليوم؟</string>
+    <string name="dashboard_courses_header_subtitle">ابحث في الأسفل.</string>
+    <string name="dashboard_courses_search_hint">ابحث عن الدورات</string>
+    <string name="dashboard_courses_category_all">كل الدورات</string>
+    <string name="dashboard_courses_category_uiux">تصميم UI/UX</string>
+    <string name="dashboard_courses_category_development">التطوير</string>
+    <string name="dashboard_courses_category_basic">الأساسيات</string>
+    <string name="dashboard_courses_author_format">بواسطة: %1$s</string>
+    <string name="dashboard_courses_lessons_format">%1$d خطوة</string>
+    <string name="dashboard_courses_rating_format">%1$.1f ★</string>
+    <string name="dashboard_courses_price_format">$%1$.0f</string>
+    <string name="dashboard_course_lessons_title">كل دروس %1$s</string>
+    <string name="dashboard_course_lessons_summary">هنا %1$d درسًا وتم إكمال %2$d</string>
+    <string name="dashboard_course_lessons_progress">%1$d من أصل %2$d خطوات مكتملة</string>
+    <string name="dashboard_course_lesson_duration">%1$d دقيقة</string>
+    <string name="dashboard_course_lessons_topic_intro">ما هو %1$s؟</string>
+    <string name="dashboard_course_lessons_topic_why">لماذا يعد %1$s ضروريًا؟</string>
+    <string name="dashboard_course_lessons_topic_definitions">ما هي تعريفات %1$s؟</string>
+    <string name="dashboard_course_lessons_topic_types">ما هي الأنواع الأربعة لـ %1$s؟</string>
+    <string name="dashboard_course_lessons_topic_basics">أساسيات %1$s</string>
+    <string name="dashboard_course_lessons_open_course">اذهب إلى الدورة</string>
+    <string name="dashboard_course_lessons_join_course">الانضمام إلى الدورة</string>
+    <string name="dashboard_course_leave_course">غادر الدورة</string>
+    <string name="dashboard_course_details_close">إغلاق</string>
+    <string name="dashboard_course_details_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus efficitur, urna non sollicitudin sollicitudin, ante ex cursus massa, sit amet rhoncus elit neque id urna.</string>
+    <string name="dashboard_course_leave_confirm">هل تريد مغادرة هذه الدورة؟</string>
+    <string name="course_wizard_close">إغلاق الدورة</string>
+    <string name="course_wizard_previous">السابق</string>
+    <string name="course_wizard_next">التالي</string>
+    <string name="course_wizard_finish">إنهاء الدورة</string>
+    <string name="course_wizard_step_position">الخطوة %1$d من %2$d</string>
+    <string name="course_wizard_open_survey">فتح الاستبيان</string>
+    <string name="course_wizard_open_exam">فتح الامتحان</string>
+    <string name="dashboard_exam_title">امتحان</string>
+    <string name="dashboard_exam_incorrect_answers">بعض الإجابات غير صحيحة. يرجى المحاولة مرة أخرى.</string>
+    <string name="dashboard_exam_completed">تم إكمال الامتحان.</string>
+    <string name="course_wizard_attachments_title">المرفقات</string>
+    <string name="course_wizard_attachment_video">فيديو</string>
+    <string name="course_wizard_attachment_image">صورة</string>
+    <string name="course_wizard_attachment_audio">صوت</string>
+    <string name="course_wizard_attachment_pdf">PDF</string>
+    <string name="course_wizard_play_error">تعذر فتح المرفق</string>
+    <string name="course_wizard_open_image">فتح الصورة</string>
+    <string name="course_wizard_open_pdf">فتح ملف PDF</string>
+    <string name="course_wizard_pdf_page_counter">الصفحة %1$d/%2$d</string>
+    <string name="course_wizard_fullscreen">تبديل وضع ملء الشاشة</string>
+    <string name="course_wizard_play_video">تشغيل الفيديو</string>
+    <string name="course_wizard_exit_fullscreen">الخروج من ملء الشاشة</string>
+    <string name="create_voice_image_options_title">خيارات الصورة</string>
+    <string name="create_voice_image_option_view">عرض الصورة</string>
+    <string name="create_voice_image_option_delete">حذف الصورة</string>
+</resources>

@@ -1,0 +1,34 @@
+<resources>
+    <style name="Widget.MyPlanet.TextInputLayout.OutlinedBox.Cornerless"
+        parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">0dp</item>
+        <item name="boxCornerRadiusTopEnd">0dp</item>
+        <item name="boxCornerRadiusBottomStart">0dp</item>
+        <item name="boxCornerRadiusBottomEnd">0dp</item>
+    </style>
+
+    <style name="TextAppearance.MyPlanet.DashboardDrawerItem" parent="@style/TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Theme.MyPlanetLite.ImagePreview" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.MyPlanet.PopupMenu" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="popupMenuStyle">@style/Widget.MyPlanet.PopupMenuStyle</item>
+    </style>
+
+    <style name="Widget.MyPlanet.PopupMenuStyle" parent="@style/Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/dashboard_popup_menu_background</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyPlanet.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="8dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/inviteMemberAvatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/avatar_placeholder_background"
+        android:contentDescription="@string/dashboard_team_members_avatar_content_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_person_placeholder_24"
+        android:tint="@color/white"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyPlanet.Circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/inviteMemberInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/inviteMemberAvatar"
+        app:layout_constraintEnd_toStartOf="@id/inviteMemberAdd"
+        app:layout_constraintStart_toEndOf="@id/inviteMemberAvatar"
+        app:layout_constraintTop_toTopOf="@id/inviteMemberAvatar">
+
+        <TextView
+            android:id="@+id/inviteMemberName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="#111827"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/inviteMemberUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textColor="#4a5568" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/inviteMemberAdd"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:contentDescription="@string/dashboard_invite_members_add"
+        android:insetLeft="0dp"
+        android:insetRight="0dp"
+        android:minWidth="0dp"
+        android:paddingHorizontal="8dp"
+        app:icon="@drawable/ic_add_24"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyPlanetLite" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.MyPlanetLite" parent="Base.Theme.MyPlanetLite" />
+
+    <style name="Theme.MyPlanetLite.CourseWizard" parent="Theme.MyPlanetLite">
+        <item name="android:statusBarColor">@color/course_wizard_top_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.MyPlanetLite.FullscreenPlayer" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/course_wizard_top_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.MyPlanetLite.UCrop" parent="Theme.MyPlanetLite">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

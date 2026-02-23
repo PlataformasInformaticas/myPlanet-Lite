@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".dashboard.DashboardPostDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/postDetailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:navigationIcon="@drawable/ic_arrow_back_24"
+            app:title="@string/dashboard_post_detail_title"
+            app:titleCentered="false" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postDetailRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/dashboard_horizontal_padding"
+        android:paddingEnd="@dimen/dashboard_horizontal_padding"
+        android:paddingTop="@dimen/dashboard_content_top_spacing"
+        android:paddingBottom="@dimen/dashboard_reply_composer_inset"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/item_dashboard_post_detail_header" />
+
+    <ProgressBar
+        android:id="@+id/postDetailLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/postDetailReplyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:maxHeight="@dimen/dashboard_reply_composer_max_height"
+        android:orientation="vertical"
+        app:layout_anchorGravity="bottom">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="false"
+            android:padding="5dp"
+            android:scrollbarStyle="insideOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/dashboardReplyEditorContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dashboard_post_divider_height"
+                        android:background="@color/dashboard_post_divider" />
+
+                    <TextView
+                        android:id="@+id/postDetailReplyingTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                        android:textColor="?attr/colorOnSurface"
+                        android:visibility="gone"
+                        tools:text="@string/dashboard_post_replying_to" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/dashboardReplyInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="none">
+
+                        <EditText
+                            android:id="@+id/dashboardReplyInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/white"
+                            android:hint="@string/dashboard_post_reply_hint"
+                            android:gravity="top"
+                            android:inputType="textMultiLine"
+                            android:maxLines="6"
+                            android:minHeight="0dp"
+                            android:minLines="1"
+                            android:overScrollMode="ifContentScrolls"
+                            android:scrollbarStyle="insideInset"
+                            android:paddingStart="12dp"
+                            android:paddingTop="6dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="6dp"
+                            android:scrollbars="vertical"
+                            android:nestedScrollingEnabled="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dashboardReplyExpandedContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:overScrollMode="never">
+
+                            <LinearLayout
+                                android:id="@+id/dashboardReplyMarkdownToolbar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/dashboardReplyMarkdownBold"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="0dp"
+                                android:minWidth="0dp"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:textColor="@android:color/black"
+                                android:contentDescription="@string/create_voice_format_bold_description"
+                                app:icon="@drawable/ic_format_bold_24"
+                                app:iconGravity="textStart"
+                                app:iconPadding="0dp"
+                                app:iconTint="@android:color/black" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/dashboardReplyMarkdownItalic"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="0dp"
+                                android:minWidth="0dp"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:textColor="@android:color/black"
+                                android:contentDescription="@string/create_voice_format_italic_description"
+                                app:icon="@drawable/ic_format_italic_24"
+                                app:iconGravity="textStart"
+                                app:iconPadding="0dp"
+                                app:iconTint="@android:color/black" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/dashboardReplyMarkdownHeading"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="0dp"
+                                android:minWidth="0dp"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:textColor="@android:color/black"
+                                android:contentDescription="@string/create_voice_format_heading_description"
+                                app:icon="@drawable/ic_format_heading_24"
+                                app:iconGravity="textStart"
+                                app:iconPadding="0dp"
+                                app:iconTint="@android:color/black" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/dashboardReplyMarkdownBullet"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="0dp"
+                                android:minWidth="0dp"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:textColor="@android:color/black"
+                                android:contentDescription="@string/create_voice_format_bullet_description"
+                                app:icon="@drawable/ic_format_list_bulleted_24"
+                                app:iconGravity="textStart"
+                                app:iconPadding="0dp"
+                                app:iconTint="@android:color/black" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/dashboardReplyMarkdownNumbered"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="0dp"
+                                android:minWidth="0dp"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:textColor="@android:color/black"
+                                android:contentDescription="@string/create_voice_format_numbered_description"
+                                app:icon="@drawable/ic_format_list_numbered_24"
+                                app:iconGravity="textStart"
+                                app:iconPadding="0dp"
+                                app:iconTint="@android:color/black" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/dashboardReplyMarkdownQuote"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="0dp"
+                                android:minWidth="0dp"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:textColor="@android:color/black"
+                                android:contentDescription="@string/create_voice_format_quote_description"
+                                app:icon="@drawable/ic_format_quote_24"
+                                app:iconGravity="textStart"
+                                app:iconPadding="0dp"
+                                app:iconTint="@android:color/black" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/dashboardReplyMarkdownLink"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="0dp"
+                                android:minWidth="0dp"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:textColor="@android:color/black"
+                                android:contentDescription="@string/create_voice_format_link_description"
+                                app:icon="@drawable/ic_insert_link_24"
+                                app:iconGravity="textStart"
+                                app:iconPadding="0dp"
+                                app:iconTint="@android:color/black" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/dashboardReplyMarkdownImage"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="0dp"
+                                android:minWidth="0dp"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:textColor="@android:color/black"
+                                android:contentDescription="@string/create_voice_format_image_description"
+                                app:icon="@drawable/ic_insert_photo_24"
+                                app:iconGravity="textStart"
+                                app:iconPadding="0dp"
+                                app:iconTint="@android:color/black" />
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+                <!-- Close the editor container before starting the preview section -->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dashboardReplyPreviewContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dashboardReplyPreviewLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/dashboard_post_reply_preview_label"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                        android:textColor="?attr/colorOnSurface"
+                        android:alpha="0.72" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/dashboardReplyPreviewImagesRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:overScrollMode="never"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/dashboardReplyPreviewImages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/dashboardReplyPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="top"
+                        android:lineSpacingExtra="4dp"
+                        android:overScrollMode="ifContentScrolls"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:scrollbars="vertical"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dashboardReplyActions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="8dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/dashboardReplySendButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="?attr/colorPrimary"
+                        android:text="@string/dashboard_post_reply_send"
+                        android:textColor="?attr/colorOnPrimary" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

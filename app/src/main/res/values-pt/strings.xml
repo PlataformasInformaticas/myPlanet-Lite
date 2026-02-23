@@ -1,0 +1,667 @@
+<resources>
+    <string name="app_name">myPlanet Lite</string>
+    <string name="app_name_prefix">myPlanet</string>
+    <string name="app_name_suffix">Lite</string>
+    <string name="app_version">Versão %1$s</string>
+    <string name="login_username_label">Nome de usuário</string>
+    <string name="login_password_label">Senha</string>
+    <string name="login_action">Entrar</string>
+    <string name="login_username_error">Digite seu nome de usuário</string>
+    <string name="login_password_error">A senha deve ter pelo menos 4 caracteres</string>
+    <string name="login_invalid_credentials">Nome de usuário ou senha incorretos</string>
+    <string name="login_generic_error">Não foi possível entrar. Tente novamente.</string>
+    <string name="logo">Logotipo</string>
+    <string name="login_signup_prompt">Não tem uma conta?</string>
+    <string name="login_signup_action">Cadastre-se</string>
+    <string name="login_privacy_policy_prompt">Leia nossa <font color="@color/login_primary">Privacy Policy</font></string>
+    <string name="login_survey_translation_consent_title">Traduções de pesquisas</string>
+    <string name="login_survey_translation_consent_description">Para oferecer traduções de pesquisas, precisamos do seu consentimento para processar o texto com segurança.</string>
+    <string name="login_survey_translation_consent_accept">Ativar traduções e aceitar a política de privacidade de tradução</string>
+    <string name="login_survey_translation_consent_policy">Revisar a política de privacidade de tradução</string>
+    <string name="login_server_label">Selecione um servidor</string>
+    <string name="login_server_error">Selecione ou informe um servidor</string>
+    <string name="login_remember_action">Lembrar-me</string>
+    <string name="server_planet_xela">Planet Xela</string>
+    <string name="server_planet_guatemala">Planet Guatemala</string>
+    <string name="server_planet_san_pablo">Planet San Pablo</string>
+    <string name="server_planet_somalia">Planet Somalia</string>
+    <string name="server_planet_learning">Learning</string>
+    <string name="server_planet_earth">Earth</string>
+    <string name="server_planet_vi">Planet VI</string>
+    <string name="server_planet_uriur">Uriur</string>
+    <string name="server_configuration_title">Configurar servidor</string>
+    <string name="server_configuration_url_hint">Endereço do servidor</string>
+    <string name="server_configuration_name_hint">Nome do servidor</string>
+    <string name="server_configuration_country_hint">Bandeira</string>
+    <string name="server_configuration_save">Salvar</string>
+    <string name="server_configuration_url_error">Digite um endereço de servidor</string>
+    <string name="server_configuration_name_error">Insira um nome do servidor</string>
+    <string name="server_configuration_country_error">Selecione uma bandeira</string>
+    <string name="server_configuration_add_button">Adicionar</string>
+    <string name="server_configuration_added">Servidor adicionado à lista</string>
+    <string name="server_configuration_duplicate_error">O servidor já existe na lista</string>
+    <string name="server_option_configure">Adicionar servidor…</string>
+    <string name="server_option_clear">Limpar servidores</string>
+    <string name="language_selector_content_description">Selecionar idioma</string>
+    <string name="language_selector_title">Escolher idioma</string>
+    <string name="language_name_english">English</string>
+    <string name="language_name_spanish">Español</string>
+    <string name="language_name_french">Français</string>
+    <string name="language_name_portuguese">Português</string>
+    <string name="language_name_arabic">العربية</string>
+    <string name="language_name_somali">Soomaali</string>
+    <string name="language_name_nepali">नेपाली</string>
+    <string name="language_name_hindi">हिन्दी</string>
+    <string name="powered_by_plataformas_informaticas" translatable="false">Powered by &lt;a href="http://plataformasinformaticas.com"&gt;Plataformas Informáticas&lt;/a&gt;</string>
+    <string name="signup_navigate_back">Voltar</string>
+    <string name="signup_header_message">Conclua estas etapas para fazer parte da comunidade de aprendizagem.</string>
+    <string name="signup_header_title" translatable="false">Planet</string>
+    <string name="signup_username_label">@string/login_username_label</string>
+    <string name="signup_password_label">@string/login_password_label</string>
+    <string name="signup_confirm_password_label">Confirmar senha</string>
+    <string name="signup_first_name_label">Nome</string>
+    <string name="signup_middle_name_label">Nome do meio</string>
+    <string name="signup_last_name_label">Sobrenome</string>
+    <string name="signup_language_label">Idioma</string>
+    <string name="signup_gender_label">Gênero</string>
+    <string name="signup_birth_date_label">Data de nascimento</string>
+    <string name="signup_level_label">Nível</string>
+    <string name="signup_email_label">E-mail</string>
+    <string name="signup_email_error_invalid">Digite um endereço de e-mail válido</string>
+    <string name="signup_password_error_mismatch">As senhas devem coincidir</string>
+    <string name="signup_password_error_length">A senha deve ter pelo menos 6 caracteres</string>
+    <string name="signup_username_error_invalid">Digite um nome de usuário que comece com uma letra e use apenas letras e números</string>
+    <string name="signup_first_name_error_required">Digite seu nome</string>
+    <string name="signup_last_name_error_required">Digite seu sobrenome</string>
+    <string name="signup_birth_date_error_required">Selecione sua data de nascimento</string>
+    <string name="signup_gender_error_required">Selecione uma opção de gênero</string>
+    <string name="signup_phone_label">Número de celular</string>
+    <string name="signup_phone_error_invalid">Digite um número de celular válido</string>
+    <string name="signup_language_error_required">Selecione um idioma</string>
+    <string name="signup_level_error_required">Selecione um nível</string>
+    <string name="signup_birth_date_picker_title">Selecionar data de nascimento</string>
+    <string name="signup_next_action">Próximo</string>
+    <string name="signup_back_action">Voltar</string>
+    <string name="signup_accept_action">Aceitar</string>
+    <string name="signup_connection_checking">Verificando conexão com o servidor…</string>
+    <string name="signup_connection_error_retry">Não foi possível conectar ao servidor. Toque para tentar novamente.</string>
+    <string name="signup_connection_error_input">Não foi possível conectar ao servidor.</string>
+    <string name="signup_username_checking">Verificando disponibilidade do nome de usuário…</string>
+    <string name="signup_username_error_taken">Este nome de usuário já está em uso.</string>
+    <string name="dashboard_offline_mode_only_surveys">Modo offline: apenas pesquisas estão disponíveis.</string>
+    <string name="dashboard_online_mode_restored">Conexão restaurada: todos os painéis estão habilitados.</string>
+    <string name="dashboard_survey_download">Baixar</string>
+    <string name="dashboard_survey_downloaded">Baixado</string>
+    <string name="dashboard_survey_download_success">Pesquisa salva para uso offline.</string>
+    <string name="dashboard_survey_download_error">Não foi possível salvar a pesquisa para uso offline.</string>
+    <string name="dashboard_surveys_tab_outbox">Pendentes</string>
+    <string name="dashboard_surveys_outbox_empty">Nenhuma submissão pendente.</string>
+    <string name="dashboard_survey_submission_saved_offline">Envio salvo na caixa de saída para sincronização.</string>
+    <string name="dashboard_outbox_saved_at">Salvo offline em %1$s</string>
+    <string name="dashboard_outbox_unknown_survey">Pesquisa</string>
+    <string name="dashboard_outbox_unknown_team">Equipe</string>
+    <string name="dashboard_outbox_detail_intro">Estas são as respostas que você preencheu. Revise-as e toque em enviar quando estiver pronto.</string>
+    <string name="dashboard_outbox_send">Enviar</string>
+    <string name="dashboard_outbox_send_placeholder">A sincronização estará disponível em breve.</string>
+    <string name="dashboard_outbox_no_answers">Nenhuma resposta foi capturada.</string>
+    <string name="dashboard_outbox_no_answer">Sem resposta</string>
+    <string name="dashboard_outbox_preview_title">Pré-visualização</string>
+    <string name="dashboard_outbox_unknown_question">Pergunta %1$d</string>
+    <string name="dashboard_outbox_missing_entry">Submissão pendente não encontrada.</string>
+    <string name="dashboard_outbox_birthdate_format">Data de nascimento: %1$s</string>
+    <string name="dashboard_outbox_age_format">Idade: %1$d</string>
+    <string name="dashboard_outbox_gender_format">Gênero: %1$s</string>
+    <string name="dashboard_outbox_language_format">Idioma: %1$s</string>
+    <string name="dashboard_outbox_level_format">Nível: %1$s</string>
+    <string name="dashboard_outbox_phone_format">Telefone: %1$s</string>
+    <string name="dashboard_outbox_email_format">E-mail: %1$s</string>
+    <string name="dashboard_outbox_participant_details">Detalhes do participante</string>
+    <string name="dashboard_outbox_offline_cannot_send">Conecte-se à internet para enviar esta submissão.</string>
+    <string name="dashboard_outbox_unable_to_verify_rev">Não foi possível verificar a versão da pesquisa no servidor.</string>
+    <string name="dashboard_outbox_send_success">Submissão enviada com sucesso.</string>
+    <string name="dashboard_outbox_send_failed">Não foi possível enviar a submissão. Tente novamente.</string>
+    <string name="dashboard_outbox_rev_mismatch_title">Pesquisa alterada</string>
+    <string name="dashboard_outbox_rev_mismatch_message">Esta pesquisa foi alterada no servidor, portanto não pode ser sincronizada. Deseja excluí-la ou mantê-la arquivada?</string>
+    <string name="dashboard_outbox_delete_submission">Excluir submissão</string>
+    <string name="dashboard_outbox_keep_submission">Manter arquivada</string>
+    <string name="dashboard_outbox_deleted">Submissão excluída.</string>
+    <string name="dashboard_outbox_delete_confirm_message">Excluir esta resposta de pesquisa pendente? Esta ação não pode ser desfeita.</string>
+    <string name="dashboard_outbox_delete_failed">Não foi possível excluir a submissão. Tente novamente.</string>
+    <string name="dashboard_outbox_back">Voltar</string>
+
+    <string name="signup_step_username_title">Escolha um nome de usuário</string>
+    <string name="signup_step_username_subtitle">Comece com uma letra. Use apenas letras e números.</string>
+    <string name="signup_step_names_title">Qual é o seu nome?</string>
+    <string name="signup_step_names_subtitle">Digite seu nome verdadeiro.</string>
+    <string name="signup_step_birth_date_title">Quando você nasceu?</string>
+    <string name="signup_step_birth_date_subtitle">Selecione sua data de nascimento.</string>
+    <string name="signup_step_gender_title">Com qual gênero você se identifica?</string>
+    <string name="signup_step_gender_subtitle">Escolha a opção que melhor se adequa a você.</string>
+    <string name="signup_step_contact_title">Como podemos falar com você?</string>
+    <string name="signup_step_contact_subtitle">Informe seu e-mail e número de celular.</string>
+    <string name="signup_step_password_title">Crie uma senha</string>
+    <string name="signup_step_password_subtitle">Use pelo menos seis letras ou números.</string>
+    <string name="signup_step_language_title">Idioma e nível</string>
+    <string name="signup_step_language_subtitle">Escolha o idioma e o nível de sua preferência.</string>
+    <string name="signup_step_license_title">Aceite a licença</string>
+    <string name="signup_step_license_subtitle">Revise os termos antes de criar sua conta.</string>
+    <string name="signup_license_title">Acordo de Licença de Usuário Final (EULA)</string>
+    <string name="signup_license_subtitle">Open Learning Exchange
+Aplicativos: Planet, myPlanet e myPlanetLite</string>
+    <string name="signup_license_section1_title">1. Aceitação do acordo</string>
+    <string name="signup_license_section1_body">Ao selecionar "Aceitar" neste aplicativo Android, você confirma que leu, entendeu e concorda com os termos estabelecidos neste Acordo de Licença de Usuário Final (o "Acordo").
+
+Se você não concordar, deve selecionar "Cancelar" e parar de usar o aplicativo.</string>
+    <string name="signup_license_section2_title">2. Propriedade</string>
+    <string name="signup_license_section2_body">A Open Learning Exchange ("OLE") é proprietária dos aplicativos Planet, myPlanet e myPlanetLite, incluindo seu conteúdo, design, código e materiais relacionados.</string>
+    <string name="signup_license_section3_title">3. Licença de uso</string>
+    <string name="signup_license_section3_body">A OLE concede a você uma licença limitada, pessoal, não exclusiva e intransferível para instalar e usar este aplicativo Android exclusivamente para os fins autorizados pela sua instituição ou organização.</string>
+    <string name="signup_license_section4_title">4. Dados, segurança e privacidade</string>
+    <string name="signup_license_section4_point1">4.1 Os Aplicativos devem coletar e processar os dados pessoais necessários para autenticação, operação e sincronização do usuário.</string>
+    <string name="signup_license_section4_point2">4.2 Todos os dados transmitidos ou armazenados pelos Aplicativos são criptografados em conformidade com os padrões de segurança aplicáveis.</string>
+    <string name="signup_license_section4_point3">4.3 Você aceita que o uso dos Aplicativos envolve esse processamento seguro.</string>
+    <string name="signup_license_section5_title">5. Remoção de conta</string>
+    <string name="signup_license_section5_body">Se você decidir cancelar a inscrição ou excluir sua conta, deverá entrar em contato com um administrador na plataforma Planet, que gerenciará o encerramento do acesso ou a exclusão de dados de acordo com os procedimentos estabelecidos.</string>
+    <string name="signup_license_section6_title">6. Obrigações do usuário</string>
+    <string name="signup_license_section6_intro">Você concorda em:</string>
+    <string name="signup_license_section6_point1">• Usar o aplicativo de forma responsável e em conformidade com os regulamentos aplicáveis.</string>
+    <string name="signup_license_section6_point2">• Manter seguras as informações de login atribuídas.</string>
+    <string name="signup_license_section6_point3">• Relatar qualquer uso indevido ou comportamento suspeito ao administrador institucional.</string>
+    <string name="signup_license_section7_title">7. Alterações no acordo</string>
+    <string name="signup_license_section7_body">A OLE pode atualizar estes termos quando necessário. Continuar usando o aplicativo após qualquer alteração constitui aceitação do Acordo atualizado.</string>
+    <string name="signup_license_section8_title">8. Confirmação</string>
+    <string name="signup_license_section8_intro">Ao tocar em "Aceitar", você reconhece que:</string>
+    <string name="signup_license_section8_point1">• Você leu este Acordo.</string>
+    <string name="signup_license_section8_point2">• Você entende seu escopo.</string>
+    <string name="signup_license_section8_point3">• Você aceita plenamente seus termos e condições.</string>
+    <string name="signup_license_auto_login_label">Usar estes dados para preencher o formulário de login</string>
+
+    <string name="signup_gender_option_male">Masculino</string>
+    <string name="signup_gender_option_female">Feminino</string>
+
+    <string-array name="signup_gender_options_language_en">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_es">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_fr">
+        <item>Masculin</item>
+        <item>Féminin</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_pt">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_ar">
+        <item>ذكر</item>
+        <item>أنثى</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_so">
+        <item>Lab</item>
+        <item>Dhedig</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_ne">
+        <item>पुरुष</item>
+        <item>महिला</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_hi">
+        <item>पुरुष</item>
+        <item>महिला</item>
+    </string-array>
+
+    <string name="signup_level_option_beginner">Iniciante</string>
+    <string name="signup_level_option_intermediate">Intermediário</string>
+    <string name="signup_level_option_advanced">Avançado</string>
+    <string name="signup_level_option_expert">Especialista</string>
+
+    <string-array name="signup_language_options">
+        <item>@string/language_name_english</item>
+        <item>@string/language_name_spanish</item>
+        <item>@string/language_name_french</item>
+        <item>@string/language_name_portuguese</item>
+        <item>@string/language_name_arabic</item>
+        <item>@string/language_name_somali</item>
+        <item>@string/language_name_nepali</item>
+        <item>@string/language_name_hindi</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_en">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+        <item>Expert</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_es">
+        <item>Principiante</item>
+        <item>Intermedio</item>
+        <item>Avanzado</item>
+        <item>Experto</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_fr">
+        <item>Débutant</item>
+        <item>Intermédiaire</item>
+        <item>Avancé</item>
+        <item>Expert</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_pt">
+        <item>Iniciante</item>
+        <item>Intermediário</item>
+        <item>Avançado</item>
+        <item>Especialista</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_ar">
+        <item>مبتدئ</item>
+        <item>متوسط</item>
+        <item>متقدم</item>
+        <item>خبير</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_so">
+        <item>Bilow</item>
+        <item>Dhexdhexaad</item>
+        <item>Sareeye</item>
+        <item>Khabiir</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_ne">
+        <item>प्रारम्भिक</item>
+        <item>मध्यम</item>
+        <item>उन्नत</item>
+        <item>विशेषज्ञ</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_hi">
+        <item>शुरुआती</item>
+        <item>मध्यम</item>
+        <item>उन्नत</item>
+        <item>विशेषज्ञ</item>
+    </string-array>
+
+    <string-array name="signup_level_options">
+        <item>@string/signup_level_option_beginner</item>
+        <item>@string/signup_level_option_intermediate</item>
+        <item>@string/signup_level_option_advanced</item>
+        <item>@string/signup_level_option_expert</item>
+    </string-array>
+    <string name="server_status_checking">Verificando status do servidor…</string>
+    <string name="server_status_connected">Servidor conectado</string>
+    <string name="server_status_disconnected">Servidor desconectado</string>
+    <string name="server_status_disconnected_retry">Servidor desconectado. Toque para tentar novamente.</string>
+
+    <string name="dashboard_logo_content_description">Logotipo do myPlanet</string>
+    <string name="dashboard_settings_content_description">Abrir configurações</string>
+    <string name="dashboard_settings_title">Configurações</string>
+    <string name="dashboard_settings_menu_language">Idioma</string>
+    <string name="dashboard_settings_menu_survey_translation">Traduzir pesquisas automaticamente</string>
+    <string name="dashboard_settings_menu_voice_batch_size">Vozes por carregamento</string>
+    <string name="dashboard_settings_survey_translation_enabled">Tradução de pesquisas ativada</string>
+    <string name="dashboard_settings_survey_translation_disabled">Tradução de pesquisas desativada</string>
+    <string name="dashboard_survey_translation_notice">Este app usa inteligência artificial para traduzir conteúdo. Ao continuar, você concorda com nossa Política de Privacidade.</string>
+    <string name="dashboard_survey_translation_applied_notice">Este conteúdo de pesquisa foi traduzido usando inteligência artificial.</string>
+    <string name="dashboard_survey_translation_consent_accept">Aceitar</string>
+    <string name="dashboard_survey_translation_consent_cancel">Cancelar</string>
+    <string name="dashboard_settings_voice_batch_size_title">Escolha quantas vozes carregar de uma vez</string>
+    <string name="dashboard_settings_voice_batch_size_option">%1$d vozes</string>
+    <string name="dashboard_avatar_content_description">Avatar do usuário</string>
+    <string name="dashboard_voices_title">Vozes</string>
+    <string name="dashboard_teams_title">Minhas equipes</string>
+    <string name="dashboard_teams_my_title">Minhas equipes</string>
+    <string name="dashboard_teams_my_description">Grupos dos quais você é membro e pode participar.</string>
+    <string name="dashboard_teams_select_team_hint">Escolha uma equipe no menu para ver suas atualizações.</string>
+    <string name="dashboard_teams_explore_title">Explorar equipes</string>
+    <string name="dashboard_teams_explore_description">Grupos disponíveis que você pode entrar.</string>
+    <string name="dashboard_teams_join_prompt">Você ainda não faz parte de nenhuma equipe. Você pode entrar em uma para começar.</string>
+    <string name="dashboard_teams_no_server">Conecte-se a um servidor para ver suas equipes.</string>
+    <string name="dashboard_teams_no_user">Não foi possível identificar seu usuário. Faça login novamente.</string>
+    <string name="dashboard_teams_no_credentials">Não encontramos seus dados de login. Faça login novamente.</string>
+    <string name="dashboard_teams_error_loading">Não foi possível carregar suas equipes. Tente novamente mais tarde.</string>
+    <string name="dashboard_teams_member_unknown">Membros indisponíveis</string>
+    <string name="dashboard_teams_unknown_name">Equipe sem nome</string>
+    <string name="dashboard_teams_default_initials">ME</string>
+    <string name="dashboard_teams_bookmark">Favoritar equipe</string>
+    <string name="dashboard_teams_join_team">Entrar na equipe</string>
+    <string name="dashboard_teams_join_pending">Solicitação de entrada enviada</string>
+    <string name="dashboard_teams_cancel_join_title">Cancelar solicitação de entrada?</string>
+    <string name="dashboard_teams_cancel_join_message">Deseja cancelar sua solicitação para entrar nesta equipe?</string>
+    <string name="dashboard_teams_cancel_join_confirm">Cancelar solicitação</string>
+    <string name="dashboard_teams_leave_team">Sair da equipe</string>
+    <string name="dashboard_teams_leader_badge">Você é o líder da equipe</string>
+    <plurals name="dashboard_teams_member_count">
+        <item quantity="one">%d membro</item>
+        <item quantity="other">%d membros</item>
+    </plurals>
+    <string name="dashboard_home">Início</string>
+    <string name="dashboard_team_members_title">Membros da equipe</string>
+    <string name="dashboard_team_members_empty">Ainda não há membros nesta equipe.</string>
+    <string name="dashboard_team_members_error_loading">Não foi possível carregar os membros da equipe agora.</string>
+    <string name="dashboard_team_members_leader_role">Líder</string>
+    <string name="dashboard_team_members_member_role">Membro</string>
+    <string name="dashboard_team_members_missing_credentials">Faça login para ver os membros da equipe.</string>
+    <string name="dashboard_team_members_missing_server">Defina um servidor para ver os membros da equipe.</string>
+    <string name="dashboard_team_members_unknown">Membro desconhecido</string>
+    <string name="dashboard_team_members_unknown_username">Nome de usuário desconhecido</string>
+    <string name="dashboard_team_members_profile_unavailable">O perfil não está disponível para este membro.</string>
+    <string name="dashboard_team_members_remove_action">Remover</string>
+    <string name="dashboard_team_members_remove_cancel">Cancelar</string>
+    <string name="dashboard_team_members_remove_confirmation_title">Remover membro</string>
+    <string name="dashboard_team_members_remove_confirmation_message">Remover %1$s da equipe?</string>
+    <string name="dashboard_team_members_remove_success">%1$s foi removido(a) da equipe.</string>
+    <string name="dashboard_team_members_remove_error">Não foi possível remover %1$s. Tente novamente.</string>
+    <string name="dashboard_team_members_remove_content_description">Remover membro da equipe</string>
+    <string name="dashboard_team_members_avatar_content_description">Avatar do membro da equipe</string>
+    <string name="dashboard_invite_members_title">Convidar pessoas para esta equipe</string>
+    <string name="dashboard_invite_members_subtitle">Adicione usuários à equipe pressionando o botão +.</string>
+    <string name="dashboard_invite_members_search_hint">Pesquisar membros da equipe...</string>
+    <string name="dashboard_invite_members_add">Adicionar</string>
+    <string name="dashboard_invite_members_cancel">Fechar</string>
+    <string name="dashboard_invite_members_load_error">Não foi possível carregar usuários para convidar agora.</string>
+    <string name="dashboard_invite_members_add_success">%1$s adicionado(a) à equipe.</string>
+    <string name="dashboard_invite_members_add_error">Não foi possível adicionar %1$s à equipe.</string>
+    <string name="dashboard_invite_members_add_error_generic">Não foi possível adicionar este usuário agora.</string>
+    <string name="dashboard_team_members_search_empty">Nenhum membro corresponde à sua busca.</string>
+    <string name="dashboard_post_image_content_description">Imagem do conteúdo</string>
+    <string name="dashboard_post_comments_content_description">@string/dashboard_post_detail_comments_title</string>
+    <string name="dashboard_image_preview_content_description">Imagem do post em tela cheia</string>
+    <string name="dashboard_profile_menu_profile">@string/profile_title</string>
+    <string name="dashboard_profile_menu_teams">Equipes</string>
+    <string name="dashboard_profile_menu_privacy_policy">Política de privacidade</string>
+    <string name="dashboard_profile_menu_logout">Sair</string>
+    <string name="privacy_policy_title">Política de privacidade</string>
+    <string name="privacy_policy_intro">Esta Política de Privacidade explica como o MyPlanet Lite, fornecido por meio da sua organização, lida com dados pessoais quando você usa o app.</string>
+    <string name="privacy_policy_data_collection_title">Informações que coletamos</string>
+    <string name="privacy_policy_data_collection_description">Coletamos:\n• Detalhes da conta (nome, nome de usuário, e-mail, organização).\n• Uso e diagnóstico (atividade de sessão, interações com recursos, dispositivo e versão do app).\n• Conteúdo opcional que você envia (posts, respostas de pesquisa, mídias enviadas).</string>
+    <string name="privacy_policy_data_usage_title">Como usamos seus dados</string>
+    <string name="privacy_policy_data_usage_description">Usamos suas informações para fornecer e melhorar o serviço, personalizar sua experiência, manter sua conta segura e cumprir obrigações legais.</string>
+    <string name="privacy_policy_usage_title">Como usamos suas informações</string>
+    <string name="privacy_policy_usage_description">Seus dados nos ajudam a oferecer recursos essenciais, sincronizar conteúdos de aprendizagem, personalizar configurações de idioma e localidade, melhorar desempenho e confiabilidade e apoiar segurança, prevenção de fraudes e investigações.</string>
+    <string name="privacy_policy_storage_title">Armazenamento e retenção</string>
+    <string name="privacy_policy_storage_description">As informações são armazenadas em servidores seguros gerenciados pela OLE ou pela sua organização, com controles de acesso e criptografia em trânsito. Retemos dados apenas pelo tempo necessário para fornecer o serviço, cumprir exigências legais, fazer cumprir acordos ou resolver disputas, com retenção limitada para backups.</string>
+    <string name="privacy_policy_sharing_title">Compartilhamento e terceiros</string>
+    <string name="privacy_policy_sharing_description">Não vendemos dados pessoais. As informações podem ser compartilhadas com provedores de serviços confiáveis (como hospedagem, análise ou plataformas de notificação) sob acordos de proteção de dados, com administradores da sua organização para gerenciar contas ou quando exigido por lei.</string>
+    <string name="privacy_policy_rights_title">Suas escolhas e direitos</string>
+    <string name="privacy_policy_rights_description">Você pode revisar ou atualizar os detalhes do perfil no app. Quando aplicável, você pode solicitar acesso, correção, exclusão, restrição ou portabilidade de seus dados, ou se opor a determinados processamentos. Você pode retirar dados opcionais fornecidos excluindo esse conteúdo ou interrompendo seu envio.</string>
+    <string name="privacy_policy_security_title">Segurança</string>
+    <string name="privacy_policy_security_description">Usamos salvaguardas técnicas e organizacionais — incluindo criptografia de transporte (TLS), controles de autenticação, acesso de menor privilégio e monitoramento — para reduzir riscos de acesso ou divulgação não autorizados. Mantenha suas credenciais seguras.</string>
+    <string name="privacy_policy_minors_title">Dados de crianças</string>
+    <string name="privacy_policy_minors_description">O app é destinado a aprendizes autorizados por organizações parceiras. Se dados de uma criança forem coletados sem o consentimento necessário, entre em contato conosco para que possamos removê-los.</string>
+    <string name="privacy_policy_changes_title">Atualizações de política</string>
+    <string name="privacy_policy_changes_description">Podemos atualizar esta política para refletir mudanças de produto, segurança ou legais. Atualizações significativas serão comunicadas por avisos no app ou por outros canais apropriados.</string>
+    <string name="privacy_policy_contact_title">Contato</string>
+    <string name="privacy_policy_contact_description">Para dúvidas ou para exercer seus direitos de privacidade, entre em contato com o administrador da sua organização ou com nossa equipe de suporte.</string>
+    <string name="teams_title">Equipes</string>
+    <string name="profile_title">Perfil</string>
+    <string name="profile_description">Revise e edite suas informações pessoais.</string>
+    <string name="profile_section_account">Conta</string>
+    <string name="profile_section_personal">Detalhes pessoais</string>
+    <string name="profile_section_contact">Informações de contato</string>
+    <string name="profile_section_learning">Preferências de aprendizagem</string>
+    <string name="profile_username_label">@string/login_username_label</string>
+    <string name="profile_avatar_label">Avatar</string>
+    <string name="profile_avatar_hint">Escolha uma foto para visualizar como ela fica em molduras circulares e quadradas.</string>
+    <string name="profile_avatar_preview_circle_label">Circular</string>
+    <string name="profile_avatar_preview_square_label">Quadrado</string>
+    <string name="profile_avatar_preview_circle_content_description">Prévia circular do avatar</string>
+    <string name="profile_avatar_preview_square_content_description">Prévia quadrada do avatar</string>
+    <string name="profile_avatar_change_button">Escolher imagem</string>
+    <string name="profile_avatar_picker_error">Não foi possível carregar essa imagem. Tente outro arquivo.</string>
+    <string name="profile_avatar_crop_title">Ajustar avatar</string>
+    <string name="profile_loading_message">Atualizando suas informações…</string>
+    <string name="profile_refresh_failed_toast">Não foi possível atualizar seu perfil. Mostrando informações salvas.</string>
+    <string name="profile_save_button">Salvar alterações</string>
+    <string name="profile_save_success_toast">Seu perfil foi atualizado.</string>
+    <string name="profile_save_failed_toast">Não foi possível salvar suas alterações. Tente novamente.</string>
+    <string name="profile_birth_date_picker_title">@string/signup_birth_date_error_required</string>
+    <string name="profile_field_first_name">@string/signup_first_name_label</string>
+    <string name="profile_field_middle_name">@string/signup_middle_name_label</string>
+    <string name="profile_field_last_name">@string/signup_last_name_label</string>
+    <string name="profile_field_email">@string/signup_email_label</string>
+    <string name="profile_field_phone">Número de telefone</string>
+    <string name="profile_field_language">@string/signup_language_label</string>
+    <string name="profile_field_birth_date">@string/signup_birth_date_label</string>
+    <string name="dashboard_team_member_profile_title">Perfil do membro</string>
+    <string name="dashboard_team_member_profile_navigation_content_description">Voltar</string>
+    <string name="dashboard_team_member_profile_username_format">@%1$s</string>
+    <string name="dashboard_team_member_profile_identity_section">Identidade</string>
+    <string name="dashboard_team_member_profile_name_label">Nome</string>
+    <string name="dashboard_team_member_profile_username_label">Nome de usuário</string>
+    <string name="dashboard_team_member_profile_contact_section">Contato</string>
+    <string name="dashboard_team_member_profile_email_label">E-mail</string>
+    <string name="dashboard_team_member_profile_phone_label">Número de telefone</string>
+    <string name="dashboard_team_member_profile_preferences_section">Preferências</string>
+    <string name="dashboard_team_member_profile_language_label">Idioma</string>
+    <string name="dashboard_team_member_profile_level_label">Nível</string>
+    <string name="dashboard_team_member_profile_gender_label">Gênero</string>
+    <string name="dashboard_team_member_profile_birth_date_label">Data de nascimento</string>
+    <string name="dashboard_team_member_profile_email_action">Enviar e-mail</string>
+    <string name="dashboard_team_member_profile_phone_action">Ligar</string>
+    <string name="dashboard_team_member_profile_not_available">Não disponível</string>
+    <string name="dashboard_team_member_profile_error">Não foi possível carregar o perfil do membro.</string>
+    <string name="profile_field_gender">@string/signup_gender_label</string>
+    <string name="profile_field_level">Nível de aprendizagem</string>
+    <string name="dashboard_profile_name_placeholder">Seu nome</string>
+    <string name="dashboard_profile_username_placeholder">@nome_de_usuario</string>
+    <string name="dashboard_profile_username_format">@%1$s</string>
+    <string name="dashboard_add_voice_content_description">Adicionar uma nova voz</string>
+    <string name="dashboard_voices_empty">Nenhuma voz para exibir ainda.</string>
+    <string name="dashboard_voices_no_server">Faça login para ver as vozes da comunidade.</string>
+    <string name="dashboard_voices_error">Não foi possível carregar as vozes mais recentes.</string>
+    <string name="dashboard_voices_error_toast">Não foi possível carregar mais vozes.</string>
+    <string name="dashboard_surveys_title">Pesquisas</string>
+    <string name="dashboard_surveys_header_title">Pesquisas da equipe</string>
+    <string name="dashboard_surveys_header_description">Navegue pelas pesquisas da sua equipe ou importadas da comunidade.</string>
+    <string name="dashboard_surveys_tab_team">Equipe</string>
+    <string name="dashboard_surveys_tab_adopted">Importadas</string>
+    <string name="dashboard_surveys_empty_team">Sua equipe ainda não criou pesquisas.</string>
+    <string name="dashboard_surveys_empty_adopted">Ainda não há pesquisas importadas.</string>
+    <string name="dashboard_surveys_error_loading">Não foi possível carregar pesquisas agora.</string>
+    <string name="dashboard_surveys_missing_server">Escolha um servidor para carregar pesquisas.</string>
+    <string name="dashboard_surveys_missing_team">Selecione uma equipe para carregar pesquisas.</string>
+    <string name="dashboard_surveys_missing_credentials">Faça login para carregar pesquisas.</string>
+    <string name="dashboard_surveys_metadata">Criada em %1$s · Concluída %2$d vezes</string>
+    <string name="dashboard_surveys_unknown_date">Data desconhecida</string>
+    <string name="dashboard_survey_wizard_step_counter">Etapa %1$d de %2$d</string>
+    <string name="dashboard_survey_wizard_participant_basics_title">Informações básicas do respondente</string>
+    <string name="dashboard_survey_wizard_gender_label">Selecione o gênero do respondente</string>
+    <string name="dashboard_survey_wizard_birth_year_label">Ano de nascimento</string>
+    <string name="dashboard_survey_wizard_birth_year_required">Digite um ano de nascimento para continuar.</string>
+    <string name="dashboard_survey_wizard_additional_info_label">Detalhes adicionais (opcional)</string>
+    <string name="dashboard_survey_wizard_names_title">Nome do respondente</string>
+    <string name="dashboard_survey_wizard_first_name_label">Nome (opcional)</string>
+    <string name="dashboard_survey_wizard_middle_name_label">Nome do meio (opcional)</string>
+    <string name="dashboard_survey_wizard_last_name_label">Sobrenome (opcional)</string>
+    <string name="dashboard_survey_wizard_birthdate_title">Data de nascimento</string>
+    <string name="dashboard_survey_wizard_birth_date_label">Data de nascimento (opcional)</string>
+    <string name="dashboard_survey_wizard_contact_title">Detalhes de contato</string>
+    <string name="dashboard_survey_wizard_email_label">E-mail (opcional)</string>
+    <string name="dashboard_survey_wizard_phone_label">Número de telefone (opcional)</string>
+    <string name="dashboard_survey_wizard_language_level_title">Idioma e nível</string>
+    <string name="dashboard_survey_wizard_language_label">Idioma (opcional)</string>
+    <string name="dashboard_survey_wizard_level_label">Nível (opcional)</string>
+    <string name="dashboard_survey_wizard_previous">Anterior</string>
+    <string name="dashboard_survey_wizard_next">Próximo</string>
+    <string name="dashboard_survey_wizard_finish">Concluir</string>
+    <string name="dashboard_survey_wizard_input_required">Digite uma resposta para continuar.</string>
+    <string name="dashboard_survey_wizard_choice_required">Selecione ao menos uma opção para continuar.</string>
+    <string name="dashboard_survey_wizard_rating_required">Escolha uma avaliação para continuar.</string>
+    <string name="dashboard_survey_wizard_completed">Pesquisa concluída.</string>
+    <string name="dashboard_survey_wizard_submission_failed">Não foi possível salvar suas respostas. Tente novamente.</string>
+    <string name="dashboard_survey_wizard_other_option">Outro</string>
+    <string name="dashboard_survey_wizard_other_hint">Digite outra resposta</string>
+    <string name="dashboard_survey_wizard_empty_questions">Esta pesquisa ainda não tem perguntas.</string>
+    <string name="create_voice_title">Criar voz</string>
+    <string name="create_voice_editor_label">Compartilhe sua voz</string>
+    <string name="create_voice_hint">Voz em formato Markdown</string>
+    <string name="create_voice_menu_post">Postar</string>
+    <string name="create_voice_primary_action">Publicar voz</string>
+    <string name="create_voice_preview_label">Pré-visualização</string>
+    <string name="create_voice_preview_placeholder">Comece a digitar para ver como sua voz ficará.</string>
+    <string name="create_voice_empty_error">Digite algum texto antes de publicar.</string>
+    <string name="create_voice_post_success">Sua voz foi publicada.</string>
+    <string name="create_voice_post_error">Não foi possível publicar sua voz. Tente novamente.</string>
+    <string name="create_voice_missing_credentials">Não foi possível acessar suas credenciais salvas. Faça login novamente.</string>
+    <string name="create_voice_missing_server">Escolha um servidor antes de criar uma voz.</string>
+    <string name="create_voice_format_bold_description">Negrito</string>
+    <string name="create_voice_format_italic_description">Itálico</string>
+    <string name="create_voice_format_heading_description">Título</string>
+    <string name="create_voice_format_bullet_description">Lista com marcadores</string>
+    <string name="create_voice_format_numbered_description">Lista numerada</string>
+    <string name="create_voice_format_quote_description">Citação</string>
+    <string name="create_voice_format_link_description">Inserir link</string>
+
+    <string name="create_voice_link_dialog_title">Inserir link</string>
+    <string name="create_voice_link_title_hint">Título do link</string>
+    <string name="create_voice_link_url_hint">URL do link</string>
+    <string name="create_voice_link_insert_button">Inserir</string>
+    <string name="create_voice_link_required_fields">Digite um título e uma URL.</string>
+    <string name="create_voice_format_image_description">Inserir imagem</string>
+    <string name="create_voice_format_placeholder">texto</string>
+    <string name="create_voice_image_processing_error">Não foi possível processar essa imagem. Tente outro arquivo.</string>
+    <string name="create_voice_image_upload_error">Não foi possível enviar suas imagens. Tente novamente.</string>
+    <string name="permission_required_message">As permissões de internet, foto e câmera são necessárias para continuar.</string>
+    <string name="create_voice_confirm_title">@string/create_voice_primary_action</string>
+    <string name="create_voice_confirm_message">Deseja publicar esta voz?</string>
+    <string name="create_voice_confirm_positive">Publicar</string>
+    <string name="create_voice_confirm_negative">Cancelar</string>
+
+    <string name="edit_voice_title">Editar voz</string>
+    <string name="edit_voice_editor_label">Atualize sua voz</string>
+    <string name="edit_voice_menu_update">@string/profile_save_button</string>
+    <string name="edit_voice_primary_action">Salvar voz</string>
+    <string name="edit_voice_confirm_title">Atualizar voz</string>
+    <string name="edit_voice_confirm_message">Deseja atualizar esta voz?</string>
+    <string name="edit_voice_confirm_positive">@string/server_configuration_save</string>
+    <string name="edit_voice_update_success">Voz atualizada com sucesso.</string>
+    <string name="edit_voice_update_error">Não foi possível atualizar a voz, tente novamente.</string>
+    <string name="edit_voice_missing_document">Não foi possível editar esta voz agora.</string>
+    <string name="dashboard_post_detail_title">Voz</string>
+    <string name="dashboard_post_detail_comments_title">Comentários</string>
+    <string name="dashboard_post_detail_comments_empty">Ainda não há comentários.</string>
+    <string name="dashboard_post_detail_comments_error">Não foi possível carregar comentários.</string>
+    <string name="dashboard_post_action_reply">Responder</string>
+    <string name="dashboard_post_action_edit">Editar</string>
+    <string name="dashboard_post_action_delete">Excluir</string>
+    <string name="dashboard_post_action_share">Compartilhar</string>
+    <string name="dashboard_post_actions_menu_content_description">Mais ações do post</string>
+    <string name="dashboard_comment_actions_menu_content_description">Mais ações do comentário</string>
+    <string name="dashboard_post_reply_hint">Escreva sua resposta…</string>
+    <string name="dashboard_post_reply_send">Enviar</string>
+    <string name="dashboard_post_reply_empty">Escreva uma resposta antes de enviar.</string>
+    <string name="dashboard_post_reply_error">Não foi possível publicar a resposta, tente novamente.</string>
+    <string name="dashboard_post_reply_success">Resposta publicada com sucesso.</string>
+    <string name="dashboard_post_reply_missing_credentials">Credenciais ausentes para publicar a resposta.</string>
+    <string name="dashboard_post_reply_preview_label">@string/create_voice_preview_label</string>
+    <string name="dashboard_post_reply_preview_placeholder">A prévia da sua resposta aparecerá aqui.</string>
+    <string name="dashboard_post_replying_to">Respondendo a @%1$s</string>
+    <string name="dashboard_post_action_edit_toast">Ação de editar voz em breve.</string>
+    <string name="dashboard_post_action_delete_toast">Ação de excluir voz em breve.</string>
+    <string name="dashboard_post_action_share_toast">Ação de compartilhar voz em breve.</string>
+    <string name="dashboard_comment_edit_hint">Atualize seu comentário</string>
+    <string name="dashboard_comment_edit_helper">Editando comentário existente</string>
+    <string name="dashboard_comment_edit_send">Atualizar</string>
+    <string name="dashboard_comment_edit_success">Comentário atualizado.</string>
+    <string name="dashboard_comment_edit_error">Não foi possível atualizar o comentário.</string>
+    <string name="dashboard_comment_delete_success">Comentário excluído.</string>
+    <string name="dashboard_comment_delete_error">Não foi possível excluir o comentário.</string>
+    <string name="dashboard_post_delete_success">Voz excluída com sucesso.</string>
+    <string name="dashboard_post_delete_error">Não foi possível excluir esta voz. Tente novamente.</string>
+    <string name="dashboard_share_post_title">Voz - Planet - %1$s</string>
+    <string name="dashboard_share_post_server_fallback">MyPlanetLite</string>
+    <string name="share_post">Compartilhar post</string>
+    <string name="dashboard_share_post_chooser_title">Compartilhar voz</string>
+    <string name="dashboard_share_post_fallback">Compartilhado do MyPlanetLite</string>
+    <string name="dashboard_relative_time_seconds">há alguns segundos</string>
+    <string name="dashboard_relative_time_minute">há 1 minuto</string>
+    <string name="dashboard_relative_time_minutes">há %1$d minutos</string>
+    <string name="dashboard_relative_time_hour">há 1 hora</string>
+    <string name="dashboard_relative_time_hours">há %1$d horas</string>
+    <string name="dashboard_relative_time_day">há 1 dia</string>
+    <string name="dashboard_relative_time_days">há %1$d dias</string>
+    <string name="dashboard_relative_time_month">há 1 mês</string>
+    <string name="dashboard_relative_time_months">há %1$d meses</string>
+    <string name="dashboard_relative_time_year">há 1 ano</string>
+    <string name="dashboard_relative_time_years">há %1$d anos</string>
+
+    <string name="search_hint">Pesquisar</string>
+    <string name="add_member_button_description">Adicionar membro</string>
+    <string name="dashboard_courses_title">Cursos</string>
+    <string name="dashboard_courses_tab_mine">Meus cursos</string>
+    <string name="dashboard_courses_tab_all">Cursos</string>
+    <string name="dashboard_courses_tab_team">Cursos da equipe</string>
+    <string name="dashboard_courses_content_description_icon">Ícone do curso</string>
+    <string name="dashboard_course_progress_value">Progresso: %1$d%%</string>
+    <string name="dashboard_courses_sample_name_creativity">Pensamento criativo</string>
+    <string name="dashboard_courses_sample_name_digital_marketing">Marketing digital</string>
+    <string name="dashboard_courses_sample_name_leadership">Fundamentos de liderança</string>
+    <string name="dashboard_courses_sample_name_data">Fundamentos de dados</string>
+    <string name="dashboard_courses_sample_name_communication">Comunicação eficaz</string>
+    <string name="dashboard_courses_sample_name_finance">Fundamentos de finanças</string>
+    <string name="dashboard_courses_sample_name_english">Inglês para o trabalho</string>
+    <string name="dashboard_courses_sample_name_coding">Introdução à programação</string>
+    <string name="dashboard_courses_header_title">O que você gostaria de aprender hoje?</string>
+    <string name="dashboard_courses_header_subtitle">Pesquise abaixo.</string>
+    <string name="dashboard_courses_search_hint">Pesquisar cursos</string>
+    <string name="dashboard_courses_category_all">Todos os cursos</string>
+    <string name="dashboard_courses_category_uiux">Design UI/UX</string>
+    <string name="dashboard_courses_category_development">Desenvolvimento</string>
+    <string name="dashboard_courses_category_basic">Básico</string>
+    <string name="dashboard_courses_author_format">Por: %1$s</string>
+    <string name="dashboard_courses_lessons_format">%1$d etapas</string>
+    <string name="dashboard_courses_rating_format">%1$.1f ★</string>
+    <string name="dashboard_courses_price_format">$%1$.0f</string>
+    <string name="dashboard_course_lessons_title">Todas as lições de %1$s</string>
+    <string name="dashboard_course_lessons_summary">Aqui %1$d lições e complete %2$d</string>
+    <string name="dashboard_course_lessons_progress">%1$d de %2$d etapas concluídas</string>
+    <string name="dashboard_course_lesson_duration">%1$d min</string>
+    <string name="dashboard_course_lessons_topic_intro">O que é %1$s?</string>
+    <string name="dashboard_course_lessons_topic_why">Por que %1$s é necessário?</string>
+    <string name="dashboard_course_lessons_topic_definitions">Quais são as definições de %1$s?</string>
+    <string name="dashboard_course_lessons_topic_types">Quais são os 4 tipos de %1$s?</string>
+    <string name="dashboard_course_lessons_topic_basics">Fundamentos de %1$s</string>
+    <string name="dashboard_course_lessons_open_course">Ir para o curso</string>
+    <string name="dashboard_course_lessons_join_course">Entrar no curso</string>
+    <string name="dashboard_course_leave_course">Sair do curso</string>
+    <string name="course_wizard_close">Fechar curso</string>
+    <string name="course_wizard_previous">Anterior</string>
+    <string name="course_wizard_next">Próximo</string>
+    <string name="course_wizard_finish">Concluir curso</string>
+    <string name="course_wizard_step_position">Etapa %1$d de %2$d</string>
+    <string name="course_wizard_open_survey">Abrir pesquisa</string>
+    <string name="course_wizard_open_exam">Abrir prova</string>
+    <string name="dashboard_exam_title">Prova</string>
+    <string name="dashboard_exam_incorrect_answers">Algumas respostas estão incorretas. Tente novamente.</string>
+    <string name="dashboard_exam_completed">Prova concluída.</string>
+    <string name="course_wizard_attachments_title">Anexos</string>
+    <string name="course_wizard_attachment_video">Vídeo</string>
+    <string name="course_wizard_attachment_image">Imagem</string>
+    <string name="course_wizard_attachment_audio">Áudio</string>
+    <string name="course_wizard_attachment_pdf">PDF</string>
+    <string name="course_wizard_play_error">Não foi possível abrir o anexo</string>
+    <string name="course_wizard_fullscreen">Alternar tela cheia</string>
+    <string name="course_wizard_play_video">Reproduzir vídeo</string>
+    <string name="course_wizard_open_image">Abrir imagem</string>
+    <string name="course_wizard_open_pdf">Abrir PDF</string>
+    <string name="course_wizard_pdf_page_counter">Página %1$d/%2$d</string>
+    <string name="course_wizard_exit_fullscreen">Sair da tela cheia</string>
+    <string name="dashboard_course_leave_confirm">Deseja sair deste curso?</string>
+    <string name="dashboard_course_details_close">Fechar</string>
+    <string name="dashboard_course_details_description" />
+    <string name="dashboard_courses_missing_credentials">Configuração do servidor ou credenciais ausentes</string>
+    <string name="dashboard_courses_loading_error">Não foi possível carregar cursos</string>
+    <string name="create_voice_image_options_title">Opções da imagem</string>
+    <string name="create_voice_image_option_view">Ver imagem</string>
+    <string name="create_voice_image_option_delete">Excluir imagem</string>
+</resources>

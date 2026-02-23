@@ -1,0 +1,611 @@
+<resources>
+    <string name="app_name">myPlanet Lite</string>
+    <string name="app_name_prefix">myPlanet</string>
+    <string name="app_name_suffix">Lite</string>
+    <string name="app_version">संस्करण %1$s</string>
+    <string name="login_username_label">प्रयोगकर्तानाम</string>
+    <string name="login_password_label">पासवर्ड</string>
+    <string name="login_action">साइन इन गर्नुहोस्</string>
+    <string name="login_username_error">तपाईंको प्रयोगकर्तानाम लेख्नुहोस्</string>
+    <string name="login_password_error">पासवर्ड कम्तीमा ४ वर्णको हुनुपर्छ</string>
+    <string name="login_invalid_credentials">प्रयोगकर्तानाम वा पासवर्ड मेल खान्दैन</string>
+    <string name="login_generic_error">साइन इन गर्न सकेन। कृपया फेरि प्रयास गर्नुहोस्।</string>
+    <string name="logo">लोगो</string>
+    <string name="login_signup_prompt">खाता छैन?</string>
+    <string name="login_signup_action">दर्ता गर्नुहोस्</string>
+    <string name="login_privacy_policy_prompt">हाम्रो <font color="@color/login_primary">गोपनीयता नीति</font> पढ्नुहोस्</string>
+    <string name="login_survey_translation_consent_title">सर्वेक्षण अनुवाद</string>
+    <string name="login_survey_translation_consent_description">तपाईंलाई सर्वेक्षण अनुवाद उपलब्ध गराउन, हामीलाई पाठ सुरक्षित रूपमा प्रशोधन गर्न तपाईंको सहमति आवश्यक छ।</string>
+    <string name="login_survey_translation_consent_accept">अनुवाद सक्षम गर्नुहोस् र अनुवाद गोपनीयता नीतिमा सहमति दिनुहोस्</string>
+    <string name="login_survey_translation_consent_policy">अनुवाद गोपनीयता नीति हेर्नुहोस्</string>
+    <string name="login_server_label">सर्भर छान्नुहोस्</string>
+    <string name="login_server_error">सर्भर छान्नुहोस् वा प्रविष्ट गर्नुहोस्</string>
+    <string name="login_remember_action">मलाई सम्झनुहोस्</string>
+    <string name="server_planet_xela">Planet Xela</string>
+    <string name="server_planet_guatemala">Planet Guatemala</string>
+    <string name="server_planet_san_pablo">Planet San Pablo</string>
+    <string name="server_planet_somalia">Planet Somalia</string>
+    <string name="server_planet_learning">Learning</string>
+    <string name="server_planet_earth">पृथ्वी ग्रह</string>
+    <string name="server_planet_vi">Planet VI</string>
+    <string name="server_planet_uriur">Uriur</string>
+    <string name="server_configuration_title">सर्भर कन्फिगर गर्नुहोस्</string>
+    <string name="server_configuration_url_hint">सर्भर ठेगाना</string>
+    <string name="server_configuration_name_hint">सर्भर नाम</string>
+    <string name="server_configuration_country_hint">झण्डा</string>
+    <string name="server_configuration_save">सुरक्षित गर्नुहोस्</string>
+    <string name="server_configuration_url_error">सर्भर ठेगाना प्रविष्ट गर्नुहोस्</string>
+    <string name="server_configuration_name_error">सर्भर नाम प्रविष्ट गर्नुहोस्</string>
+    <string name="server_configuration_country_error">झण्डा चयन गर्नुहोस्</string>
+    <string name="server_configuration_add_button">थप्नुहोस्</string>
+    <string name="server_configuration_added">सर्भर सूचीमा थपियो</string>
+    <string name="server_configuration_duplicate_error">सर्भर पहिले नै सूचीमा छ</string>
+    <string name="server_option_configure">सर्भर थप्नुहोस्…</string>
+    <string name="server_option_clear">सर्भरहरू हटाउनुहोस्</string>
+    <string name="language_selector_content_description">भाषा चयन गर्नुहोस्</string>
+    <string name="language_selector_title">भाषा छान्नुहोस्</string>
+    <string name="language_name_english">English</string>
+    <string name="language_name_spanish">Español</string>
+    <string name="language_name_french">Français</string>
+    <string name="language_name_portuguese">पोर्तुगीज</string>
+    <string name="language_name_arabic">العربية</string>
+    <string name="language_name_somali">Soomaali</string>
+    <string name="language_name_nepali">नेपाली</string>
+    <string name="language_name_hindi">हिन्दी</string>
+    <string name="powered_by_plataformas_informaticas" translatable="false"><![CDATA[Powered by <a href="http://plataformasinformaticas.com">Plataformas Informáticas</a>]]></string>
+    <string name="signup_navigate_back">फिर्ता जानुहोस्</string>
+    <string name="signup_header_title">Planet</string>
+    <string name="signup_header_message">यी चरणहरू पूरा गरेर सिकाइ समुदायको हिस्सा बन्नुहोस्।</string>
+    <string name="signup_username_label">@string/login_username_label</string>
+    <string name="signup_password_label">@string/login_password_label</string>
+    <string name="signup_confirm_password_label">पासवर्ड पुष्टि गर्नुहोस्</string>
+    <string name="signup_first_name_label">पहिलो नाम</string>
+    <string name="signup_middle_name_label">बीचको नाम</string>
+    <string name="signup_last_name_label">थर</string>
+    <string name="signup_language_label">भाषा</string>
+    <string name="signup_gender_label">लिङ्ग</string>
+    <string name="signup_birth_date_label">जन्म मिति</string>
+    <string name="signup_level_label">स्तर</string>
+    <string name="signup_email_label">इमेल</string>
+    <string name="signup_email_error_invalid">वैध इमेल लेख्नुहोस्</string>
+    <string name="signup_password_error_mismatch">पासवर्डहरू मिल्नुपर्छ</string>
+    <string name="signup_password_error_length">पासवर्ड कम्तीमा ६ अक्षरको हुनुपर्छ</string>
+    <string name="signup_username_error_invalid">कृपया अक्षरबाट सुरु हुने र केवल अक्षर तथा अंक प्रयोग गर्ने प्रयोगकर्तानाम लेख्नुहोस्</string>
+    <string name="signup_first_name_error_required">आफ्नो नाम लेख्नुहोस्</string>
+    <string name="signup_last_name_error_required">आफ्नो थर लेख्नुहोस्</string>
+    <string name="signup_birth_date_error_required">आफ्नो जन्म मिति चयन गर्नुहोस्</string>
+    <string name="signup_gender_error_required">एक लिङ्ग विकल्प चयन गर्नुहोस्</string>
+    <string name="signup_phone_label">मोबाइल नम्बर</string>
+    <string name="signup_phone_error_invalid">मान्य मोबाइल नम्बर लेख्नुहोस्</string>
+    <string name="signup_language_error_required">भाषा चयन गर्नुहोस्</string>
+    <string name="signup_level_error_required">स्तर चयन गर्नुहोस्</string>
+    <string name="signup_birth_date_picker_title">जन्म मिति चयन गर्नुहोस्</string>
+    <string name="signup_next_action">अर्को</string>
+    <string name="signup_back_action">पछाडि</string>
+    <string name="signup_accept_action">स्वीकार गर्नुहोस्</string>
+    <string name="signup_connection_checking">सर्भर जडान जाँच्दै…</string>
+    <string name="signup_connection_error_retry">सर्भरसँग जडान हुन सकेन। पुन: प्रयास गर्न ट्याप गर्नुहोस्।</string>
+    <string name="signup_connection_error_input">सर्भरसँग जडान हुन सकेन।</string>
+    <string name="signup_username_checking">प्रयोगकर्तानाम उपलब्धता जाँच्दै…</string>
+    <string name="signup_username_error_taken">यो प्रयोगकर्तानाम पहिले नै प्रयोगमा छ।</string>
+
+    <string name="signup_step_username_title">प्रयोगकर्तानाम छान्नुहोस्</string>
+    <string name="signup_step_username_subtitle">अक्षरबाट सुरु गर्नुहोस्। केवल अक्षर र अंक प्रयोग गर्नुहोस्।</string>
+    <string name="signup_step_names_title">तपाईंको नाम के हो?</string>
+    <string name="signup_step_names_subtitle">आफ्नो वास्तविक नाम लेख्नुहोस्।</string>
+    <string name="signup_step_birth_date_title">तपाईं कहिले जन्मनुभएको हो?</string>
+    <string name="signup_step_birth_date_subtitle">जन्म मिति चयन गर्नुहोस्।</string>
+    <string name="signup_step_gender_title">तपाईं कुन लिङ्गसँग परिचित हुनुहुन्छ?</string>
+    <string name="signup_step_gender_subtitle">तपाईंलाई सबैभन्दा उपयुक्त विकल्प छान्नुहोस्।</string>
+    <string name="signup_step_contact_title">हामी तपाईंलाई कसरी सम्पर्क गर्ने?</string>
+    <string name="signup_step_contact_subtitle">आफ्नो इमेल र मोबाइल नम्बर दिनुहोस्।</string>
+    <string name="signup_step_password_title">पासवर्ड बनाउनुहोस्</string>
+    <string name="signup_step_password_subtitle">कम्तीमा छ वटा अक्षर वा अंक प्रयोग गर्नुहोस्।</string>
+    <string name="signup_step_language_title">भाषा र स्तर</string>
+    <string name="signup_step_language_subtitle">आफ्नो मनपर्ने भाषा र स्तर छान्नुहोस्।</string>
+    <string name="signup_step_license_title">लाइसेन्स स्वीकार गर्नुहोस्</string>
+    <string name="signup_step_license_subtitle">खाता बनाउनुअघि नियमहरू हेर्नुहोस्।</string>
+
+    <string name="signup_license_title">अन्तिम प्रयोगकर्ता इजाजतपत्र सम्झौता (EULA)</string>
+    <string name="signup_license_subtitle">Open Learning Exchange
+एप्लिकेशनहरू: Planet, myPlanet र myPlanetLite</string>
+    <string name="signup_license_section1_title">१. सम्झौताको स्वीकृति</string>
+    <string name="signup_license_section1_body">यस एन्ड्रोइड एप्लिकेशनभित्र "स्वीकार" चयन गर्दा, तपाईंले यो अन्तिम प्रयोगकर्ता इजाजतपत्र सम्झौता ("सम्झौता") मा उल्लेखित सर्तहरू पढेको, बुझेको र स्वीकारेको प्रमाणित गर्नुहुन्छ।
+
+यदि तपाईं सहमत हुनुहुन्न भने "रद्द गर्नुहोस्" चयन गरी एप्लिकेशन प्रयोग गर्न बन्द गर्नुहोस्।</string>
+    <string name="signup_license_section2_title">२. स्वामित्व</string>
+    <string name="signup_license_section2_body">Open Learning Exchange ("OLE") Planet, myPlanet र myPlanetLite एप्लिकेशनहरू र तिनका सामग्री, डिजाइन, कोड तथा सम्बन्धित सामग्रीको स्वामी हो।</string>
+    <string name="signup_license_section3_title">३. प्रयोगको इजाजतपत्र</string>
+    <string name="signup_license_section3_body">OLE ले प्रयोगकर्तालाई उसको संस्था वा संगठनले अनुमति दिएको प्रयोजनका लागि मात्र यो एन्ड्रोइड एप्लिकेशन स्थापना र प्रयोग गर्न सीमित, व्यक्तिगत, गैर-अद्वितीय र गैर-हस्तान्तरणीय इजाजतपत्र प्रदान गर्छ।</string>
+    <string name="signup_license_section4_title">४. डाटा, सुरक्षा र गोपनीयता</string>
+    <string name="signup_license_section4_point1">४.१ प्रयोगकर्ताको प्रमाणीकरण, सञ्चालन र समायोजनका लागि आवश्यक व्यक्तिगत डाटा एप्लिकेशनहरूले संकलन र प्रशोधन गर्नुपर्छ।</string>
+    <string name="signup_license_section4_point2">४.२ एप्लिकेशनहरूले प्रसारण वा भण्डारण गर्ने सम्पूर्ण डाटा प्रचलित सुरक्षा मापदण्डअनुसार इन्क्रिप्ट गरिएको हुन्छ।</string>
+    <string name="signup_license_section4_point3">४.३ एप्लिकेशन प्रयोग गर्दा यस्तो सुरक्षित प्रशोधन हुने कुरामा प्रयोगकर्ता सहमत हुन्छ।</string>
+    <string name="signup_license_section5_title">५. प्रणालीबाट निष्क्रियता</string>
+    <string name="signup_license_section5_body">प्रयोगकर्ताले खाता बन्द गर्ने वा हटाउने निर्णय गरेमा, Planet प्लेटफर्म भित्रका प्रशासकसँग प्रत्यक्ष सम्पर्क गरी पहुँच बन्द वा डाटा मेटाउने प्रक्रियालाई अनुरोध गर्नुपर्छ।</string>
+    <string name="signup_license_section6_title">६. प्रयोगकर्ताका दायित्व</string>
+    <string name="signup_license_section6_intro">प्रयोगकर्ताले निम्न कुराहरूमा सहमति जनाउँछ:</string>
+    <string name="signup_license_section6_point1">• एप्लिकेशनलाई जिम्मेवारीका साथ र लागू हुने नियमअनुसार प्रयोग गर्ने।</string>
+    <string name="signup_license_section6_point2">• आफ्नो लगइन जानकारी सुरक्षित राख्ने।</string>
+    <string name="signup_license_section6_point3">• कुनै दुरुपयोग वा शंकास्पद व्यवहार देखिएमा आफ्ना संस्थागत प्रशासकलाई खबर गर्ने।</string>
+    <string name="signup_license_section7_title">७. सम्झौतामा परिमार्जन</string>
+    <string name="signup_license_section7_body">OLE ले आवश्यकता अनुसार यी सर्तहरू अद्यावधिक गर्न सक्छ। कुनै परिवर्तनपछि एप्लिकेशन प्रयोग गर्न निरन्तरता दिनु अद्यावधिक सम्झौताको स्वीकृतिको रूपमा मानिनेछ।</string>
+    <string name="signup_license_section8_title">८. पुष्टि</string>
+    <string name="signup_license_section8_intro">"स्वीकार" ट्याप गर्दा तपाईंले यो कुरामा सहमति जनाउनुहुन्छ:</string>
+    <string name="signup_license_section8_point1">• तपाईंले यो सम्झौता पढ्नुभएको छ।</string>
+    <string name="signup_license_section8_point2">• यसको दायरालाई बुझ्नुभएको छ।</string>
+    <string name="signup_license_section8_point3">• यसको सबै सर्त तथा नियमहरू पूर्ण रूपमा स्वीकार गर्नुभएको छ।</string>
+    <string name="signup_license_auto_login_label">लगइन फारम भर्न यी विवरण प्रयोग गर्नुहोस्</string>
+
+    <string name="signup_gender_option_male">पुरुष</string>
+    <string name="signup_gender_option_female">महिला</string>
+
+    <string-array name="signup_gender_options_language_en">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_es">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_fr">
+        <item>Masculin</item>
+        <item>Féminin</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_ar">
+        <item>ذكر</item>
+        <item>أنثى</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_so">
+        <item>Lab</item>
+        <item>Dhedig</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_ne">
+        <item>पुरुष</item>
+        <item>महिला</item>
+    </string-array>
+
+    <string name="signup_level_option_beginner">प्रारम्भिक</string>
+    <string name="signup_level_option_intermediate">मध्यम</string>
+    <string name="signup_level_option_advanced">उन्नत</string>
+    <string name="signup_level_option_expert">विशेषज्ञ</string>
+
+    <string-array name="signup_language_options">
+        <item>@string/language_name_english</item>
+        <item>@string/language_name_spanish</item>
+        <item>@string/language_name_french</item>
+        <item>@string/language_name_portuguese</item>
+        <item>@string/language_name_arabic</item>
+        <item>@string/language_name_somali</item>
+        <item>@string/language_name_nepali</item>
+        <item>@string/language_name_hindi</item>
+    </string-array>
+
+    <string-array name="signup_level_options">
+        <item>@string/signup_level_option_beginner</item>
+        <item>@string/signup_level_option_intermediate</item>
+        <item>@string/signup_level_option_advanced</item>
+        <item>@string/signup_level_option_expert</item>
+    </string-array>
+    <string-array name="signup_level_options_language_en">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+        <item>Expert</item>
+    </string-array>
+    <string-array name="signup_level_options_language_es">
+        <item>Principiante</item>
+        <item>Intermedio</item>
+        <item>Avanzado</item>
+        <item>Experto</item>
+    </string-array>
+    <string-array name="signup_level_options_language_fr">
+        <item>Débutant</item>
+        <item>Intermédiaire</item>
+        <item>Avancé</item>
+        <item>Expert</item>
+    </string-array>
+    <string-array name="signup_level_options_language_ar">
+        <item>مبتدئ</item>
+        <item>متوسط</item>
+        <item>متقدم</item>
+        <item>خبير</item>
+    </string-array>
+    <string-array name="signup_level_options_language_so">
+        <item>Bilow</item>
+        <item>Dhexdhexaad</item>
+        <item>Sareeye</item>
+        <item>Khabiir</item>
+    </string-array>
+    <string-array name="signup_level_options_language_ne">
+        <item>प्रारम्भिक</item>
+        <item>मध्यम</item>
+        <item>उन्नत</item>
+        <item>विशेषज्ञ</item>
+    </string-array>
+    <string name="server_status_checking">सर्भर स्थिति जाँच्दै…</string>
+    <string name="server_status_connected">सर्भर जडान भयो</string>
+    <string name="server_status_disconnected">सर्भर विच्छेद भयो</string>
+    <string name="server_status_disconnected_retry">सर्भर विच्छेद भयो। पुनः प्रयास गर्न ट्याप गर्नुहोस्।</string>
+    <string name="dashboard_logo_content_description">myPlanet लोगो</string>
+    <string name="dashboard_settings_content_description">सेटिङ खोल्नुहोस्</string>
+    <string name="dashboard_settings_title">सेटिङ्स</string>
+    <string name="dashboard_settings_menu_language">भाषा</string>
+    <string name="dashboard_settings_menu_survey_translation">सर्वेक्षण स्वत: अनुवाद गर्नुहोस्</string>
+    <string name="dashboard_settings_menu_voice_batch_size">प्रति लोड आवाजहरू</string>
+    <string name="dashboard_settings_survey_translation_enabled">सर्वेक्षण अनुवाद सक्षम भयो</string>
+    <string name="dashboard_settings_survey_translation_disabled">सर्वेक्षण अनुवाद अक्षम भयो</string>
+    <string name="dashboard_survey_translation_notice">यो एपले सामग्री अनुवाद गर्न कृत्रिम बुद्धिमत्ता प्रयोग गर्छ। जारी राख्दै, तपाईं हाम्रो गोपनीयता नीतिसँग सहमत हुनुहुन्छ।</string>
+    <string name="dashboard_survey_translation_applied_notice">यो सर्वेक्षण कृत्रिम बुद्धिमत्ताले अनुवाद गरिएको हो।</string>
+    <string name="dashboard_survey_translation_consent_accept">स्वीकार गर्नुहोस्</string>
+    <string name="dashboard_survey_translation_consent_cancel">रद्द गर्नुहोस्</string>
+    <string name="dashboard_settings_voice_batch_size_title">एकै पटक कति आवाजहरू लोड गर्ने छनोट गर्नुहोस्</string>
+    <string name="dashboard_settings_voice_batch_size_option">%1$d आवाजहरू</string>
+    <string name="dashboard_avatar_content_description">प्रयोगकर्ताको अवतार</string>
+    <string name="dashboard_voices_title">स्वरहरू</string>
+    <string name="dashboard_teams_title">मेरो टिमहरू</string>
+    <string name="dashboard_teams_my_title">मेरो टोलीहरू</string>
+    <string name="dashboard_teams_my_description">तपाईं सदस्य रहेका र सहभागी हुन सकिने समूहहरू।</string>
+    <string name="dashboard_teams_select_team_hint">मेनुभित्रबाट एउटा टोली छानेर यसको जानकारी हेर्नुहोस्।</string>
+    <string name="dashboard_teams_explore_title">टोलीहरू अन्वेषण गर्नुहोस्</string>
+    <string name="dashboard_teams_explore_description">तपाईं सामेल हुन सक्ने उपलब्ध समूहहरू।</string>
+    <string name="dashboard_teams_join_prompt">तपाईं अहिलेसम्म कुनै टिममा हुनुहुन्न। सुरु गर्न तपाईं एउटा टिममा सामेल हुन सक्नुहुन्छ।</string>
+    <string name="dashboard_teams_no_server">आफ्ना टिमहरू हेर्न सर्भरमा जडान गर्नुहोस्।</string>
+    <string name="dashboard_teams_no_user">हामीले तपाईंको प्रयोगकर्ता पत्ता लगाउन सकेनौं। कृपया फेरि साइन इन गर्नुहोस्।</string>
+    <string name="dashboard_teams_no_credentials">हामीले तपाईंको लगइन विवरण फेला पार्न सकेनौं। कृपया फेरि साइन इन गर्नुहोस्।</string>
+    <string name="dashboard_teams_error_loading">हामीले तपाईंको टिमहरू लोड गर्न सकेनौं। पछि पुनः प्रयास गर्नुहोस्।</string>
+    <string name="dashboard_teams_member_unknown">सदस्य संख्या उपलब्ध छैन</string>
+    <string name="dashboard_teams_unknown_name">नाम नभएको टिम</string>
+    <string name="dashboard_teams_default_initials">टीटी</string>
+    <string name="dashboard_teams_bookmark">टोलीलाई पुस्तकचिन्ह लगाउनुहोस्</string>
+    <string name="dashboard_teams_join_team">टिममा सामेल हुनुहोस्</string>
+    <string name="dashboard_teams_join_pending">सामेल हुने अनुरोध पठाइयो</string>
+    <string name="dashboard_teams_cancel_join_title">सामेल हुने अनुरोध रद्द गर्ने?</string>
+    <string name="dashboard_teams_cancel_join_message">के तपाईं यो टिममा सामेल हुने आफ्नो अनुरोध रद्द गर्न चाहनुहुन्छ?</string>
+    <string name="dashboard_teams_cancel_join_confirm">अनुरोध रद्द गर्नुहोस्</string>
+    <string name="dashboard_teams_leave_team">टिम छोड्नुहोस्</string>
+    <string name="dashboard_teams_leader_badge">तपाईं टिम नेता हुनुहुन्छ</string>
+    <plurals name="dashboard_teams_member_count">
+        <item quantity="one">%d सदस्य</item>
+        <item quantity="other">%d सदस्य</item>
+    </plurals>
+    <string name="dashboard_home">गृह</string>
+    <string name="dashboard_team_members_title">टोलीका सदस्यहरू</string>
+    <string name="dashboard_team_members_empty">यो टोलीमा अहिलेसम्म कुनै सदस्य छैन।</string>
+    <string name="dashboard_team_members_error_loading">हामी अहिले टोलीका सदस्यहरू लोड गर्न सकेनौं।</string>
+    <string name="dashboard_team_members_leader_role">नेता</string>
+    <string name="dashboard_team_members_member_role">सदस्य</string>
+    <string name="dashboard_team_members_missing_credentials">टोलीका सदस्यहरू हेर्न साइन इन गर्नुहोस्।</string>
+    <string name="dashboard_team_members_missing_server">टोलीका सदस्यहरू हेर्न सर्वर सेट गर्नुहोस्।</string>
+    <string name="dashboard_team_members_unknown">अज्ञात सदस्य</string>
+    <string name="dashboard_team_members_unknown_username">अज्ञात प्रयोगकर्ता नाम</string>
+    <string name="dashboard_team_members_profile_unavailable">यो सदस्यका लागि प्रोफाइल उपलब्ध छैन।</string>
+    <string name="dashboard_team_members_remove_action">हटाउने</string>
+    <string name="dashboard_team_members_remove_cancel">रद्द गर्नुहोस्</string>
+    <string name="dashboard_team_members_remove_confirmation_title">सदस्य हटाउनुहोस्</string>
+    <string name="dashboard_team_members_remove_confirmation_message">%1$s लाई टोलीबाट हटाउने?</string>
+    <string name="dashboard_team_members_remove_success">%1$s टोलीबाट हटाइयो।</string>
+    <string name="dashboard_team_members_remove_error">%1$s लाई हटाउन सकेनौं। कृपया पुन: प्रयास गर्नुहोस्।</string>
+    <string name="dashboard_team_members_remove_content_description">टोलीबाट सदस्य हटाउनुहोस्</string>
+    <string name="dashboard_team_members_avatar_content_description">टोली सदस्यको अवतार</string>
+    <string name="dashboard_invite_members_title">यस टोलीमा मानिसहरूलाई निमन्त्रणा गर्नुहोस्</string>
+    <string name="dashboard_invite_members_subtitle">+ बटन थिचेर टोलीमा प्रयोगकर्ताहरू थप्नुहोस्।</string>
+    <string name="dashboard_invite_members_search_hint">टोली सदस्यहरू खोज्नुहोस्...</string>
+    <string name="dashboard_invite_members_add">थप्नुहोस्</string>
+    <string name="dashboard_invite_members_cancel">बन्द गर्नुहोस्</string>
+    <string name="dashboard_invite_members_load_error">अहिले निमन्त्रणा गर्न प्रयोगकर्ताहरू लोड गर्न सकेनौं।</string>
+    <string name="dashboard_invite_members_add_success">%1$s टोलीमा थपियो।</string>
+    <string name="dashboard_invite_members_add_error">%1$s लाई टोलीमा थप्न सकिएन।</string>
+    <string name="dashboard_invite_members_add_error_generic">यो प्रयोगकर्ता अहिले थप्न सकिँदैन।</string>
+    <string name="dashboard_team_members_search_empty">तपाईंको खोजसँग मेल खाने सदस्यहरू छैनन्।</string>
+    <string name="dashboard_post_image_content_description">सामग्रीको तस्बिर</string>
+    <string name="dashboard_post_comments_content_description">@string/dashboard_post_detail_comments_title</string>
+    <string name="dashboard_image_preview_content_description">पूर्ण पर्दा तस्बिर</string>
+    <string name="dashboard_profile_menu_profile">@string/profile_title</string>
+    <string name="dashboard_profile_menu_teams">टोलीहरू</string>
+    <string name="dashboard_profile_menu_logout">लग आउट</string>
+    <string name="teams_title">टोलीहरू</string>
+    <string name="profile_title">प्रोफाइल</string>
+    <string name="profile_description">आफ्नो व्यक्तिगत जानकारी हेर्नुहोस् र सम्पादन गर्नुहोस्।</string>
+    <string name="profile_section_account">खाता</string>
+    <string name="profile_section_personal">व्यक्तिगत विवरण</string>
+    <string name="profile_section_contact">सम्पर्क जानकारी</string>
+    <string name="profile_section_learning">सिकाइ प्राथमिकताहरू</string>
+    <string name="profile_username_label">@string/login_username_label</string>
+    <string name="profile_avatar_label">अवतार</string>
+    <string name="profile_avatar_hint">वृत्ताकार र चौको फ्रेममा कस्तो देखिन्छ भनेर पूर्वावलोकन गर्न एउटा फोटो छान्नुहोस्।</string>
+    <string name="profile_avatar_preview_circle_label">वृत्ताकार</string>
+    <string name="profile_avatar_preview_square_label">चौको</string>
+    <string name="profile_avatar_preview_circle_content_description">अवतारको वृत्ताकार पूर्वावलोकन</string>
+    <string name="profile_avatar_preview_square_content_description">अवतारको चौको पूर्वावलोकन</string>
+    <string name="profile_avatar_change_button">तस्वीर छान्नुहोस्</string>
+    <string name="profile_avatar_picker_error">त्यो तस्वीर लोड गर्न सकेनौं। अर्को फाइल प्रयास गर्नुहोस्।</string>
+    <string name="profile_avatar_crop_title">अवतार समायोजन गर्नुहोस्</string>
+    <string name="profile_loading_message">तपाईंको जानकारी अद्यावधिक गर्दैछौं&#8230;</string>
+    <string name="profile_refresh_failed_toast">हामी तपाईंको प्रोफाइल ताजा गर्न सकेनौं। सुरक्षित गरिएको जानकारी देखाइरहेका छौं।</string>
+    <string name="profile_save_button">परिवर्तनहरू बचत गर्नुहोस्</string>
+    <string name="profile_save_success_toast">तपाईंको प्रोफाइल अद्यावधिक भयो।</string>
+    <string name="profile_save_failed_toast">हामीले तपाईंका परिवर्तनहरू बचत गर्न सकेनौं। फेरि प्रयास गर्नुहोस्।</string>
+    <string name="profile_birth_date_picker_title">@string/signup_birth_date_error_required</string>
+    <string name="profile_field_first_name">@string/signup_first_name_label</string>
+    <string name="profile_field_middle_name">@string/signup_middle_name_label</string>
+    <string name="profile_field_last_name">@string/signup_last_name_label</string>
+    <string name="profile_field_email">@string/signup_email_label</string>
+    <string name="profile_field_phone">फोन नम्बर</string>
+    <string name="profile_field_language">@string/signup_language_label</string>
+    <string name="profile_field_birth_date">@string/signup_birth_date_label</string>
+    <string name="dashboard_team_member_profile_title">सदस्य प्रोफाइल</string>
+    <string name="dashboard_team_member_profile_navigation_content_description">फिर्ता</string>
+    <string name="dashboard_team_member_profile_username_format">@%1$s</string>
+    <string name="dashboard_team_member_profile_identity_section">पहिचान</string>
+    <string name="dashboard_team_member_profile_name_label">नाम</string>
+    <string name="dashboard_team_member_profile_username_label">प्रयोगकर्ता नाम</string>
+    <string name="dashboard_team_member_profile_contact_section">सम्पर्क</string>
+    <string name="dashboard_team_member_profile_email_label">इमेल</string>
+    <string name="dashboard_team_member_profile_phone_label">फोन नम्बर</string>
+    <string name="dashboard_team_member_profile_email_action">इमेल पठाउनुहोस्</string>
+    <string name="dashboard_team_member_profile_phone_action">फोन गर्नुहोस्</string>
+    <string name="dashboard_team_member_profile_preferences_section">प्राथमिकताहरू</string>
+    <string name="dashboard_team_member_profile_language_label">भाषा</string>
+    <string name="dashboard_team_member_profile_level_label">स्तर</string>
+    <string name="dashboard_team_member_profile_gender_label">लिङ्ग</string>
+    <string name="dashboard_team_member_profile_birth_date_label">जन्म मिति</string>
+    <string name="dashboard_team_member_profile_not_available">उपलब्ध छैन</string>
+    <string name="dashboard_team_member_profile_error">सदस्य प्रोफाइल लोड गर्न सकिएन।</string>
+    <string name="profile_field_gender">@string/signup_gender_label</string>
+    <string name="profile_field_level">सिकाइ स्तर</string>
+    <string name="dashboard_profile_name_placeholder">तपाईंको नाम</string>
+    <string name="dashboard_profile_username_placeholder">&#64;प्रयोगकर्तानाम</string>
+    <string name="dashboard_profile_username_format">&#64;%1$s</string>
+    <string name="dashboard_add_voice_content_description">नयाँ स्वर थप्नुहोस्</string>
+    <string name="dashboard_voices_empty">अहिलेसम्म कुनै आवाज उपलब्ध छैन।</string>
+    <string name="dashboard_voices_no_server">समुदायका आवाज हेर्न लगइन गर्नुहोस्।</string>
+    <string name="dashboard_voices_error">भर्खरका आवाजहरू लोड गर्न सकेनौं।</string>
+    <string name="dashboard_voices_error_toast">थप आवाजहरू लोड गर्न सकेनौं।</string>
+    <string name="dashboard_surveys_title">सर्वेक्षणहरू</string>
+    <string name="dashboard_surveys_header_title">टिम सर्वेक्षण</string>
+    <string name="dashboard_surveys_header_description">आफ्नो टिमका वा समुदायबाट आयात गरिएका सर्वेक्षणहरू हेर्नुहोस्।</string>
+    <string name="dashboard_surveys_tab_team">टोली</string>
+    <string name="dashboard_surveys_tab_adopted">आयातित</string>
+    <string name="dashboard_surveys_empty_team">तपाईंको टिमले अझै कुनै सर्वेक्षण बनाएको छैन।</string>
+    <string name="dashboard_surveys_empty_adopted">अहिले कुनै आयात गरिएका सर्वेक्षण छैनन्।</string>
+    <string name="dashboard_surveys_error_loading">हामीले अहिले सर्वेक्षण लोड गर्न सकेनौं।</string>
+    <string name="dashboard_surveys_missing_server">सर्वेक्षण लोड गर्न सर्भर छान्नुहोस्।</string>
+    <string name="dashboard_surveys_missing_team">सर्वेक्षण लोड गर्न टिम चयन गर्नुहोस्।</string>
+    <string name="dashboard_surveys_missing_credentials">सर्वेक्षण लोड गर्न लगइन गर्नुहोस्।</string>
+    <string name="dashboard_surveys_metadata">सिर्जना मिति %1$s • %2$d पटक पूरा भयो</string>
+    <string name="dashboard_surveys_unknown_date">अज्ञात मिति</string>
+    <string name="dashboard_survey_wizard_step_counter">चरण %1$d/%2$d</string>
+    <string name="dashboard_survey_wizard_participant_basics_title">प्रतिवादीको आधारभूत विवरण</string>
+    <string name="dashboard_survey_wizard_gender_label">प्रतिवादीको लिङ्ग छान्नुहोस्</string>
+    <string name="dashboard_survey_wizard_birth_year_label">जन्म वर्ष</string>
+    <string name="dashboard_survey_wizard_birth_year_required">जारी राख्न जन्म वर्ष लेख्नुहोस्।</string>
+    <string name="dashboard_survey_wizard_additional_info_label">थप विवरण (वैकल्पिक)</string>
+    <string name="dashboard_survey_wizard_names_title">प्रतिवादीको नाम</string>
+    <string name="dashboard_survey_wizard_first_name_label">पहिलो नाम (वैकल्पिक)</string>
+    <string name="dashboard_survey_wizard_middle_name_label">मध्य नाम (वैकल्पिक)</string>
+    <string name="dashboard_survey_wizard_last_name_label">थर (वैकल्पिक)</string>
+    <string name="dashboard_survey_wizard_birthdate_title">जन्म मिति</string>
+    <string name="dashboard_survey_wizard_birth_date_label">जन्म मिति (वैकल्पिक)</string>
+    <string name="dashboard_survey_wizard_contact_title">सम्पर्क विवरण</string>
+    <string name="dashboard_survey_wizard_email_label">इमेल (वैकल्पिक)</string>
+    <string name="dashboard_survey_wizard_phone_label">फोन नम्बर (वैकल्पिक)</string>
+    <string name="dashboard_survey_wizard_language_level_title">भाषा र स्तर</string>
+    <string name="dashboard_survey_wizard_language_label">भाषा (वैकल्पिक)</string>
+    <string name="dashboard_survey_wizard_level_label">स्तर (वैकल्पिक)</string>
+    <string name="dashboard_survey_wizard_previous">अघिल्लो</string>
+    <string name="dashboard_survey_wizard_next">अर्को</string>
+    <string name="dashboard_survey_wizard_finish">समाप्त</string>
+    <string name="dashboard_survey_wizard_input_required">जारी राख्न उत्तर लेख्नुहोस्।</string>
+    <string name="dashboard_survey_wizard_choice_required">जारी राख्न कम्तीमा एउटा विकल्प छान्नुहोस्।</string>
+    <string name="dashboard_survey_wizard_rating_required">जारी राख्न एउटा रेटिङ छान्नुहोस्।</string>
+    <string name="dashboard_survey_wizard_completed">सर्वेक्षण पूरा भयो।</string>
+    <string name="dashboard_survey_wizard_submission_failed">तपाईंको जवाफहरू सुरक्षित गर्न सकिएन। कृपया पुनः प्रयास गर्नुहोस्।</string>
+    <string name="dashboard_survey_wizard_other_option">अन्य</string>
+    <string name="dashboard_survey_wizard_other_hint">अन्य उत्तर लेख्नुहोस्</string>
+    <string name="dashboard_survey_wizard_empty_questions">यो सर्वेक्षणमा अहिलेसम्म कुनै प्रश्न छैन।</string>
+    <string name="create_voice_title">भ्वाइस सिर्जना गर्नुहोस्</string>
+    <string name="create_voice_editor_label">आफ्नो भ्वाइस साझा गर्नुहोस्</string>
+    <string name="create_voice_hint">Markdown ढाँचामा स्वर</string>
+    <string name="create_voice_menu_post">पोस्ट गर्नुहोस्</string>
+    <string name="create_voice_primary_action">भ्वाइस प्रकाशित गर्नुहोस्</string>
+    <string name="create_voice_preview_label">पूर्वावलोकन</string>
+    <string name="create_voice_preview_placeholder">तपाईंको भ्वाइस कस्तो देखिन्छ भन्ने हेर्न लेख्न सुरु गर्नुहोस्।</string>
+    <string name="create_voice_empty_error">पोस्ट गर्नुअघि केही पाठ टाइप गर्नुहोस्।</string>
+    <string name="create_voice_post_success">तपाईंको भ्वाइस प्रकाशित भयो।</string>
+    <string name="create_voice_post_error">तपाईंको भ्वाइस प्रकाशित गर्न सकिएन। फेरि प्रयास गर्नुहोस्।</string>
+    <string name="create_voice_missing_credentials">हामीले तपाईंको बचत गरिएको प्रमाणहरू पहुँच गर्न सकेनौं। कृपया पुन: लगइन गर्नुहोस्।</string>
+    <string name="create_voice_missing_server">भ्वाइस बनाउनु अघि कृपया सर्भर छान्नुहोस्।</string>
+    <string name="create_voice_format_bold_description">बाक्लो</string>
+    <string name="create_voice_format_italic_description">तेर्सो</string>
+    <string name="create_voice_format_heading_description">शीर्षक</string>
+    <string name="create_voice_format_bullet_description">बुलेट सूची</string>
+    <string name="create_voice_format_numbered_description">क्रमाङ्कित सूची</string>
+    <string name="create_voice_format_quote_description">उद्धरण</string>
+    <string name="create_voice_format_link_description">लिङ्क थप्नुहोस्</string>
+
+    <string name="create_voice_link_dialog_title">लिङ्क राख्नुहोस्</string>
+    <string name="create_voice_link_title_hint">लिङ्क शीर्षक</string>
+    <string name="create_voice_link_url_hint">लिङ्क URL</string>
+    <string name="create_voice_link_insert_button">राख्नुहोस्</string>
+    <string name="create_voice_link_required_fields">कृपया शीर्षक र URL प्रविष्ट गर्नुहोस्।</string>
+    <string name="create_voice_format_image_description">तस्वीर थप्नुहोस्</string>
+    <string name="create_voice_format_placeholder">पाठ</string>
+    <string name="create_voice_image_processing_error">त्यो तस्वीर प्रशोधन गर्न सकेनौं। कृपया अर्को फाइल प्रयास गर्नुहोस्।</string>
+    <string name="create_voice_image_upload_error">हामीले तपाईंका तस्वीरहरू अपलोड गर्न सकेनौं। फेरि प्रयास गर्नुहोस्।</string>
+    <string name="permission_required_message">जारी राख्न इन्टरनेट, फोटो र क्यामेरा अनुमतिहरू आवश्यक छन्।</string>
+    <string name="create_voice_confirm_title">@string/create_voice_primary_action</string>
+    <string name="create_voice_confirm_message">के तपाईं यो आवाज प्रकाशित गर्न चाहनुहुन्छ?</string>
+    <string name="create_voice_confirm_positive">प्रकाशित गर्नुहोस्</string>
+    <string name="create_voice_confirm_negative">रद्द गर्नुहोस्</string>
+
+    <string name="edit_voice_title">भ्वाइस सम्पादन गर्नुहोस्</string>
+    <string name="edit_voice_editor_label">आफ्नो भ्वाइस अद्यावधिक गर्नुहोस्</string>
+    <string name="edit_voice_menu_update">@string/profile_save_button</string>
+    <string name="edit_voice_primary_action">भ्वाइस बचत गर्नुहोस्</string>
+    <string name="edit_voice_confirm_title">भ्वाइस अद्यावधिक गर्नुहोस्</string>
+    <string name="edit_voice_confirm_message">के तपाईं यो भ्वाइस अद्यावधिक गर्न चाहनुहुन्छ?</string>
+    <string name="edit_voice_confirm_positive">@string/server_configuration_save</string>
+    <string name="edit_voice_update_success">भ्वाइस सफलतापूर्वक अद्यावधिक भयो।</string>
+    <string name="edit_voice_update_error">भ्वाइस अद्यावधिक गर्न सकिएन, कृपया फेरि प्रयास गर्नुहोस्।</string>
+    <string name="edit_voice_missing_document">हामी अहिले यो भ्वाइस सम्पादन गर्न सकेनौं।</string>
+    <string name="dashboard_post_detail_title">स्वर</string>
+    <string name="dashboard_post_detail_comments_title">टिप्पणीहरू</string>
+    <string name="dashboard_post_detail_comments_empty">अहिलेसम्म कुनै टिप्पणी छैन।</string>
+    <string name="dashboard_post_detail_comments_error">टिप्पणीहरू लोड गर्न सकेनौं।</string>
+    <string name="dashboard_post_action_reply">जवाफ दिनुहोस्</string>
+    <string name="dashboard_post_action_edit">सम्पादन गर्नुहोस्</string>
+    <string name="dashboard_post_action_delete">हटाउनुहोस्</string>
+    <string name="dashboard_post_action_share">सेयर गर्नुहोस्</string>
+    <string name="dashboard_post_reply_hint">आफ्नो जवाफ लेख्नुहोस्…</string>
+    <string name="dashboard_post_reply_send">पठाउनुहोस्</string>
+    <string name="dashboard_post_reply_empty">पठाउनु अघि कृपया जवाफ लेख्नुहोस्।</string>
+    <string name="dashboard_post_reply_error">जवाफ पोस्ट गर्न सकेनौं, कृपया पुन: प्रयास गर्नुहोस्।</string>
+    <string name="dashboard_post_reply_success">जवाफ सफलतापूर्वक पोस्ट भयो।</string>
+    <string name="dashboard_post_reply_missing_credentials">जवाफ पोस्ट गर्न प्रमाणहरू हराइरहेको छ।</string>
+    <string name="dashboard_post_reply_preview_label">@string/create_voice_preview_label</string>
+    <string name="dashboard_post_reply_preview_placeholder">तपाईंको जवाफको पूर्वावलोकन यहाँ देखिन्छ।</string>
+    <string name="dashboard_post_replying_to">@%1$s लाई जवाफ दिँदै</string>
+    <string name="dashboard_post_actions_menu_content_description">पोस्टका थप कार्यहरू</string>
+    <string name="dashboard_comment_actions_menu_content_description">थप टिप्पणी कार्यहरू</string>
+    <string name="dashboard_comment_edit_hint">तपाईंको टिप्पणी अद्यावधिक गर्नुहोस्</string>
+    <string name="dashboard_comment_edit_helper">अघिल्लो टिप्पणी सम्पादन गर्दै</string>
+    <string name="dashboard_comment_edit_send">अद्यावधिक</string>
+    <string name="dashboard_comment_edit_success">टिप्पणी अद्यावधिक भयो।</string>
+    <string name="dashboard_comment_edit_error">टिप्पणी अद्यावधिक गर्न सकेन।</string>
+    <string name="dashboard_post_action_edit_toast">सम्पादन गर्ने क्रिया छिट्टै उपलब्ध हुनेछ।</string>
+    <string name="dashboard_post_action_delete_toast">मेटाउने क्रिया छिट्टै उपलब्ध हुनेछ।</string>
+    <string name="dashboard_post_action_share_toast">सेयर गर्ने क्रिया छिट्टै उपलब्ध हुनेछ।</string>
+    <string name="dashboard_post_delete_success">भ्वाइस सफलतापूर्वक मेटाइयो।</string>
+    <string name="dashboard_post_delete_error">यो भ्वाइस मेटाउन सकिएन। कृपया पुन: प्रयास गर्नुहोस्।</string>
+    <string name="dashboard_comment_delete_success">टिप्पणी मेटाइयो।</string>
+    <string name="dashboard_comment_delete_error">टिप्पणी मेटाउन सकिएन।</string>
+    <string name="dashboard_share_post_title">आवाज - Planet - %1$s</string>
+    <string name="dashboard_share_post_server_fallback">MyPlanetLite</string>
+    <string name="dashboard_share_post_chooser_title">भ्वाइस साझा गर्नुहोस्</string>
+    <string name="dashboard_share_post_fallback">MyPlanetLite बाट साझेदारी गरिएको</string>
+    <string name="share_post">पोस्ट सेयर गर्नुहोस्</string>
+    <string name="dashboard_relative_time_seconds">केही सेकेन्ड अघि</string>
+    <string name="dashboard_relative_time_minute">१ मिनेट अघि</string>
+    <string name="dashboard_relative_time_minutes">%1$d मिनेट अघि</string>
+    <string name="dashboard_relative_time_hour">१ घण्टा अघि</string>
+    <string name="dashboard_relative_time_hours">%1$d घण्टा अघि</string>
+    <string name="dashboard_relative_time_day">१ दिन अघि</string>
+    <string name="dashboard_relative_time_days">%1$d दिन अघि</string>
+    <string name="dashboard_relative_time_month">१ महिना अघि</string>
+    <string name="dashboard_relative_time_months">%1$d महिना अघि</string>
+    <string name="dashboard_relative_time_year">१ वर्ष अघि</string>
+    <string name="dashboard_relative_time_years">%1$d वर्ष अघि</string>
+
+    <string name="search_hint">खोज्नुहोस्</string>
+    <string name="add_member_button_description">सदस्य थप्नुहोस्</string>
+    <string name="dashboard_offline_mode_only_surveys">अफलाइन मोड: केवल सर्वेक्षणहरू उपलब्ध छन्।</string>
+    <string name="dashboard_online_mode_restored">जडान पुनःस्थापित: सबै प्यानलहरू सक्षम छन्।</string>
+    <string name="dashboard_survey_download">डाउनलोड</string>
+    <string name="dashboard_survey_downloaded">डाउनलोड गरियो</string>
+    <string name="dashboard_survey_download_success">सर्वेक्षण अफलाइन प्रयोगका लागि सुरक्षित गरियो।</string>
+    <string name="dashboard_survey_download_error">सर्वेक्षण अफलाइन प्रयोगका लागि सुरक्षित गर्न सकिएन।</string>
+    <string name="dashboard_surveys_tab_outbox">पेन्डिङ</string>
+    <string name="dashboard_surveys_outbox_empty">कुनै लंबित पठाइहरू छैनन्।</string>
+    <string name="dashboard_survey_submission_saved_offline">पठाइ समिकरणका लागि पठाइ बाकसमा सुरक्षित गरियो।</string>
+    <string name="dashboard_outbox_saved_at">%1$s मा अफलाइन सुरक्षित गरियो</string>
+    <string name="dashboard_outbox_unknown_survey">सर्वेक्षण</string>
+    <string name="dashboard_outbox_unknown_team">टोली</string>
+    <string name="dashboard_outbox_detail_intro">तपाईंले भरेका उत्तरहरू यहाँ छन्। समीक्षा गर्नुहोस् र तयार भएपछि पठाउनुहोस्।</string>
+    <string name="dashboard_outbox_send">पठाउनुहोस्</string>
+    <string name="dashboard_outbox_send_placeholder">समक्रमण छिट्टै उपलब्ध हुनेछ।</string>
+    <string name="dashboard_outbox_no_answers">कुनै उत्तरहरू रेकर्ड भएनन्।</string>
+    <string name="dashboard_outbox_no_answer">उत्तर छैन</string>
+    <string name="dashboard_outbox_preview_title">पूर्वावलोकन</string>
+    <string name="dashboard_outbox_unknown_question">प्रश्न %1$d</string>
+    <string name="dashboard_outbox_missing_entry">पेन्डिङ पठाइ भेटिएन।</string>
+    <string name="dashboard_outbox_birthdate_format">जन्म मिति: %1$s</string>
+    <string name="dashboard_outbox_age_format">उमेर: %1$d</string>
+    <string name="dashboard_outbox_gender_format">लिङ्ग: %1$s</string>
+    <string name="dashboard_outbox_language_format">भाषा: %1$s</string>
+    <string name="dashboard_outbox_level_format">स्तर: %1$s</string>
+    <string name="dashboard_outbox_phone_format">फोन: %1$s</string>
+    <string name="dashboard_outbox_email_format">इमेल: %1$s</string>
+    <string name="dashboard_outbox_participant_details">प्रतिभागीका विवरण</string>
+    <string name="dashboard_outbox_offline_cannot_send">यो पठाइ पठाउन इन्टरनेटमा जडान हुनुहोस्।</string>
+    <string name="dashboard_outbox_unable_to_verify_rev">सर्भरमा सर्वेक्षणको संस्करण पुष्टि गर्न सकेन।</string>
+    <string name="dashboard_outbox_send_success">पठाइ सफलतापूर्वक पठाइयो।</string>
+    <string name="dashboard_outbox_send_failed">पठाइ पठाउन सकेन। फेरि प्रयास गर्नुहोस्।</string>
+    <string name="dashboard_outbox_rev_mismatch_title">सर्वेक्षण परिवर्तन गरिएको छ</string>
+    <string name="dashboard_outbox_rev_mismatch_message">यो सर्वेक्षण सर्भरमा परिवर्तन गरिएको छ, त्यसैले समक्रमण गर्न सकिँदैन। तपाईं यसलाई मेटाउन चाहनुहुन्छ वा संग्रहित राख्न चाहनुहुन्छ?</string>
+    <string name="dashboard_outbox_delete_submission">पठाइ मेटाउनुहोस्</string>
+    <string name="dashboard_outbox_keep_submission">संग्रहित राख्नुहोस्</string>
+    <string name="dashboard_outbox_deleted">पठाइ मेटाइयो।</string>
+    <string name="dashboard_outbox_delete_confirm_message">यो बाँकी सर्वेक्षण प्रतिक्रिया मेटाउनुहोस्? यो क्रिया उल्ट्याउन सकिँदैन।</string>
+    <string name="dashboard_outbox_delete_failed">पठाइ मेटाउन सकेन। फेरि प्रयास गर्नुहोस्।</string>
+    <string name="dashboard_outbox_back">फिर्ता</string>
+    <string name="dashboard_courses_title">पाठ्यक्रमहरू</string>
+    <string name="dashboard_courses_tab_mine">मेरो पाठ्यक्रम</string>
+    <string name="dashboard_courses_tab_all">पाठ्यक्रमहरू</string>
+    <string name="dashboard_courses_tab_team">टोलीका पाठ्यक्रमहरू</string>
+    <string name="dashboard_courses_content_description_icon">कोर्स आइकन</string>
+    <string name="dashboard_course_progress_value">प्रगति: %1$d%%</string>
+    <string name="dashboard_courses_sample_name_creativity">सर्जनात्मक सोच</string>
+    <string name="dashboard_courses_sample_name_digital_marketing">डिजिटल मार्केटिङ</string>
+    <string name="dashboard_courses_sample_name_leadership">नेतृत्वका आधारहरू</string>
+    <string name="dashboard_courses_sample_name_data">डाटा आधारहरू</string>
+    <string name="dashboard_courses_sample_name_communication">प्रभावकारी संवाद</string>
+    <string name="dashboard_courses_sample_name_finance">वित्तको आधार</string>
+    <string name="dashboard_courses_sample_name_english">कामका लागि अंग्रेजी</string>
+    <string name="dashboard_courses_sample_name_coding">कोडिङको परिचय</string>
+    <string name="dashboard_courses_header_title">आज तपाईं के सिक्न चाहनुहुन्छ?</string>
+    <string name="dashboard_courses_header_subtitle">तल खोज्नुहोस्।</string>
+    <string name="dashboard_courses_search_hint">पाठ्यक्रम खोज्नुहोस्</string>
+    <string name="dashboard_courses_category_all">सबै पाठ्यक्रम</string>
+    <string name="dashboard_courses_category_uiux">UI/UX डिजाइन</string>
+    <string name="dashboard_courses_category_development">विकास</string>
+    <string name="dashboard_courses_category_basic">मूलभूत</string>
+    <string name="dashboard_courses_author_format">द्वारा: %1$s</string>
+    <string name="dashboard_courses_lessons_format">%1$d चरणहरू</string>
+    <string name="dashboard_courses_rating_format">%1$.1f ★</string>
+    <string name="dashboard_courses_price_format">$%1$.0f</string>
+    <string name="dashboard_course_lessons_title">%1$s का सबै पाठहरू</string>
+    <string name="dashboard_course_lessons_summary">यहाँ %1$d पाठ र %2$d पूरा</string>
+    <string name="dashboard_course_lessons_progress">%1$d / %2$d चरण पूरा</string>
+    <string name="dashboard_course_lesson_duration">%1$d मिनेट</string>
+    <string name="dashboard_course_lessons_topic_intro">%1$s के हो?</string>
+    <string name="dashboard_course_lessons_topic_why">किन %1$s आवश्यक छ?</string>
+    <string name="dashboard_course_lessons_topic_definitions">%1$s का परिभाषा के हुन्?</string>
+    <string name="dashboard_course_lessons_topic_types">%1$s का 4 प्रकार के हुन्?</string>
+    <string name="dashboard_course_lessons_topic_basics">%1$s का आधारहरू</string>
+    <string name="dashboard_course_lessons_open_course">कोर्समा जानुहोस्</string>
+    <string name="dashboard_course_lessons_join_course">पाठ्यक्रममा सहभागी हुनुहोस्</string>
+    <string name="dashboard_course_leave_course">पाठ्यक्रम त्याग्नुहोस्</string>
+    <string name="dashboard_course_details_close">बन्द गर्नुहोस्</string>
+    <string name="dashboard_course_details_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus efficitur, urna non sollicitudin sollicitudin, ante ex cursus massa, sit amet rhoncus elit neque id urna.</string>
+    <string name="dashboard_course_leave_confirm">के तपाईं यो पाठ्यक्रम छोड्न चाहनुहुन्छ?</string>
+    <string name="course_wizard_close">पाठ्यक्रम बन्द गर्नुहोस्</string>
+    <string name="course_wizard_previous">अघिल्लो</string>
+    <string name="course_wizard_next">अर्को</string>
+    <string name="course_wizard_finish">पाठ्यक्रम समाप्त गर्नुहोस्</string>
+    <string name="course_wizard_step_position">चरण %1$d / %2$d</string>
+    <string name="course_wizard_attachments_title">संलग्नहरू</string>
+    <string name="course_wizard_attachment_video">भिडियो</string>
+    <string name="course_wizard_attachment_image">तस्बिर</string>
+    <string name="course_wizard_attachment_audio">अडियो</string>
+    <string name="course_wizard_attachment_pdf">PDF</string>
+    <string name="course_wizard_play_error">संलग्न फाइल खोल्न सकेनौं</string>
+    <string name="course_wizard_open_image">तस्बिर खोल्नुहोस्</string>
+    <string name="course_wizard_open_pdf">PDF खोल्नुहोस्</string>
+    <string name="course_wizard_open_exam">परीक्षा खोल्नुहोस्</string>
+    <string name="course_wizard_pdf_page_counter">पृष्ठ %1$d/%2$d</string>
+    <string name="course_wizard_fullscreen">पूर्णस्क्रीन टगल गर्नुहोस्</string>
+    <string name="course_wizard_play_video">भिडियो चलाउनुहोस्</string>
+    <string name="course_wizard_exit_fullscreen">पूर्णस्क्रीनबाट बाहिर निस्कनुहोस्</string>
+    <string name="dashboard_exam_title">परीक्षा</string>
+    <string name="dashboard_exam_incorrect_answers">केही उत्तरहरू गलत छन्। कृपया फेरि प्रयास गर्नुहोस्।</string>
+    <string name="dashboard_exam_completed">परीक्षा पूरा भयो।</string>
+    <string name="create_voice_image_options_title">तस्बिर विकल्पहरू</string>
+    <string name="create_voice_image_option_view">तस्बिर हेर्नुहोस्</string>
+    <string name="create_voice_image_option_delete">तस्बिर मेटाउनुहोस्</string>
+</resources>

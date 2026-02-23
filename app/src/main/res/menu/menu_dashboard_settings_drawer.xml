@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_settings_language"
+        android:checkable="false"
+        android:icon="@drawable/translate_24"
+        android:title="@string/dashboard_settings_menu_language" />
+    <item
+        android:id="@+id/menu_settings_voice_batch_size"
+        android:checkable="false"
+        android:icon="@drawable/ic_format_list_bulleted_24"
+        android:title="@string/dashboard_settings_menu_voice_batch_size" />
+    <item
+        android:id="@+id/menu_settings_survey_translation"
+        android:checkable="false"
+        android:actionLayout="@layout/menu_settings_switch_item"
+        android:icon="@drawable/ic_translation_refresh"
+        android:title="@string/dashboard_settings_menu_survey_translation" />
+</menu>

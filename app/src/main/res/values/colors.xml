@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blueOle">#0554F2</color>
+    <color name="darkOle">#344F73</color>
+    <color name="grayOle">#AECCF2</color>
+    <color name="cyanOle">#035AA6</color>
+    <color name="greenOle">#C1FF72</color>
+    <color name="greenOleLogo">#5AAC48</color>
+    <color name="login_primary">#2A9D8F</color>
+    <color name="login_secondary_text">#8A8D90</color>
+    <color name="login_input_background">#F5F7FA</color>
+    <color name="login_hint">#9AA0A6</color>
+    <color name="login_input_border">#E0E5EC</color>
+    <color name="dashboard_drawer_divider">#FFE0E5EC</color>
+    <color name="dashboard_post_divider">#FFE0E5EC</color>
+    <color name="dashboard_popup_menu_background">#FFF2F2F2</color>
+    <color name="F6F6F6">#F6F6F6</color>
+    <color name="C6F6F6F">#6F6F6F</color>
+    <color name="D4D4D4">#D4D4D4</color>
+    <color name="B3B3B3">#B3B3B3</color>
+    <color name="C919191">#919191</color>
+    <color name="survey_rating_selected_background">#2196F3</color>
+    <color name="survey_rating_selected_text">#FFFFFF</color>
+    <color name="survey_rating_default_text">#000000</color>
+    <color name="course_wizard_top_background">#6A1B9A</color>
+</resources>

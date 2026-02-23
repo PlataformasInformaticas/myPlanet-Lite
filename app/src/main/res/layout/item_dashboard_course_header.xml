@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/dashboardCoursesHeaderTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dashboard_courses_header_title"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <TextView
+        android:id="@+id/dashboardCoursesHeaderSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/dashboard_courses_header_subtitle"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:textColor="?android:attr/textColorSecondary" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/dashboard_courses_search_hint"
+        android:padding="2dp"
+        app:endIconDrawable="@drawable/ic_filter_24"
+        app:endIconTint="?attr/colorPrimary"
+        app:endIconMode="custom"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="?attr/colorPrimary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dashboardCoursesSearch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="none"
+        android:overScrollMode="ifContentScrolls">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/dashboardCoursesCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="8dp"
+            app:singleLine="true"
+            app:singleSelection="true" />
+    </HorizontalScrollView>
+</LinearLayout>

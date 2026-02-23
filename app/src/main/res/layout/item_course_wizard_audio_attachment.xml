@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/courseWizardAttachmentIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/course_wizard_attachment_audio"
+            android:src="@drawable/ic_course_step_audio_24"
+            android:tint="@color/black" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/courseWizardAttachmentTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+            <TextView
+                android:id="@+id/courseWizardAttachmentSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/D4D4D4"
+        app:strokeWidth="1dp">
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/courseWizardAudioPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="88dp"
+            android:background="@color/white"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            app:controller_layout_id="@layout/player_controls_audio_attachment"
+            app:show_timeout="0"
+            app:show_buffering="when_playing"
+            app:surface_type="none"
+            app:use_controller="true" />
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

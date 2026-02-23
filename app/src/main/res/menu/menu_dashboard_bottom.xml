@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home_24"
+        android:title="@string/dashboard_home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_surveys"
+        android:icon="@drawable/ic_surveys_24"
+        android:title="@string/dashboard_surveys_title"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_courses"
+        android:icon="@drawable/ic_courses_24"
+        android:title="@string/dashboard_courses_title"
+        app:showAsAction="ifRoom" />
+</menu>

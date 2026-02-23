@@ -1,0 +1,612 @@
+<resources>
+    <string name="app_name">myPlanet Lite</string>
+    <string name="app_name_prefix">myPlanet</string>
+    <string name="app_name_suffix">Lite</string>
+    <string name="app_version">Nooca %1$s</string>
+    <string name="login_username_label">Magaca isticmaale</string>
+    <string name="login_password_label">Furaha sirta ah</string>
+    <string name="login_action">Soo gal</string>
+    <string name="login_username_error">Geli magacaaga isticmaale</string>
+    <string name="login_password_error">Furaha sirta ah waa inuu lahaadaa ugu yaraan 4 xaraf</string>
+    <string name="login_invalid_credentials">Magaca isticmaale ama eray sir ah khaldan</string>
+    <string name="login_generic_error">Lama suurtagelin in la galo. Fadlan isku day mar kale.</string>
+    <string name="logo">Logo</string>
+    <string name="login_signup_prompt">Ma lihid xisaab?</string>
+    <string name="login_signup_action">Is diiwaangeli</string>
+    <string name="login_privacy_policy_prompt">Akhri <font color="@color/login_primary">Qaanuunka Arrimaha Khaaska ah</font></string>
+    <string name="login_survey_translation_consent_title">Turjumaadda sahannada</string>
+    <string name="login_survey_translation_consent_description">Si aan kuu siino turjumaadda sahannada, waxaan u baahanahay oggolaanshahaaga si aan si ammaan ah u farsameyno qoraalka.</string>
+    <string name="login_survey_translation_consent_accept">Daar turjumaadaha oo aqbal siyaasadda qarsoodiga turjumaadda</string>
+    <string name="login_survey_translation_consent_policy">Dib u eeg siyaasadda qarsoodiga turjumaadda</string>
+    <string name="login_server_label">Dooro server</string>
+    <string name="login_server_error">Dooro ama geli server</string>
+    <string name="login_remember_action">Xasuusnow aniga</string>
+    <string name="server_planet_xela">Planet Xela</string>
+    <string name="server_planet_guatemala">Planet Guatemala</string>
+    <string name="server_planet_san_pablo">Planet San Pablo</string>
+    <string name="server_planet_somalia">Planet Somalia</string>
+    <string name="server_planet_learning">Learning</string>
+    <string name="server_planet_earth">Planet Earth</string>
+    <string name="server_planet_vi">Planet VI</string>
+    <string name="server_planet_uriur">Uriur</string>
+    <string name="server_configuration_title">Deji server</string>
+    <string name="server_configuration_url_hint">Cinwaanka server-ka</string>
+    <string name="server_configuration_name_hint">Magaca server-ka</string>
+    <string name="server_configuration_country_hint">Calan</string>
+    <string name="server_configuration_save">Kaydi</string>
+    <string name="server_configuration_url_error">Geli cinwaanka server-ka</string>
+    <string name="server_configuration_name_error">Geli magaca server-ka</string>
+    <string name="server_configuration_country_error">Dooro calan</string>
+    <string name="server_configuration_add_button">Ku dar</string>
+    <string name="server_configuration_added">Server-ka ayaa lagu daray liiska</string>
+    <string name="server_configuration_duplicate_error">Server-kan hore ayuu ugu jiraa liiska</string>
+    <string name="server_option_configure">Ku dar server…</string>
+    <string name="server_option_clear">Nadiifi serverro</string>
+    <string name="language_selector_content_description">Dooro luqad</string>
+    <string name="language_selector_title">Dooro luqad</string>
+    <string name="language_name_english">English</string>
+    <string name="language_name_spanish">Español</string>
+    <string name="language_name_french">Français</string>
+    <string name="language_name_portuguese">Boortaqiis</string>
+    <string name="language_name_arabic">العربية</string>
+    <string name="language_name_somali">Soomaali</string>
+    <string name="language_name_nepali">नेपाली</string>
+    <string name="language_name_hindi">हिन्दी</string>
+    <string name="powered_by_plataformas_informaticas" translatable="false"><![CDATA[Powered by <a href="http://plataformasinformaticas.com">Plataformas Informáticas</a>]]></string>
+    <string name="signup_navigate_back">Dib u noqo</string>
+    <string name="signup_header_title">Planet</string>
+    <string name="signup_header_message">Dhameyso tallaabooyinkan si aad uga mid noqoto bulshada waxbarasho.</string>
+    <string name="signup_username_label">@string/login_username_label</string>
+    <string name="signup_password_label">@string/login_password_label</string>
+    <string name="signup_confirm_password_label">Xaqiiji furaha sirta ah</string>
+    <string name="signup_first_name_label">Magaca koowaad</string>
+    <string name="signup_middle_name_label">Magaca dhexe</string>
+    <string name="signup_last_name_label">Magaca qoyska</string>
+    <string name="signup_language_label">Luqad</string>
+    <string name="signup_gender_label">Jinsi</string>
+    <string name="signup_birth_date_label">Taariikhda dhalashada</string>
+    <string name="signup_level_label">Heer</string>
+    <string name="signup_email_label">Iimayl</string>
+    <string name="signup_email_error_invalid">Geli iimayl sax ah</string>
+    <string name="signup_password_error_mismatch">Furaha sirta waa in ay is waafaqaan</string>
+    <string name="signup_password_error_length">Furaha sirta waa inuu lahaadaa ugu yaraan 6 xaraf ama tiro</string>
+    <string name="signup_username_error_invalid">Geli magac isticmaale oo ka bilaabma xaraf oo isticmaala keliya xarfo iyo tirooyin</string>
+    <string name="signup_first_name_error_required">Geli magacaaga koowaad</string>
+    <string name="signup_last_name_error_required">Geli magaca qoyskaaga</string>
+    <string name="signup_birth_date_error_required">Dooro taariikhda dhalashadaada</string>
+    <string name="signup_gender_error_required">Dooro ikhtiyaar jinsi</string>
+    <string name="signup_phone_label">Lambarka taleefanka gacanta</string>
+    <string name="signup_phone_error_invalid">Geli lambarka taleefanka gacanta ee saxda ah</string>
+    <string name="signup_language_error_required">Dooro luqad</string>
+    <string name="signup_level_error_required">Dooro heer</string>
+    <string name="signup_birth_date_picker_title">Dooro taariikhda dhalashada</string>
+    <string name="signup_next_action">Xiga</string>
+    <string name="signup_back_action">Dib</string>
+    <string name="signup_accept_action">Aqbal</string>
+    <string name="signup_connection_checking">Ku hubinaya isku xirka server-ka…</string>
+    <string name="signup_connection_error_retry">Lama xiriiri karo server-ka. Taabo si aad dib ugu daydo.</string>
+    <string name="signup_connection_error_input">Lama xiriiri karo server-ka.</string>
+    <string name="signup_username_checking">Hubinaya helitaanka magaca isticmaale…</string>
+    <string name="signup_username_error_taken">Magacan isticmaale hore ayaa loo isticmaalayaa.</string>
+
+    <string name="signup_step_username_title">Dooro magaca isticmaale</string>
+    <string name="signup_step_username_subtitle">Ku bilow xaraf. Isticmaal keliya xarfo iyo tirooyin.</string>
+    <string name="signup_step_names_title">Magacaagu waa kuma?</string>
+    <string name="signup_step_names_subtitle">Geli magacaaga dhabta ah.</string>
+    <string name="signup_step_birth_date_title">Goormaad dhalatay?</string>
+    <string name="signup_step_birth_date_subtitle">Dooro taariikhda dhalashadaada.</string>
+    <string name="signup_step_gender_title">Jinsiga aad isku aragto?</string>
+    <string name="signup_step_gender_subtitle">Dooro ikhtiyaarka kugu habboon.</string>
+    <string name="signup_step_contact_title">Sideen kuu gaarnaa?</string>
+    <string name="signup_step_contact_subtitle">La wadaag iimaylkaaga iyo lambarka taleefanka.</string>
+    <string name="signup_step_password_title">Abuur furaha sirta ah</string>
+    <string name="signup_step_password_subtitle">Isticmaal ugu yaraan lix xaraf ama tiro.</string>
+    <string name="signup_step_language_title">Luqad iyo heer</string>
+    <string name="signup_step_language_subtitle">Dooro luqadda iyo heerka aad doorbidayso.</string>
+    <string name="signup_step_license_title">Aqbal shatiga</string>
+    <string name="signup_step_license_subtitle">Dib u eeg shuruudaha ka hor intaadan samayn akoonka.</string>
+
+    <string name="signup_license_title">Heshiiska Shatiga Adeegsadaha Ugu Dambeysa (EULA)</string>
+    <string name="signup_license_subtitle">Open Learning Exchange
+Barnaamijyada: Planet, myPlanet iyo myPlanetLite</string>
+    <string name="signup_license_section1_title">1. Aqbalidda Heshiiska</string>
+    <string name="signup_license_section1_body">Markaad gudaha barnaamijkan Android doorato "Aqbal", waxaad xaqiijinaysaa inaad akhriday, fahamtay oo aad oggolaatay shuruudaha lagu sheegay Heshiiskan Shatiga Adeegsadaha Ugu Dambeysa ("Heshiiska").
+
+Haddii aadan oggolayn, waa inaad doorataa "Jooji" oo aad joojisaa isticmaalka barnaamijka.</string>
+    <string name="signup_license_section2_title">2. Lahaanshaha</string>
+    <string name="signup_license_section2_body">Open Learning Exchange ("OLE") ayaa leh barnaamijyada Planet, myPlanet iyo myPlanetLite, oo ay ku jiraan nuxurkooda, naqshaddooda, koodkooda iyo agabka la xidhiidha.</string>
+    <string name="signup_license_section3_title">3. Shatiga Isticmaalka</string>
+    <string name="signup_license_section3_body">OLE waxay isticmaaleha siisaa shati xaddidan, shakhsi ah, aan gaar u ahayn oo aan la wareejin karin si uu barnaamijkan Android ugu rakibo uguna adeegsado kaliya ujeeddooyinka ay oggolaato hay\'addiisa ama ururkiisu.</string>
+    <string name="signup_license_section4_title">4. Xogta, Amniga iyo Asturnaanta</string>
+    <string name="signup_license_section4_point1">4.1 Barnaamijyadu waa inay ururiyaan oo ay farsameeyaan xogta shaqsiga ah ee lagama maarmaanka u ah aqoonsiga, hawlgalka iyo waafajinta isticmaaleha.</string>
+    <string name="signup_license_section4_point2">4.2 Dhammaan xogta ay barnaamijyadu gudbiyaan ama kaydiyaan waa la sirgoynayaa iyadoo la raacayo heerarka amniga ee khuseeya.</string>
+    <string name="signup_license_section4_point3">4.3 Isticmaaluhu wuxuu aqbalayaa in isticmaalka barnaamijyadu ku lug leedahay farsamayntan ammaan ah.</string>
+    <string name="signup_license_section5_title">5. Ka bixitaanka Nidaamka</string>
+    <string name="signup_license_section5_body">Haddii isticmaalehu go\'aansado inuu ka baxo ama tirtirto akoonkiisa, waa inuu si toos ah ula xiriiro maamule ka tirsan madal Planet kaas oo maamuli doona xiritaanka gelitaanka ama tirtirka xogta iyadoo la raacayo habraacyada la dejiyay.</string>
+    <string name="signup_license_section6_title">6. Waajibaadka Isticmaalaha</string>
+    <string name="signup_license_section6_intro">Isticmaaluhu wuxuu ballanqaadaa inuu:</string>
+    <string name="signup_license_section6_point1">• Barnaamijka u isticmaalo si masuuliyad leh isla markaana la jaanqaada xeerarka khuseeya.</string>
+    <string name="signup_license_section6_point2">• Ilaaliyo macluumaadka gelitaanka ee loo qoondeeyay.</string>
+    <string name="signup_license_section6_point3">• Ka warbixiyo isticmaale kasta oo xun ama dhaqan laga shakiyo maamulihiisa hay\'adeed.</string>
+    <string name="signup_license_section7_title">7. Isbeddelada Heshiiska</string>
+    <string name="signup_license_section7_body">OLE waxay cusboonaysiin kartaa shuruudahaan marka loo baahdo. Sii wadista isticmaalka barnaamijka kadib isbeddel kasta waxay ka dhigan tahay inaad aqbashay nooca la cusboonaysiiyay ee Heshiiska.</string>
+    <string name="signup_license_section8_title">8. Xaqiijinta</string>
+    <string name="signup_license_section8_intro">Markaad taabato "Aqbal", waxaad caddeyneysaa inaad:</string>
+    <string name="signup_license_section8_point1">• Akhriday Heshiiskan.</string>
+    <string name="signup_license_section8_point2">• Fahamtay waxa uu ka kooban yahay.</string>
+    <string name="signup_license_section8_point3">• Si buuxda u aqbashay shuruudihiisa iyo xeerarkiisa.</string>
+    <string name="signup_license_auto_login_label">Isticmaal xogtan si aad u buuxiso foomka gelitaanka</string>
+
+    <string name="signup_gender_option_male">Lab</string>
+    <string name="signup_gender_option_female">Dhedig</string>
+
+    <string-array name="signup_gender_options_language_en">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_es">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_fr">
+        <item>Masculin</item>
+        <item>Féminin</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_ar">
+        <item>ذكر</item>
+        <item>أنثى</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_so">
+        <item>Lab</item>
+        <item>Dhedig</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_ne">
+        <item>पुरुष</item>
+        <item>महिला</item>
+    </string-array>
+
+    <string name="signup_level_option_beginner">Bilow</string>
+    <string name="signup_level_option_intermediate">Dhexdhexaad</string>
+    <string name="signup_level_option_advanced">Sareeye</string>
+    <string name="signup_level_option_expert">Khabiir</string>
+
+    <string-array name="signup_language_options">
+        <item>@string/language_name_english</item>
+        <item>@string/language_name_spanish</item>
+        <item>@string/language_name_french</item>
+        <item>@string/language_name_portuguese</item>
+        <item>@string/language_name_arabic</item>
+        <item>@string/language_name_somali</item>
+        <item>@string/language_name_nepali</item>
+        <item>@string/language_name_hindi</item>
+    </string-array>
+
+    <string-array name="signup_level_options">
+        <item>@string/signup_level_option_beginner</item>
+        <item>@string/signup_level_option_intermediate</item>
+        <item>@string/signup_level_option_advanced</item>
+        <item>@string/signup_level_option_expert</item>
+    </string-array>
+    <string-array name="signup_level_options_language_en">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+        <item>Expert</item>
+    </string-array>
+    <string-array name="signup_level_options_language_es">
+        <item>Principiante</item>
+        <item>Intermedio</item>
+        <item>Avanzado</item>
+        <item>Experto</item>
+    </string-array>
+    <string-array name="signup_level_options_language_fr">
+        <item>Débutant</item>
+        <item>Intermédiaire</item>
+        <item>Avancé</item>
+        <item>Expert</item>
+    </string-array>
+    <string-array name="signup_level_options_language_ar">
+        <item>مبتدئ</item>
+        <item>متوسط</item>
+        <item>متقدم</item>
+        <item>خبير</item>
+    </string-array>
+    <string-array name="signup_level_options_language_so">
+        <item>Bilow</item>
+        <item>Dhexdhexaad</item>
+        <item>Sareeye</item>
+        <item>Khabiir</item>
+    </string-array>
+    <string-array name="signup_level_options_language_ne">
+        <item>प्रारम्भिक</item>
+        <item>मध्यम</item>
+        <item>उन्नत</item>
+        <item>विशेषज्ञ</item>
+    </string-array>
+    <string name="server_status_checking">Hubinaya xaaladda server-ka…</string>
+    <string name="server_status_connected">Server-ka waa ku xiran yahay</string>
+    <string name="server_status_disconnected">Server-ka waa go\'an</string>
+    <string name="server_status_disconnected_retry">Server-ka waa go\'an. Taabo si aad dib ugu daydo.</string>
+    <string name="dashboard_logo_content_description">Astaanta myPlanet</string>
+    <string name="dashboard_settings_content_description">Fur dejinta</string>
+    <string name="dashboard_settings_title">Dejinta</string>
+    <string name="dashboard_settings_menu_language">Luqad</string>
+    <string name="dashboard_settings_menu_survey_translation">Si otomaatig ah u turjun sahannada</string>
+    <string name="dashboard_settings_menu_voice_batch_size">Codad halkii rarid</string>
+    <string name="dashboard_settings_survey_translation_enabled">Turjumaadda sahannada waa la hawlgeliyay</string>
+    <string name="dashboard_settings_survey_translation_disabled">Turjumaadda sahannada waa la damiyay</string>
+    <string name="dashboard_survey_translation_notice">App-kan waxa uu adeegsadaa sirdoon macmal ah si uu u turjumo nuxurka. Haddii aad sii waddo, waxaad oggolaanaysaa Siyaasaddeena Qarsoodiga.</string>
+    <string name="dashboard_survey_translation_applied_notice">Sahan-kan waxaa lagu turjumay sirdoon macmal ah.</string>
+    <string name="dashboard_survey_translation_consent_accept">Aqbal</string>
+    <string name="dashboard_survey_translation_consent_cancel">Jooji</string>
+    <string name="dashboard_settings_voice_batch_size_title">Dooro inta cod ee mar la soo rarayo</string>
+    <string name="dashboard_settings_voice_batch_size_option">%1$d cod</string>
+    <string name="dashboard_avatar_content_description">Sawirka isticmaaleha</string>
+    <string name="dashboard_voices_title">Codad</string>
+    <string name="dashboard_teams_title">Kooxahayga</string>
+    <string name="dashboard_teams_my_title">Kooxahayga</string>
+    <string name="dashboard_teams_my_description">Kooxo aad xubin ka tahay oo aad ka qayb qaadan karto.</string>
+    <string name="dashboard_teams_select_team_hint">Dooro koox ka menu-ga si aad u aragto macluumaadkeeda.</string>
+    <string name="dashboard_teams_explore_title">Baadh kooxaha</string>
+    <string name="dashboard_teams_explore_description">Kooxo diyaar ah oo aad ku biiri karto.</string>
+    <string name="dashboard_teams_join_prompt">Weli kuma jirto koox. Waxaad ku biiri kartaa mid si aad u bilowdo.</string>
+    <string name="dashboard_teams_no_server">Ku xidh server si aad u aragto kooxahaaga.</string>
+    <string name="dashboard_teams_no_user">Ma awoodin inaan aqoonsanno isticmaalahaaga. Fadlan mar kale gal.</string>
+    <string name="dashboard_teams_no_credentials">Ma helin faahfaahinta gelitaanka. Fadlan mar kale gal.</string>
+    <string name="dashboard_teams_error_loading">Ma awoodin inaan soo dejinno kooxahaaga. Mar dambe isku day.</string>
+    <string name="dashboard_teams_member_unknown">Tirada xubnaha lama heli karo</string>
+    <string name="dashboard_teams_unknown_name">Koox aan magac lahayn</string>
+    <string name="dashboard_teams_default_initials">KK</string>
+    <string name="dashboard_teams_bookmark">Ku calaamadee kooxda</string>
+    <string name="dashboard_teams_join_team">Ku biir kooxda</string>
+    <string name="dashboard_teams_join_pending">Codsiga ku biirista waa la diray</string>
+    <string name="dashboard_teams_cancel_join_title">Jooji codsiga ku biirista?</string>
+    <string name="dashboard_teams_cancel_join_message">Ma rabtaa inaad kansasho codsigaaga ku biirista kooxdaan?</string>
+    <string name="dashboard_teams_cancel_join_confirm">Jooji codsiga</string>
+    <string name="dashboard_teams_leave_team">Ka bax kooxda</string>
+    <string name="dashboard_teams_leader_badge">Adiga ayaa hoggaamiye kooxda</string>
+    <plurals name="dashboard_teams_member_count">
+        <item quantity="one">%d xubin</item>
+        <item quantity="other">%d xubnood</item>
+    </plurals>
+    <string name="dashboard_home">Hoyga</string>
+    <string name="dashboard_team_members_title">Xubnaha kooxda</string>
+    <string name="dashboard_team_members_empty">Weli ma jiraan xubno kooxdan ku jira.</string>
+    <string name="dashboard_team_members_error_loading">Ma awoodin inaan hadda soo dejinno xubnaha kooxda.</string>
+    <string name="dashboard_team_members_leader_role">Hoggaamiye</string>
+    <string name="dashboard_team_members_member_role">Xubin</string>
+    <string name="dashboard_team_members_missing_credentials">Soo gal si aad u aragto xubnaha kooxda.</string>
+    <string name="dashboard_team_members_missing_server">Deji server si aad u aragto xubnaha kooxda.</string>
+    <string name="dashboard_team_members_unknown">Xubin aan la aqoon</string>
+    <string name="dashboard_team_members_unknown_username">Magaca isticmaale lama yaqaan</string>
+    <string name="dashboard_team_members_profile_unavailable">Koontada xubintan lama heli karo.</string>
+    <string name="dashboard_team_members_remove_action">Ka saar</string>
+    <string name="dashboard_team_members_remove_cancel">Jooji</string>
+    <string name="dashboard_team_members_remove_confirmation_title">Ka saar xubin</string>
+    <string name="dashboard_team_members_remove_confirmation_message">Ka saar %1$s kooxda?</string>
+    <string name="dashboard_team_members_remove_success">%1$s waxaa laga saaray kooxda.</string>
+    <string name="dashboard_team_members_remove_error">Lama saari karin %1$s. Fadlan isku day mar kale.</string>
+    <string name="dashboard_team_members_remove_content_description">Ka saar xubin kooxda</string>
+    <string name="dashboard_team_members_avatar_content_description">Sawirka xubinta kooxda</string>
+    <string name="dashboard_invite_members_title">Casuum dadka kooxdan</string>
+    <string name="dashboard_invite_members_subtitle">Ku dar isticmaaleyaal kooxda adigoo riixaya badhanka +.</string>
+    <string name="dashboard_invite_members_search_hint">Raadi xubnaha kooxda...</string>
+    <string name="dashboard_invite_members_add">Kudar</string>
+    <string name="dashboard_invite_members_cancel">Xir</string>
+    <string name="dashboard_invite_members_load_error">Ma awoodin inaan soo dejino isticmaalayaasha lagu casuumi karo hadda.</string>
+    <string name="dashboard_invite_members_add_success">%1$s ayaa lagu daray kooxda.</string>
+    <string name="dashboard_invite_members_add_error">Lama dari karo %1$s kooxda.</string>
+    <string name="dashboard_invite_members_add_error_generic">Isticmaalahan lama dari karo hadda.</string>
+    <string name="dashboard_team_members_search_empty">Ma jiraan xubno la mid ah raadintaada.</string>
+    <string name="dashboard_post_image_content_description">Sawirka nuxurka</string>
+    <string name="dashboard_post_comments_content_description">@string/dashboard_post_detail_comments_title</string>
+    <string name="dashboard_image_preview_content_description">Sawir shaashad buuxa ah</string>
+    <string name="dashboard_profile_menu_profile">@string/profile_title</string>
+    <string name="dashboard_profile_menu_teams">Kooxo</string>
+    <string name="dashboard_profile_menu_logout">Ka bax</string>
+    <string name="teams_title">Kooxo</string>
+    <string name="profile_title">Xogtaada</string>
+    <string name="profile_description">Dib u eeg oo wax ka beddel xogtaada gaarka ah.</string>
+    <string name="profile_section_account">Akoonka</string>
+    <string name="profile_section_personal">Xogta shaqsiga</string>
+    <string name="profile_section_contact">Macluumaadka xiriirka</string>
+    <string name="profile_section_learning">Doorbidyada waxbarashada</string>
+    <string name="profile_username_label">@string/login_username_label</string>
+    <string name="profile_avatar_label">Sawirka profile-ka</string>
+    <string name="profile_avatar_hint">Dooro sawir si aad u aragto sida uu uga muuqdo qaab wareegsan iyo mid afargees ah.</string>
+    <string name="profile_avatar_preview_circle_label">Wareegsan</string>
+    <string name="profile_avatar_preview_square_label">Afargees</string>
+    <string name="profile_avatar_preview_circle_content_description">Tusmo wareegsan oo sawirka profile-ka ah</string>
+    <string name="profile_avatar_preview_square_content_description">Tusmo afargees oo sawirka profile-ka ah</string>
+    <string name="profile_avatar_change_button">Dooro sawir</string>
+    <string name="profile_avatar_picker_error">Sawirkan lama soo rogi karin. Isku day fayl kale.</string>
+    <string name="profile_avatar_crop_title">Habee sawirka profile-ka</string>
+    <string name="profile_loading_message">Waxaan cusboonaysiinaynaa macluumaadkaaga&#8230;</string>
+    <string name="profile_refresh_failed_toast">Ma aanan awoodin inaan cusboonaysiino astaantaada. Waxaan muujinaynaa xogta kaydsan.</string>
+    <string name="profile_save_button">Kaydi isbeddellada</string>
+    <string name="profile_save_success_toast">Faahfaahintaada ayaa la cusboonaysiiyay.</string>
+    <string name="profile_save_failed_toast">Isbeddelladaada ma aanan kaydin. Isku day mar kale.</string>
+    <string name="profile_birth_date_picker_title">@string/signup_birth_date_error_required</string>
+    <string name="profile_field_first_name">@string/signup_first_name_label</string>
+    <string name="profile_field_middle_name">@string/signup_middle_name_label</string>
+    <string name="profile_field_last_name">@string/signup_last_name_label</string>
+    <string name="profile_field_email">@string/signup_email_label</string>
+    <string name="profile_field_phone">Lambarka telefoonka</string>
+    <string name="profile_field_language">@string/signup_language_label</string>
+    <string name="profile_field_birth_date">@string/signup_birth_date_label</string>
+    <string name="dashboard_team_member_profile_title">Xubinta profile-ka</string>
+    <string name="dashboard_team_member_profile_navigation_content_description">Dib u noqo</string>
+    <string name="dashboard_team_member_profile_username_format">@%1$s</string>
+    <string name="dashboard_team_member_profile_identity_section">Aqoonsi</string>
+    <string name="dashboard_team_member_profile_name_label">Magac</string>
+    <string name="dashboard_team_member_profile_username_label">Magaca isticmaale</string>
+    <string name="dashboard_team_member_profile_contact_section">Xiriir</string>
+    <string name="dashboard_team_member_profile_email_label">Iimayl</string>
+    <string name="dashboard_team_member_profile_phone_label">Lambarka taleefanka</string>
+    <string name="dashboard_team_member_profile_email_action">Dir iimayl</string>
+    <string name="dashboard_team_member_profile_phone_action">Wac</string>
+    <string name="dashboard_team_member_profile_preferences_section">Doorbidyo</string>
+    <string name="dashboard_team_member_profile_language_label">Luqad</string>
+    <string name="dashboard_team_member_profile_level_label">Heer</string>
+    <string name="dashboard_team_member_profile_gender_label">Jinsi</string>
+    <string name="dashboard_team_member_profile_birth_date_label">Taariikhda dhalashada</string>
+    <string name="dashboard_team_member_profile_not_available">Lama heli karo</string>
+    <string name="dashboard_team_member_profile_error">Lama soo rogi karin profile-ka xubinta.</string>
+    <string name="profile_field_gender">@string/signup_gender_label</string>
+    <string name="profile_field_level">Heerka waxbarashada</string>
+    <string name="dashboard_profile_name_placeholder">Magacaaga</string>
+    <string name="dashboard_profile_username_placeholder">&#64;isticmaale</string>
+    <string name="dashboard_profile_username_format">&#64;%1$s</string>
+    <string name="dashboard_add_voice_content_description">Ku dar cod cusub</string>
+    <string name="dashboard_voices_empty">Wali ma jiro cod la soo bandhigo.</string>
+    <string name="dashboard_voices_no_server">Gali si aad u aragto codadka bulshada.</string>
+    <string name="dashboard_voices_error">Ma awoodin in aan soo dejino codadkii ugu dambeeyay.</string>
+    <string name="dashboard_voices_error_toast">Ma awoodin in aan soo dejino codad dheeraad ah.</string>
+    <string name="dashboard_surveys_title">Sahan</string>
+    <string name="dashboard_surveys_header_title">Sahanada kooxda</string>
+    <string name="dashboard_surveys_header_description">Eeg sahanada kooxdaada ama kuwa bulshada laga soo dejiyay.</string>
+    <string name="dashboard_surveys_tab_team">Koox</string>
+    <string name="dashboard_surveys_tab_adopted">La soo dejiyay</string>
+    <string name="dashboard_surveys_empty_team">Kooxdaadu weli sahanno ma abuurin.</string>
+    <string name="dashboard_surveys_empty_adopted">Weli sahanno la soo dejiyay ma jiraan.</string>
+    <string name="dashboard_surveys_error_loading">Ma awoodin in aan sahannada soo dejino hadda.</string>
+    <string name="dashboard_surveys_missing_server">Dooro server si aad u soo dejiso sahanno.</string>
+    <string name="dashboard_surveys_missing_team">Xulo koox si aad u soo dejiso sahanno.</string>
+    <string name="dashboard_surveys_missing_credentials">Gali si aad u soo dejiso sahanno.</string>
+    <string name="dashboard_surveys_metadata">La abuuray %1$s · Waxaa la dhammaystiray %2$d jeer</string>
+    <string name="dashboard_surveys_unknown_date">Taariikh aan la aqoon</string>
+    <string name="dashboard_survey_wizard_step_counter">Tallaabo %1$d/%2$d</string>
+    <string name="dashboard_survey_wizard_participant_basics_title">Xogta aasaasiga ah ee ka qaybgalaha</string>
+    <string name="dashboard_survey_wizard_gender_label">Dooro jinsiga ka qaybgalaha</string>
+    <string name="dashboard_survey_wizard_birth_year_label">Sanadka dhalashada</string>
+    <string name="dashboard_survey_wizard_birth_year_required">Geli sanadka dhalashada si aad u socoto.</string>
+    <string name="dashboard_survey_wizard_additional_info_label">Faahfaahin dheeraad ah (ikhtiyaari)</string>
+    <string name="dashboard_survey_wizard_names_title">Magaca ka qaybgalaha</string>
+    <string name="dashboard_survey_wizard_first_name_label">Magaca koowaad (ikhtiyaari)</string>
+    <string name="dashboard_survey_wizard_middle_name_label">Magaca dhexe (ikhtiyaari)</string>
+    <string name="dashboard_survey_wizard_last_name_label">Magaca dambe (ikhtiyaari)</string>
+    <string name="dashboard_survey_wizard_birthdate_title">Taariikhda dhalashada</string>
+    <string name="dashboard_survey_wizard_birth_date_label">Taariikhda dhalashada (ikhtiyaari)</string>
+    <string name="dashboard_survey_wizard_contact_title">Faahfaahinta xiriirka</string>
+    <string name="dashboard_survey_wizard_email_label">Email (ikhtiyaari)</string>
+    <string name="dashboard_survey_wizard_phone_label">Lambarka taleefanka (ikhtiyaari)</string>
+    <string name="dashboard_survey_wizard_language_level_title">Luqadda iyo heerka</string>
+    <string name="dashboard_survey_wizard_language_label">Luqad (ikhtiyaari)</string>
+    <string name="dashboard_survey_wizard_level_label">Heer (ikhtiyaari)</string>
+    <string name="dashboard_survey_wizard_previous">Hore</string>
+    <string name="dashboard_survey_wizard_next">Xiga</string>
+    <string name="dashboard_survey_wizard_finish">Dhamee</string>
+    <string name="dashboard_survey_wizard_input_required">Fadlan geli jawaab si aad u sii waddo.</string>
+    <string name="dashboard_survey_wizard_choice_required">Dooro ugu yaraan hal ikhtiyaar si aad u sii waddo.</string>
+    <string name="dashboard_survey_wizard_rating_required">Dooro qiimeyn si aad u sii waddo.</string>
+    <string name="dashboard_survey_wizard_completed">Sahanku wuu dhammaaday.</string>
+    <string name="dashboard_survey_wizard_submission_failed">Lama kaydin jawaabahaaga. Fadlan isku day mar kale.</string>
+    <string name="dashboard_survey_wizard_other_option">Mid kale</string>
+    <string name="dashboard_survey_wizard_other_hint">Gali jawaab kale</string>
+    <string name="dashboard_survey_wizard_empty_questions">Sahankan weli su\'aalo ma leh.</string>
+    <string name="create_voice_title">Abuur cod</string>
+    <string name="create_voice_editor_label">La wadaag codkaaga</string>
+    <string name="create_voice_hint">Cod qaabka Markdown</string>
+    <string name="create_voice_menu_post">Daabac</string>
+    <string name="create_voice_primary_action">Daabac codka</string>
+    <string name="create_voice_preview_label">Horudhac</string>
+    <string name="create_voice_preview_placeholder">Bilow qorista si aad u aragto sida codkaagu u ekaan doono.</string>
+    <string name="create_voice_empty_error">Geli qoraal ka hor intaadan daabicin.</string>
+    <string name="create_voice_post_success">Codkaaga waa la daabacay.</string>
+    <string name="create_voice_post_error">Ma awoodin inaan daabacno codkaaga. Isku day mar kale.</string>
+    <string name="create_voice_missing_credentials">Ma awoodin inaanu helno xogta aqoonsigaaga la kaydiyay. Fadlan mar kale gal.</string>
+    <string name="create_voice_missing_server">Dooro server ka hor inta aanad abuurin cod.</string>
+    <string name="create_voice_format_bold_description">Dhumuc leh</string>
+    <string name="create_voice_format_italic_description">Qaloocan</string>
+    <string name="create_voice_format_heading_description">Cinwaan</string>
+    <string name="create_voice_format_bullet_description">Liis dhibco leh</string>
+    <string name="create_voice_format_numbered_description">Liis tiro leh</string>
+    <string name="create_voice_format_quote_description">Oraah</string>
+    <string name="create_voice_format_link_description">Ku dar isku xirka</string>
+
+    <string name="create_voice_link_dialog_title">Geli xiriiriye</string>
+    <string name="create_voice_link_title_hint">Cinwaanka xiriiriyaha</string>
+    <string name="create_voice_link_url_hint">URL-ka xiriiriyaha</string>
+    <string name="create_voice_link_insert_button">Geli</string>
+    <string name="create_voice_link_required_fields">Fadlan geli cinwaan iyo URL.</string>
+    <string name="create_voice_format_image_description">Ku dar sawir</string>
+    <string name="create_voice_format_placeholder">qoraal</string>
+    <string name="create_voice_image_processing_error">Sawirkaas ma aanan farsamayn karin. Fadlan isku day fayl kale.</string>
+    <string name="create_voice_image_upload_error">Sawirradaada ma aanan soo gelin karin. Isku day mar kale.</string>
+    <string name="permission_required_message">Oggolaanshaha internet-ka, sawirrada iyo kamaraddu waa loo baahan yahay si loo sii wado.</string>
+    <string name="create_voice_confirm_title">@string/create_voice_primary_action</string>
+    <string name="create_voice_confirm_message">Ma rabtaa inaad daabacdo codkan?</string>
+    <string name="create_voice_confirm_positive">Daabac</string>
+    <string name="create_voice_confirm_negative">Jooji</string>
+
+    <string name="edit_voice_title">Beddel codka</string>
+    <string name="edit_voice_editor_label">Cusbooneysii codkaaga</string>
+    <string name="edit_voice_menu_update">@string/profile_save_button</string>
+    <string name="edit_voice_primary_action">Kaydi codka</string>
+    <string name="edit_voice_confirm_title">Cusboonaysii codka</string>
+    <string name="edit_voice_confirm_message">Ma rabtaa inaad cusboonaysiiso codkan?</string>
+    <string name="edit_voice_confirm_positive">@string/server_configuration_save</string>
+    <string name="edit_voice_update_success">Codka si guul leh ayaa loo cusboonaysiiyay.</string>
+    <string name="edit_voice_update_error">Codka lama cusboonaysiin, fadlan isku day mar kale.</string>
+    <string name="edit_voice_missing_document">Ma awoodno inaan hadda beddelno codkan.</string>
+    <string name="dashboard_post_detail_title">Cod</string>
+    <string name="dashboard_post_detail_comments_title">Faallooyin</string>
+    <string name="dashboard_post_detail_comments_empty">Faallo weli lama hayo.</string>
+    <string name="dashboard_post_detail_comments_error">Ma awoodin in aan soo dejino faallooyinka.</string>
+    <string name="dashboard_post_action_reply">Ka jawaab</string>
+    <string name="dashboard_post_action_edit">Wax ka beddel</string>
+    <string name="dashboard_post_action_delete">Tirtir</string>
+    <string name="dashboard_post_action_share">La wadaag</string>
+    <string name="dashboard_post_reply_hint">Qor jawaabtaada…</string>
+    <string name="dashboard_post_reply_send">Dir</string>
+    <string name="dashboard_post_reply_empty">Fadlan qor jawaab ka hor intaadan dirin.</string>
+    <string name="dashboard_post_reply_error">Jawaabta lama daabici karin, fadlan isku day mar kale.</string>
+    <string name="dashboard_post_reply_success">Jawaab si guul leh ayaa loo daabacay.</string>
+    <string name="dashboard_post_reply_missing_credentials">Macluumaadka aqoonsiga ayaa ka maqan si loo daabaco jawaabta.</string>
+    <string name="dashboard_post_reply_preview_label">@string/create_voice_preview_label</string>
+    <string name="dashboard_post_reply_preview_placeholder">Hordhaca jawaabtaada ayaa halkan ka muuqan doona.</string>
+    <string name="dashboard_post_replying_to">Waxaa laga jawaabayaa @%1$s</string>
+    <string name="dashboard_post_actions_menu_content_description">Ficillo dheeraad ah oo qoraalka ah</string>
+    <string name="dashboard_comment_actions_menu_content_description">Ficillo kale oo faallo ah</string>
+    <string name="dashboard_comment_edit_hint">Cusboonaysii faalladaada</string>
+    <string name="dashboard_comment_edit_helper">Faallada hore ayaa la saxayaa</string>
+    <string name="dashboard_comment_edit_send">Cusboonaysii</string>
+    <string name="dashboard_comment_edit_success">Faallada waa la cusboonaysiiyay.</string>
+    <string name="dashboard_comment_edit_error">Faallada lama cusboonaysiin karin.</string>
+    <string name="dashboard_post_action_edit_toast">Falka wax-ka-beddelka wuxuu iman doonaa goor dhow.</string>
+    <string name="dashboard_post_action_delete_toast">Falkan tirtirid wuxuu iman doonaa goor dhow.</string>
+    <string name="dashboard_post_action_share_toast">Falka wadaagista wuxuu iman doonaa goor dhow.</string>
+    <string name="dashboard_post_delete_success">Codka si guul leh ayaa loo tirtiray.</string>
+    <string name="dashboard_post_delete_error">Lama tirtiri karo codkan. Fadlan isku day mar kale.</string>
+    <string name="dashboard_comment_delete_success">Faallo waa la tirtiray.</string>
+    <string name="dashboard_comment_delete_error">Laguma tirtiri karin faallada.</string>
+    <string name="dashboard_share_post_title">Cod - Planet - %1$s</string>
+    <string name="dashboard_share_post_server_fallback">MyPlanetLite</string>
+    <string name="dashboard_share_post_chooser_title">La wadaag codka</string>
+    <string name="dashboard_share_post_fallback">Lagaga wadaagay MyPlanetLite</string>
+    <string name="share_post">La wadaag qoraalka</string>
+    <string name="dashboard_relative_time_seconds">dhowr ilbiriqsi kahor</string>
+    <string name="dashboard_relative_time_minute">hal daqiiqo kahor</string>
+    <string name="dashboard_relative_time_minutes">%1$d daqiiqo kahor</string>
+    <string name="dashboard_relative_time_hour">hal saac kahor</string>
+    <string name="dashboard_relative_time_hours">%1$d saacadood kahor</string>
+    <string name="dashboard_relative_time_day">hal maalin kahor</string>
+    <string name="dashboard_relative_time_days">%1$d maalmood kahor</string>
+    <string name="dashboard_relative_time_month">hal bil kahor</string>
+    <string name="dashboard_relative_time_months">%1$d bilood kahor</string>
+    <string name="dashboard_relative_time_year">hal sano kahor</string>
+    <string name="dashboard_relative_time_years">%1$d sano kahor</string>
+
+    <string name="search_hint">Raadi</string>
+    <string name="add_member_button_description">Ku dar xubin</string>
+    <string name="dashboard_offline_mode_only_surveys">Habka offline: kaliya sahanno ayaa la heli karaa.</string>
+    <string name="dashboard_online_mode_restored">Xiriirku wuu soo noqday: dhammaan guddiyadu waa la furtay.</string>
+    <string name="dashboard_survey_download">Soo deji</string>
+    <string name="dashboard_survey_downloaded">La soo dejiyey</string>
+    <string name="dashboard_survey_download_success">Sahan ayaa loo kaydiyay isticmaal offline.</string>
+    <string name="dashboard_survey_download_error">Lama kaydin sahan si loo isticmaalo offline.</string>
+    <string name="dashboard_surveys_tab_outbox">Sugaya</string>
+    <string name="dashboard_surveys_outbox_empty">Ma jiraan diritaan sugaya.</string>
+    <string name="dashboard_survey_submission_saved_offline">Diritaanka waxa lagu kaydiyay sanduuqa soo dirid si loo waafajiyo.</string>
+    <string name="dashboard_outbox_saved_at">Waxaa offline loogu kaydiyay %1$s</string>
+    <string name="dashboard_outbox_unknown_survey">Sahan</string>
+    <string name="dashboard_outbox_unknown_team">Koox</string>
+    <string name="dashboard_outbox_detail_intro">Kuwan waa jawaabihii aad buuxisay. Dib u eeg oo taabo Dir markaad diyaar tahay.</string>
+    <string name="dashboard_outbox_send">Dir</string>
+    <string name="dashboard_outbox_send_placeholder">Iswaafajintu waxay noqon doontaa mid dhowaan la heli karo.</string>
+    <string name="dashboard_outbox_no_answers">Wax jawaabo ah lama diiwaan gelin.</string>
+    <string name="dashboard_outbox_no_answer">Jawaab ma jiro</string>
+    <string name="dashboard_outbox_preview_title">Horudhac</string>
+    <string name="dashboard_outbox_unknown_question">Su\'aal %1$d</string>
+    <string name="dashboard_outbox_missing_entry">Diritaanka sugaya lama helin.</string>
+    <string name="dashboard_outbox_birthdate_format">Taariikhda dhalashada: %1$s</string>
+    <string name="dashboard_outbox_age_format">Da\'da: %1$d</string>
+    <string name="dashboard_outbox_gender_format">Jinsi: %1$s</string>
+    <string name="dashboard_outbox_language_format">Luuqadda: %1$s</string>
+    <string name="dashboard_outbox_level_format">Heer: %1$s</string>
+    <string name="dashboard_outbox_phone_format">Telefoon: %1$s</string>
+    <string name="dashboard_outbox_email_format">Email: %1$s</string>
+    <string name="dashboard_outbox_participant_details">Faahfaahinta ka qaybgalaha</string>
+    <string name="dashboard_outbox_offline_cannot_send">Ku xidh internetka si aad u dirto diritaankan.</string>
+    <string name="dashboard_outbox_unable_to_verify_rev">Lama xaqiijin karo nooca sahanka ee server-ka.</string>
+    <string name="dashboard_outbox_send_success">Diritaanka si guul leh ayaa loo diray.</string>
+    <string name="dashboard_outbox_send_failed">Lama dirin diritaanka. Isku day mar kale.</string>
+    <string name="dashboard_outbox_rev_mismatch_title">Sahan ayaa is beddelay</string>
+    <string name="dashboard_outbox_rev_mismatch_message">Sahankan ayaa is beddelay server-ka, sidaas darteed lama waafajin karo. Ma rabtaa inaad tirtirto mise aad sii hayso kayd ahaan?</string>
+    <string name="dashboard_outbox_delete_submission">Tirtir diritaanka</string>
+    <string name="dashboard_outbox_keep_submission">Sii kaydi</string>
+    <string name="dashboard_outbox_deleted">Diritaanka waa la tirtiray.</string>
+    <string name="dashboard_outbox_delete_confirm_message">Ma tirtirtaa jawaabtan sugaysa? Ficilkan lama celin karo.</string>
+    <string name="dashboard_outbox_delete_failed">Diritaanka lama tirtirin. Isku day mar kale.</string>
+    <string name="dashboard_outbox_back">Dib ugu noqo</string>
+    <string name="dashboard_courses_title">Koorsooyin</string>
+    <string name="dashboard_courses_tab_mine">Koorsadayda</string>
+    <string name="dashboard_courses_tab_all">Koorsooyin</string>
+    <string name="dashboard_courses_tab_team">Koorsooyinka kooxda</string>
+    <string name="dashboard_courses_content_description_icon">Astaanta koorsada</string>
+    <string name="dashboard_course_progress_value">Horumarka: %1$d%%</string>
+    <string name="dashboard_courses_sample_name_creativity">Fikir hal-abuur leh</string>
+    <string name="dashboard_courses_sample_name_digital_marketing">Suuqgeyn dijitaal ah</string>
+    <string name="dashboard_courses_sample_name_leadership">Aasaaska hoggaaminta</string>
+    <string name="dashboard_courses_sample_name_data">Asaaska xogta</string>
+    <string name="dashboard_courses_sample_name_communication">Isgaarsiinta wax ku ool ah</string>
+    <string name="dashboard_courses_sample_name_finance">Aasaaska maaliyadda</string>
+    <string name="dashboard_courses_sample_name_english">Ingiriis shaqo</string>
+    <string name="dashboard_courses_sample_name_coding">Hordhac barnaamij</string>
+    <string name="dashboard_courses_header_title">Maxaad rabtaa inaad maanta barato?</string>
+    <string name="dashboard_courses_header_subtitle">Ka raadi hoosta.</string>
+    <string name="dashboard_courses_search_hint">Raadi koorsooyin</string>
+    <string name="dashboard_courses_category_all">Dhammaan koorsooyinka</string>
+    <string name="dashboard_courses_category_uiux">Naqshad UI/UX</string>
+    <string name="dashboard_courses_category_development">Horumarin</string>
+    <string name="dashboard_courses_category_basic">Aasaasi</string>
+    <string name="dashboard_courses_author_format">Waxaa qoray: %1$s</string>
+    <string name="dashboard_courses_lessons_format">%1$d tallaabo</string>
+    <string name="dashboard_courses_rating_format">%1$.1f ★</string>
+    <string name="dashboard_courses_price_format">$%1$.0f</string>
+    <string name="dashboard_course_lessons_title">Dhammaan casharrada %1$s</string>
+    <string name="dashboard_course_lessons_summary">Halkan waxaa jira %1$d cashar oo %2$d la dhammaystiray</string>
+    <string name="dashboard_course_lessons_progress">%1$d ka mid ah %2$d tillaabo ayaa la dhammeeyey</string>
+    <string name="dashboard_course_lesson_duration">%1$d daqiiqo</string>
+    <string name="dashboard_course_lessons_topic_intro">Waa maxay %1$s?</string>
+    <string name="dashboard_course_lessons_topic_why">Maxaa %1$s muhiim u ah?</string>
+    <string name="dashboard_course_lessons_topic_definitions">Waa maxay qeexitaannada %1$s?</string>
+    <string name="dashboard_course_lessons_topic_types">Waa maxay 4-ta nooc ee %1$s?</string>
+    <string name="dashboard_course_lessons_topic_basics">Aasaaska %1$s</string>
+    <string name="dashboard_course_lessons_open_course">Tag koorsada</string>
+    <string name="dashboard_course_lessons_join_course">Ku biir koorsada</string>
+    <string name="dashboard_course_leave_course">Ka bax koorsada</string>
+    <string name="dashboard_course_details_close">Xir</string>
+    <string name="dashboard_course_details_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus efficitur, urna non sollicitudin sollicitudin, ante ex cursus massa, sit amet rhoncus elit neque id urna.</string>
+    <string name="dashboard_course_leave_confirm">Ma doonaysaa inaad koorsadan ka baxdo?</string>
+    <string name="course_wizard_close">Xir koorsada</string>
+    <string name="course_wizard_previous">Kan hore</string>
+    <string name="course_wizard_next">Kan xiga</string>
+    <string name="course_wizard_finish">Dhamee koorsada</string>
+    <string name="course_wizard_step_position">Tallaabo %1$d ee %2$d</string>
+    <string name="course_wizard_open_survey">Fur sahanka</string>
+    <string name="course_wizard_attachments_title">Faylasha la lifaaqay</string>
+    <string name="course_wizard_attachment_video">Fiidyow</string>
+    <string name="course_wizard_attachment_image">Sawir</string>
+    <string name="course_wizard_attachment_audio">Cod</string>
+    <string name="course_wizard_attachment_pdf">PDF</string>
+    <string name="course_wizard_play_error">Lama furi karo lifaaqa</string>
+    <string name="course_wizard_open_image">Fur sawirka</string>
+    <string name="course_wizard_open_pdf">Fur PDF</string>
+    <string name="course_wizard_open_exam">Fur imtixaanka</string>
+    <string name="course_wizard_pdf_page_counter">Bogga %1$d/%2$d</string>
+    <string name="course_wizard_fullscreen">Beddel shaashad buuxda</string>
+    <string name="course_wizard_play_video">Ciyaar fiidiyowga</string>
+    <string name="course_wizard_exit_fullscreen">Ka bax shaashad buuxda</string>
+    <string name="dashboard_exam_title">Imtixaan</string>
+    <string name="dashboard_exam_incorrect_answers">Qaar ka mid ah jawaabaha waa khalad. Fadlan mar kale isku day.</string>
+    <string name="dashboard_exam_completed">Imtixaanka waa la dhammaystiray.</string>
+    <string name="create_voice_image_options_title">Xulashooyinka sawirka</string>
+    <string name="create_voice_image_option_view">Daawo sawirka</string>
+    <string name="create_voice_image_option_delete">Tirtir sawirka</string>
+</resources>

@@ -1,0 +1,667 @@
+<resources>
+    <string name="app_name">myPlanet Lite</string>
+    <string name="app_name_prefix">myPlanet</string>
+    <string name="app_name_suffix">Lite</string>
+    <string name="app_version">Version %1$s</string>
+    <string name="login_username_label">Username</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_action">Login</string>
+    <string name="login_username_error">Enter your username</string>
+    <string name="login_password_error">The password must be at least 4 characters long</string>
+    <string name="login_invalid_credentials">Incorrect username or password</string>
+    <string name="login_generic_error">Couldn\'t sign in. Please try again.</string>
+    <string name="logo">Logo</string>
+    <string name="login_signup_prompt">Don\'t have an account?</string>
+    <string name="login_signup_action">Sign Up</string>
+    <string name="login_privacy_policy_prompt">Read our <font color="@color/login_primary">Privacy Policy</font></string>
+    <string name="login_survey_translation_consent_title">Survey translations</string>
+    <string name="login_survey_translation_consent_description">To offer you survey translations, we need your consent to process the text securely.</string>
+    <string name="login_survey_translation_consent_accept">Enable translations and accept the translation privacy policy</string>
+    <string name="login_survey_translation_consent_policy">Review the translation privacy policy</string>
+    <string name="login_server_label">Select a server</string>
+    <string name="login_server_error">Select or enter a server</string>
+    <string name="login_remember_action">Remember me</string>
+    <string name="server_planet_xela">Planet Xela</string>
+    <string name="server_planet_guatemala">Planet Guatemala</string>
+    <string name="server_planet_san_pablo">Planet San Pablo</string>
+    <string name="server_planet_somalia">Planet Somalia</string>
+    <string name="server_planet_learning">Learning</string>
+    <string name="server_planet_earth">Earth</string>
+    <string name="server_planet_vi">Planet VI</string>
+    <string name="server_planet_uriur">Uriur</string>
+    <string name="server_configuration_title">Configure server</string>
+    <string name="server_configuration_url_hint">Server address</string>
+    <string name="server_configuration_name_hint">Server name</string>
+    <string name="server_configuration_country_hint">Flag</string>
+    <string name="server_configuration_save">Save</string>
+    <string name="server_configuration_url_error">Enter a server address</string>
+    <string name="server_configuration_name_error">Enter a server name</string>
+    <string name="server_configuration_country_error">Select a flag</string>
+    <string name="server_configuration_add_button">Add</string>
+    <string name="server_configuration_added">Server added to list</string>
+    <string name="server_configuration_duplicate_error">The server already exists in the list</string>
+    <string name="server_option_configure">Add server…</string>
+    <string name="server_option_clear">Clear servers</string>
+    <string name="language_selector_content_description">Select language</string>
+    <string name="language_selector_title">Choose language</string>
+    <string name="language_name_english">English</string>
+    <string name="language_name_spanish">Español</string>
+    <string name="language_name_french">Français</string>
+    <string name="language_name_portuguese">Português</string>
+    <string name="language_name_arabic">العربية</string>
+    <string name="language_name_somali">Soomaali</string>
+    <string name="language_name_nepali">नेपाली</string>
+    <string name="language_name_hindi">हिन्दी</string>
+    <string name="powered_by_plataformas_informaticas" translatable="false"><![CDATA[Powered by <a href="http://plataformasinformaticas.com">Plataformas Informáticas</a>]]></string>
+    <string name="signup_navigate_back">Go back</string>
+    <string name="signup_header_message">Complete these steps to be part of the learning community.</string>
+    <string name="signup_header_title" translatable="false">Planet</string>
+    <string name="signup_username_label">@string/login_username_label</string>
+    <string name="signup_password_label">@string/login_password_label</string>
+    <string name="signup_confirm_password_label">Confirm password</string>
+    <string name="signup_first_name_label">First name</string>
+    <string name="signup_middle_name_label">Middle name</string>
+    <string name="signup_last_name_label">Last name</string>
+    <string name="signup_language_label">Language</string>
+    <string name="signup_gender_label">Gender</string>
+    <string name="signup_birth_date_label">Birth date</string>
+    <string name="signup_level_label">Level</string>
+    <string name="signup_email_label">Email</string>
+    <string name="signup_email_error_invalid">Enter a valid email address</string>
+    <string name="signup_password_error_mismatch">Passwords must match</string>
+    <string name="signup_password_error_length">Password must be at least 6 characters long</string>
+    <string name="signup_username_error_invalid">Enter a username that starts with a letter and uses only letters and numbers</string>
+    <string name="signup_first_name_error_required">Enter your first name</string>
+    <string name="signup_last_name_error_required">Enter your last name</string>
+    <string name="signup_birth_date_error_required">Select your birth date</string>
+    <string name="signup_gender_error_required">Select a gender option</string>
+    <string name="signup_phone_label">Mobile number</string>
+    <string name="signup_phone_error_invalid">Enter a valid mobile number</string>
+    <string name="signup_language_error_required">Select a language</string>
+    <string name="signup_level_error_required">Select a level</string>
+    <string name="signup_birth_date_picker_title">Select birth date</string>
+    <string name="signup_next_action">Next</string>
+    <string name="signup_back_action">Back</string>
+    <string name="signup_accept_action">Accept</string>
+    <string name="signup_connection_checking">Checking server connection…</string>
+    <string name="signup_connection_error_retry">Couldn\'t connect to the server. Tap to retry.</string>
+    <string name="signup_connection_error_input">Couldn\'t connect to the server.</string>
+    <string name="signup_username_checking">Checking username availability…</string>
+    <string name="signup_username_error_taken">This username is already in use.</string>
+    <string name="dashboard_offline_mode_only_surveys">Offline mode: only surveys are available.</string>
+    <string name="dashboard_online_mode_restored">Connection restored: all panels are enabled.</string>
+    <string name="dashboard_survey_download">Download</string>
+    <string name="dashboard_survey_downloaded">Downloaded</string>
+    <string name="dashboard_survey_download_success">Survey saved for offline use.</string>
+    <string name="dashboard_survey_download_error">Couldn\'t save the survey for offline use.</string>
+    <string name="dashboard_surveys_tab_outbox">Pending</string>
+    <string name="dashboard_surveys_outbox_empty">No pending submissions.</string>
+    <string name="dashboard_survey_submission_saved_offline">Submission saved to outbox for sync.</string>
+    <string name="dashboard_outbox_saved_at">Saved offline on %1$s</string>
+    <string name="dashboard_outbox_unknown_survey">Survey</string>
+    <string name="dashboard_outbox_unknown_team">Team</string>
+    <string name="dashboard_outbox_detail_intro">These are the answers you filled. Review them and tap send when you are ready.</string>
+    <string name="dashboard_outbox_send">Send</string>
+    <string name="dashboard_outbox_send_placeholder">Sync will be available soon.</string>
+    <string name="dashboard_outbox_no_answers">No answers were captured.</string>
+    <string name="dashboard_outbox_no_answer">No answer</string>
+    <string name="dashboard_outbox_preview_title">Preview</string>
+    <string name="dashboard_outbox_unknown_question">Question %1$d</string>
+    <string name="dashboard_outbox_missing_entry">Pending submission not found.</string>
+    <string name="dashboard_outbox_birthdate_format">Birth date: %1$s</string>
+    <string name="dashboard_outbox_age_format">Age: %1$d</string>
+    <string name="dashboard_outbox_gender_format">Gender: %1$s</string>
+    <string name="dashboard_outbox_language_format">Language: %1$s</string>
+    <string name="dashboard_outbox_level_format">Level: %1$s</string>
+    <string name="dashboard_outbox_phone_format">Phone: %1$s</string>
+    <string name="dashboard_outbox_email_format">Email: %1$s</string>
+    <string name="dashboard_outbox_participant_details">Participant details</string>
+    <string name="dashboard_outbox_offline_cannot_send">Connect to the internet to send this submission.</string>
+    <string name="dashboard_outbox_unable_to_verify_rev">Couldn\'t verify the survey version on the server.</string>
+    <string name="dashboard_outbox_send_success">Submission sent successfully.</string>
+    <string name="dashboard_outbox_send_failed">Couldn\'t send the submission. Try again.</string>
+    <string name="dashboard_outbox_rev_mismatch_title">Survey changed</string>
+    <string name="dashboard_outbox_rev_mismatch_message">This survey has changed on the server, so it can\'t be synced. Do you want to delete it or keep it archived?</string>
+    <string name="dashboard_outbox_delete_submission">Delete submission</string>
+    <string name="dashboard_outbox_keep_submission">Keep archived</string>
+    <string name="dashboard_outbox_deleted">Submission deleted.</string>
+    <string name="dashboard_outbox_delete_confirm_message">Delete this pending survey response? This action cannot be undone.</string>
+    <string name="dashboard_outbox_delete_failed">Couldn\'t delete the submission. Try again.</string>
+    <string name="dashboard_outbox_back">Back</string>
+
+    <string name="signup_step_username_title">Choose a username</string>
+    <string name="signup_step_username_subtitle">Start with a letter. Use only letters and numbers.</string>
+    <string name="signup_step_names_title">What\'s your name?</string>
+    <string name="signup_step_names_subtitle">Enter your real name.</string>
+    <string name="signup_step_birth_date_title">When were you born?</string>
+    <string name="signup_step_birth_date_subtitle">Select your birth date.</string>
+    <string name="signup_step_gender_title">Which gender do you identify with?</string>
+    <string name="signup_step_gender_subtitle">Pick the option that suits you best.</string>
+    <string name="signup_step_contact_title">How can we reach you?</string>
+    <string name="signup_step_contact_subtitle">Share your email and mobile number.</string>
+    <string name="signup_step_password_title">Create a password</string>
+    <string name="signup_step_password_subtitle">Use at least six letters or numbers.</string>
+    <string name="signup_step_language_title">Language and level</string>
+    <string name="signup_step_language_subtitle">Choose the language and level you prefer.</string>
+    <string name="signup_step_license_title">Accept the license</string>
+    <string name="signup_step_license_subtitle">Review the terms before creating your account.</string>
+    <string name="signup_license_title">End User License Agreement (EULA)</string>
+    <string name="signup_license_subtitle">Open Learning Exchange
+Applications: Planet, myPlanet, and myPlanetLite</string>
+    <string name="signup_license_section1_title">1. Acceptance of Agreement</string>
+    <string name="signup_license_section1_body">By selecting "Accept" within this Android application, you confirm that you have read, understood, and agree to the terms set out in this End User License Agreement (the "Agreement").
+
+If you do not agree, you must select "Cancel" and stop using the application.</string>
+    <string name="signup_license_section2_title">2. Ownership</string>
+    <string name="signup_license_section2_body">Open Learning Exchange ("OLE") owns the Planet, myPlanet, and myPlanetLite applications, including their content, design, code, and related materials.</string>
+    <string name="signup_license_section3_title">3. License of Use</string>
+    <string name="signup_license_section3_body">OLE grants you a limited, personal, non-exclusive, and non-transferable license to install and use this Android application solely for the purposes authorized by your institution or organization.</string>
+    <string name="signup_license_section4_title">4. Data, Security, and Privacy</string>
+    <string name="signup_license_section4_point1">4.1 The Applications must collect and process the personal data required for user authentication, operation, and synchronization.</string>
+    <string name="signup_license_section4_point2">4.2 All data transmitted or stored by the Applications is encrypted in compliance with applicable security standards.</string>
+    <string name="signup_license_section4_point3">4.3 You accept that using the Applications involves this secure processing.</string>
+    <string name="signup_license_section5_title">5. Account Removal</string>
+    <string name="signup_license_section5_body">If you decide to unsubscribe or delete your account, you must contact an administrator within the Planet platform, who will manage access closure or data deletion according to established procedures.</string>
+    <string name="signup_license_section6_title">6. User Obligations</string>
+    <string name="signup_license_section6_intro">You agree to:</string>
+    <string name="signup_license_section6_point1">• Use the application responsibly and in accordance with applicable regulations.</string>
+    <string name="signup_license_section6_point2">• Keep the assigned login information secure.</string>
+    <string name="signup_license_section6_point3">• Report any misuse or suspicious behavior to your institutional administrator.</string>
+    <string name="signup_license_section7_title">7. Changes to the Agreement</string>
+    <string name="signup_license_section7_body">OLE may update these terms when necessary. Continuing to use the application after any change constitutes acceptance of the updated Agreement.</string>
+    <string name="signup_license_section8_title">8. Confirmation</string>
+    <string name="signup_license_section8_intro">By tapping "Accept," you acknowledge that:</string>
+    <string name="signup_license_section8_point1">• You have read this Agreement.</string>
+    <string name="signup_license_section8_point2">• You understand its scope.</string>
+    <string name="signup_license_section8_point3">• You fully accept its terms and conditions.</string>
+    <string name="signup_license_auto_login_label">Use these details to fill in the login form</string>
+
+    <string name="signup_gender_option_male">Male</string>
+    <string name="signup_gender_option_female">Female</string>
+
+    <string-array name="signup_gender_options_language_en">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_es">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_fr">
+        <item>Masculin</item>
+        <item>Féminin</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_pt">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_ar">
+        <item>ذكر</item>
+        <item>أنثى</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_so">
+        <item>Lab</item>
+        <item>Dhedig</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_ne">
+        <item>पुरुष</item>
+        <item>महिला</item>
+    </string-array>
+
+    <string-array name="signup_gender_options_language_hi">
+        <item>पुरुष</item>
+        <item>महिला</item>
+    </string-array>
+
+    <string name="signup_level_option_beginner">Beginner</string>
+    <string name="signup_level_option_intermediate">Intermediate</string>
+    <string name="signup_level_option_advanced">Advanced</string>
+    <string name="signup_level_option_expert">Expert</string>
+
+    <string-array name="signup_language_options">
+        <item>@string/language_name_english</item>
+        <item>@string/language_name_spanish</item>
+        <item>@string/language_name_french</item>
+        <item>@string/language_name_portuguese</item>
+        <item>@string/language_name_arabic</item>
+        <item>@string/language_name_somali</item>
+        <item>@string/language_name_nepali</item>
+        <item>@string/language_name_hindi</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_en">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+        <item>Expert</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_es">
+        <item>Principiante</item>
+        <item>Intermedio</item>
+        <item>Avanzado</item>
+        <item>Experto</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_fr">
+        <item>Débutant</item>
+        <item>Intermédiaire</item>
+        <item>Avancé</item>
+        <item>Expert</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_pt">
+        <item>Iniciante</item>
+        <item>Intermediário</item>
+        <item>Avançado</item>
+        <item>Especialista</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_ar">
+        <item>مبتدئ</item>
+        <item>متوسط</item>
+        <item>متقدم</item>
+        <item>خبير</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_so">
+        <item>Bilow</item>
+        <item>Dhexdhexaad</item>
+        <item>Sareeye</item>
+        <item>Khabiir</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_ne">
+        <item>प्रारम्भिक</item>
+        <item>मध्यम</item>
+        <item>उन्नत</item>
+        <item>विशेषज्ञ</item>
+    </string-array>
+
+    <string-array name="signup_level_options_language_hi">
+        <item>शुरुआती</item>
+        <item>मध्यम</item>
+        <item>उन्नत</item>
+        <item>विशेषज्ञ</item>
+    </string-array>
+
+    <string-array name="signup_level_options">
+        <item>@string/signup_level_option_beginner</item>
+        <item>@string/signup_level_option_intermediate</item>
+        <item>@string/signup_level_option_advanced</item>
+        <item>@string/signup_level_option_expert</item>
+    </string-array>
+    <string name="server_status_checking">Checking server status…</string>
+    <string name="server_status_connected">Server connected</string>
+    <string name="server_status_disconnected">Server disconnected</string>
+    <string name="server_status_disconnected_retry">Server disconnected. Tap to retry.</string>
+
+    <string name="dashboard_logo_content_description">myPlanet logo</string>
+    <string name="dashboard_settings_content_description">Open settings</string>
+    <string name="dashboard_settings_title">Settings</string>
+    <string name="dashboard_settings_menu_language">Language</string>
+    <string name="dashboard_settings_menu_survey_translation">Translate surveys automatically</string>
+    <string name="dashboard_settings_menu_voice_batch_size">Voices per load</string>
+    <string name="dashboard_settings_survey_translation_enabled">Survey translation enabled</string>
+    <string name="dashboard_settings_survey_translation_disabled">Survey translation disabled</string>
+    <string name="dashboard_survey_translation_notice">This app uses artificial intelligence to translate content. By continuing, you agree to our Privacy Policy.</string>
+    <string name="dashboard_survey_translation_applied_notice">This survey content was translated using artificial intelligence.</string>
+    <string name="dashboard_survey_translation_consent_accept">Accept</string>
+    <string name="dashboard_survey_translation_consent_cancel">Cancel</string>
+    <string name="dashboard_settings_voice_batch_size_title">Choose how many voices to load at once</string>
+    <string name="dashboard_settings_voice_batch_size_option">%1$d voices</string>
+    <string name="dashboard_avatar_content_description">User avatar</string>
+    <string name="dashboard_voices_title">Voices</string>
+    <string name="dashboard_teams_title">My Teams</string>
+    <string name="dashboard_teams_my_title">My teams</string>
+    <string name="dashboard_teams_my_description">Groups you are a member of and can participate in.</string>
+    <string name="dashboard_teams_select_team_hint">Choose a team from the menu to see its updates.</string>
+    <string name="dashboard_teams_explore_title">Explore teams</string>
+    <string name="dashboard_teams_explore_description">Available groups you can join.</string>
+    <string name="dashboard_teams_join_prompt">You are not part of any team yet. You can join one to get started.</string>
+    <string name="dashboard_teams_no_server">Connect to a server to view your teams.</string>
+    <string name="dashboard_teams_no_user">We couldn\'t determine your user. Please sign in again.</string>
+    <string name="dashboard_teams_no_credentials">We couldn\'t find your login details. Please sign in again.</string>
+    <string name="dashboard_teams_error_loading">We couldn\'t load your teams. Try again later.</string>
+    <string name="dashboard_teams_member_unknown">Members not available</string>
+    <string name="dashboard_teams_unknown_name">Unnamed team</string>
+    <string name="dashboard_teams_default_initials">MT</string>
+    <string name="dashboard_teams_bookmark">Bookmark team</string>
+    <string name="dashboard_teams_join_team">Join team</string>
+    <string name="dashboard_teams_join_pending">Join request sent</string>
+    <string name="dashboard_teams_cancel_join_title">Cancel join request?</string>
+    <string name="dashboard_teams_cancel_join_message">Do you want to cancel your request to join this team?</string>
+    <string name="dashboard_teams_cancel_join_confirm">Cancel request</string>
+    <string name="dashboard_teams_leave_team">Leave team</string>
+    <string name="dashboard_teams_leader_badge">You are the team leader</string>
+    <plurals name="dashboard_teams_member_count">
+        <item quantity="one">%d member</item>
+        <item quantity="other">%d members</item>
+    </plurals>
+    <string name="dashboard_home">Home</string>
+    <string name="dashboard_team_members_title">Team members</string>
+    <string name="dashboard_team_members_empty">There are no members in this team yet.</string>
+    <string name="dashboard_team_members_error_loading">We couldn\'t load the team members right now.</string>
+    <string name="dashboard_team_members_leader_role">Leader</string>
+    <string name="dashboard_team_members_member_role">Member</string>
+    <string name="dashboard_team_members_missing_credentials">Sign in to view team members.</string>
+    <string name="dashboard_team_members_missing_server">Set a server to view team members.</string>
+    <string name="dashboard_team_members_unknown">Unknown member</string>
+    <string name="dashboard_team_members_unknown_username">Unknown username</string>
+    <string name="dashboard_team_members_profile_unavailable">Profile is not available for this member.</string>
+    <string name="dashboard_team_members_remove_action">Remove</string>
+    <string name="dashboard_team_members_remove_cancel">Cancel</string>
+    <string name="dashboard_team_members_remove_confirmation_title">Remove member</string>
+    <string name="dashboard_team_members_remove_confirmation_message">Remove %1$s from the team?</string>
+    <string name="dashboard_team_members_remove_success">%1$s was removed from the team.</string>
+    <string name="dashboard_team_members_remove_error">Could not remove %1$s. Please try again.</string>
+    <string name="dashboard_team_members_remove_content_description">Remove member from team</string>
+    <string name="dashboard_team_members_avatar_content_description">Team member avatar</string>
+    <string name="dashboard_invite_members_title">Invite People to this Team</string>
+    <string name="dashboard_invite_members_subtitle">Add users to the team by pressing the + button.</string>
+    <string name="dashboard_invite_members_search_hint">Search team members...</string>
+    <string name="dashboard_invite_members_add">Add</string>
+    <string name="dashboard_invite_members_cancel">Close</string>
+    <string name="dashboard_invite_members_load_error">Unable to load users to invite right now.</string>
+    <string name="dashboard_invite_members_add_success">%1$s added to the team.</string>
+    <string name="dashboard_invite_members_add_error">Could not add %1$s to the team.</string>
+    <string name="dashboard_invite_members_add_error_generic">Unable to add this user right now.</string>
+    <string name="dashboard_team_members_search_empty">No members match your search.</string>
+    <string name="dashboard_post_image_content_description">Content image</string>
+    <string name="dashboard_post_comments_content_description">@string/dashboard_post_detail_comments_title</string>
+    <string name="dashboard_image_preview_content_description">Full screen post image</string>
+    <string name="dashboard_profile_menu_profile">@string/profile_title</string>
+    <string name="dashboard_profile_menu_teams">Teams</string>
+    <string name="dashboard_profile_menu_privacy_policy">Privacy policy</string>
+    <string name="dashboard_profile_menu_logout">Log out</string>
+    <string name="privacy_policy_title">Privacy policy</string>
+    <string name="privacy_policy_intro">This Privacy Policy explains how MyPlanet Lite, provided through your organization, handles personal data when you use the app.</string>
+    <string name="privacy_policy_data_collection_title">Information we collect</string>
+    <string name="privacy_policy_data_collection_description">We collect:\n• Account details (name, username, email, organization).\n• Usage and diagnostics (session activity, feature interactions, device and app version).\n• Optional content you submit (posts, survey responses, uploaded media).</string>
+    <string name="privacy_policy_data_usage_title">How we use your data</string>
+    <string name="privacy_policy_data_usage_description">We use your information to provide and improve the service, personalize your experience, keep your account secure, and comply with legal obligations.</string>
+    <string name="privacy_policy_usage_title">How we use your information</string>
+    <string name="privacy_policy_usage_description">Your data helps us deliver core features, synchronize learning content, personalize language and locale settings, improve performance and reliability, and support security, fraud prevention, and investigations.</string>
+    <string name="privacy_policy_storage_title">Storage and retention</string>
+    <string name="privacy_policy_storage_description">Information is stored on secure servers managed by OLE or your organization with access controls and encryption in transit. We retain data only as long as needed to provide the service, meet legal requirements, enforce agreements, or resolve disputes, with limited retention for backups.</string>
+    <string name="privacy_policy_sharing_title">Sharing and third parties</string>
+    <string name="privacy_policy_sharing_description">We do not sell personal data. Information may be shared with trusted service providers (such as hosting, analytics, or notification platforms) under data protection agreements, with your organization\'s administrators to manage accounts, or when required by law.</string>
+    <string name="privacy_policy_rights_title">Your choices and rights</string>
+    <string name="privacy_policy_rights_description">You can review or update profile details in the app. Where applicable, you may request access, correction, deletion, restriction, or portability of your data, or object to certain processing. You may withdraw optional data you provide by deleting that content or discontinuing its submission.</string>
+    <string name="privacy_policy_security_title">Security</string>
+    <string name="privacy_policy_security_description">We use technical and organizational safeguards—including transport encryption (TLS), authentication controls, least-privilege access, and monitoring—to reduce risks of unauthorized access or disclosure. Please keep your credentials secure.</string>
+    <string name="privacy_policy_minors_title">Children\'s data</string>
+    <string name="privacy_policy_minors_description">The app is intended for authorized learners through partner organizations. If a child\'s data is collected without the required consent, contact us so we can remove it.</string>
+    <string name="privacy_policy_changes_title">Policy updates</string>
+    <string name="privacy_policy_changes_description">We may update this policy to reflect product, security, or legal changes. Significant updates will be communicated through in-app notices or other appropriate channels.</string>
+    <string name="privacy_policy_contact_title">Contact</string>
+    <string name="privacy_policy_contact_description">For questions or to exercise your privacy rights, contact your organization administrator or our support team.</string>
+    <string name="teams_title">Teams</string>
+    <string name="profile_title">Profile</string>
+    <string name="profile_description">Review and edit your personal information.</string>
+    <string name="profile_section_account">Account</string>
+    <string name="profile_section_personal">Personal details</string>
+    <string name="profile_section_contact">Contact information</string>
+    <string name="profile_section_learning">Learning preferences</string>
+    <string name="profile_username_label">@string/login_username_label</string>
+    <string name="profile_avatar_label">Avatar</string>
+    <string name="profile_avatar_hint">Choose a photo to preview how it looks in circular and square frames.</string>
+    <string name="profile_avatar_preview_circle_label">Circular</string>
+    <string name="profile_avatar_preview_square_label">Square</string>
+    <string name="profile_avatar_preview_circle_content_description">Circular avatar preview</string>
+    <string name="profile_avatar_preview_square_content_description">Square avatar preview</string>
+    <string name="profile_avatar_change_button">Choose image</string>
+    <string name="profile_avatar_picker_error">We couldn\'t load that image. Try another file.</string>
+    <string name="profile_avatar_crop_title">Adjust avatar</string>
+    <string name="profile_loading_message">Updating your information&#8230;</string>
+    <string name="profile_refresh_failed_toast">We couldn\'t refresh your profile. Showing saved information.</string>
+    <string name="profile_save_button">Save changes</string>
+    <string name="profile_save_success_toast">Your profile was updated.</string>
+    <string name="profile_save_failed_toast">We couldn\'t save your changes. Try again.</string>
+    <string name="profile_birth_date_picker_title">@string/signup_birth_date_error_required</string>
+    <string name="profile_field_first_name">@string/signup_first_name_label</string>
+    <string name="profile_field_middle_name">@string/signup_middle_name_label</string>
+    <string name="profile_field_last_name">@string/signup_last_name_label</string>
+    <string name="profile_field_email">@string/signup_email_label</string>
+    <string name="profile_field_phone">Phone number</string>
+    <string name="profile_field_language">@string/signup_language_label</string>
+    <string name="profile_field_birth_date">@string/signup_birth_date_label</string>
+    <string name="dashboard_team_member_profile_title">Member profile</string>
+    <string name="dashboard_team_member_profile_navigation_content_description">Back</string>
+    <string name="dashboard_team_member_profile_username_format">@%1$s</string>
+    <string name="dashboard_team_member_profile_identity_section">Identity</string>
+    <string name="dashboard_team_member_profile_name_label">Name</string>
+    <string name="dashboard_team_member_profile_username_label">Username</string>
+    <string name="dashboard_team_member_profile_contact_section">Contact</string>
+    <string name="dashboard_team_member_profile_email_label">Email</string>
+    <string name="dashboard_team_member_profile_phone_label">Phone number</string>
+    <string name="dashboard_team_member_profile_preferences_section">Preferences</string>
+    <string name="dashboard_team_member_profile_language_label">Language</string>
+    <string name="dashboard_team_member_profile_level_label">Level</string>
+    <string name="dashboard_team_member_profile_gender_label">Gender</string>
+    <string name="dashboard_team_member_profile_birth_date_label">Birth date</string>
+    <string name="dashboard_team_member_profile_email_action">Send email</string>
+    <string name="dashboard_team_member_profile_phone_action">Call</string>
+    <string name="dashboard_team_member_profile_not_available">Not available</string>
+    <string name="dashboard_team_member_profile_error">Unable to load the member profile.</string>
+    <string name="profile_field_gender">@string/signup_gender_label</string>
+    <string name="profile_field_level">Learning level</string>
+    <string name="dashboard_profile_name_placeholder">Your name</string>
+    <string name="dashboard_profile_username_placeholder">&#64;username</string>
+    <string name="dashboard_profile_username_format">&#64;%1$s</string>
+    <string name="dashboard_add_voice_content_description">Add a new voice</string>
+    <string name="dashboard_voices_empty">No voices to display yet.</string>
+    <string name="dashboard_voices_no_server">Log in to view community voices.</string>
+    <string name="dashboard_voices_error">We couldn\'t load the latest voices.</string>
+    <string name="dashboard_voices_error_toast">Couldn\'t load more voices.</string>
+    <string name="dashboard_surveys_title">Surveys</string>
+    <string name="dashboard_surveys_header_title">Team surveys</string>
+    <string name="dashboard_surveys_header_description">Browse surveys for your team or ones imported from the community.</string>
+    <string name="dashboard_surveys_tab_team">Team</string>
+    <string name="dashboard_surveys_tab_adopted">Imported</string>
+    <string name="dashboard_surveys_empty_team">Your team hasn\'t created any surveys yet.</string>
+    <string name="dashboard_surveys_empty_adopted">No imported surveys yet.</string>
+    <string name="dashboard_surveys_error_loading">We couldn\'t load surveys right now.</string>
+    <string name="dashboard_surveys_missing_server">Choose a server to load surveys.</string>
+    <string name="dashboard_surveys_missing_team">Select a team to load surveys.</string>
+    <string name="dashboard_surveys_missing_credentials">Sign in to load surveys.</string>
+    <string name="dashboard_surveys_metadata">Created %1$s · Completed %2$d times</string>
+    <string name="dashboard_surveys_unknown_date">Unknown date</string>
+    <string name="dashboard_survey_wizard_step_counter">Step %1$d of %2$d</string>
+    <string name="dashboard_survey_wizard_participant_basics_title">Respondent basics</string>
+    <string name="dashboard_survey_wizard_gender_label">Select respondent gender</string>
+    <string name="dashboard_survey_wizard_birth_year_label">Year of birth</string>
+    <string name="dashboard_survey_wizard_birth_year_required">Enter a birth year to continue.</string>
+    <string name="dashboard_survey_wizard_additional_info_label">Additional details (optional)</string>
+    <string name="dashboard_survey_wizard_names_title">Respondent name</string>
+    <string name="dashboard_survey_wizard_first_name_label">First name (optional)</string>
+    <string name="dashboard_survey_wizard_middle_name_label">Middle name (optional)</string>
+    <string name="dashboard_survey_wizard_last_name_label">Last name (optional)</string>
+    <string name="dashboard_survey_wizard_birthdate_title">Birth date</string>
+    <string name="dashboard_survey_wizard_birth_date_label">Birth date (optional)</string>
+    <string name="dashboard_survey_wizard_contact_title">Contact details</string>
+    <string name="dashboard_survey_wizard_email_label">Email (optional)</string>
+    <string name="dashboard_survey_wizard_phone_label">Phone number (optional)</string>
+    <string name="dashboard_survey_wizard_language_level_title">Language and level</string>
+    <string name="dashboard_survey_wizard_language_label">Language (optional)</string>
+    <string name="dashboard_survey_wizard_level_label">Level (optional)</string>
+    <string name="dashboard_survey_wizard_previous">Previous</string>
+    <string name="dashboard_survey_wizard_next">Next</string>
+    <string name="dashboard_survey_wizard_finish">Finish</string>
+    <string name="dashboard_survey_wizard_input_required">Please enter an answer to continue.</string>
+    <string name="dashboard_survey_wizard_choice_required">Select at least one option to continue.</string>
+    <string name="dashboard_survey_wizard_rating_required">Choose a rating to continue.</string>
+    <string name="dashboard_survey_wizard_completed">Survey completed.</string>
+    <string name="dashboard_survey_wizard_submission_failed">Couldn\'t save your responses. Please try again.</string>
+    <string name="dashboard_survey_wizard_other_option">Other</string>
+    <string name="dashboard_survey_wizard_other_hint">Enter other response</string>
+    <string name="dashboard_survey_wizard_empty_questions">This survey doesn\'t have any questions yet.</string>
+    <string name="create_voice_title">Create voice</string>
+    <string name="create_voice_editor_label">Share your voice</string>
+    <string name="create_voice_hint">Voice in Markdown format</string>
+    <string name="create_voice_menu_post">Post</string>
+    <string name="create_voice_primary_action">Publish voice</string>
+    <string name="create_voice_preview_label">Preview</string>
+    <string name="create_voice_preview_placeholder">Start typing to see how your voice will look.</string>
+    <string name="create_voice_empty_error">Please enter some text before posting.</string>
+    <string name="create_voice_post_success">Your voice was published.</string>
+    <string name="create_voice_post_error">We couldn\'t publish your voice. Try again.</string>
+    <string name="create_voice_missing_credentials">We couldn\'t access your saved credentials. Please log in again.</string>
+    <string name="create_voice_missing_server">Please choose a server before creating a voice.</string>
+    <string name="create_voice_format_bold_description">Bold</string>
+    <string name="create_voice_format_italic_description">Italic</string>
+    <string name="create_voice_format_heading_description">Heading</string>
+    <string name="create_voice_format_bullet_description">Bulleted list</string>
+    <string name="create_voice_format_numbered_description">Numbered list</string>
+    <string name="create_voice_format_quote_description">Quote</string>
+    <string name="create_voice_format_link_description">Insert link</string>
+
+    <string name="create_voice_link_dialog_title">Insert link</string>
+    <string name="create_voice_link_title_hint">Link title</string>
+    <string name="create_voice_link_url_hint">Link URL</string>
+    <string name="create_voice_link_insert_button">Insert</string>
+    <string name="create_voice_link_required_fields">Please enter a title and URL.</string>
+    <string name="create_voice_format_image_description">Insert image</string>
+    <string name="create_voice_format_placeholder">text</string>
+    <string name="create_voice_image_processing_error">We couldn\'t process that image. Please try another file.</string>
+    <string name="create_voice_image_upload_error">We couldn\'t upload your images. Try again.</string>
+    <string name="permission_required_message">Internet, photo, and camera permissions are required to continue.</string>
+    <string name="create_voice_confirm_title">@string/create_voice_primary_action</string>
+    <string name="create_voice_confirm_message">Do you want to publish this voice?</string>
+    <string name="create_voice_confirm_positive">Publish</string>
+    <string name="create_voice_confirm_negative">Cancel</string>
+
+    <string name="edit_voice_title">Edit voice</string>
+    <string name="edit_voice_editor_label">Update your voice</string>
+    <string name="edit_voice_menu_update">@string/profile_save_button</string>
+    <string name="edit_voice_primary_action">Save voice</string>
+    <string name="edit_voice_confirm_title">Update voice</string>
+    <string name="edit_voice_confirm_message">Do you want to update this voice?</string>
+    <string name="edit_voice_confirm_positive">@string/server_configuration_save</string>
+    <string name="edit_voice_update_success">Voice updated successfully.</string>
+    <string name="edit_voice_update_error">Could not update voice, please try again.</string>
+    <string name="edit_voice_missing_document">We could not edit this voice right now.</string>
+    <string name="dashboard_post_detail_title">Voice</string>
+    <string name="dashboard_post_detail_comments_title">Comments</string>
+    <string name="dashboard_post_detail_comments_empty">No comments yet.</string>
+    <string name="dashboard_post_detail_comments_error">Couldn\'t load comments.</string>
+    <string name="dashboard_post_action_reply">Reply</string>
+    <string name="dashboard_post_action_edit">Edit</string>
+    <string name="dashboard_post_action_delete">Delete</string>
+    <string name="dashboard_post_action_share">Share</string>
+    <string name="dashboard_post_actions_menu_content_description">More post actions</string>
+    <string name="dashboard_comment_actions_menu_content_description">More comment actions</string>
+    <string name="dashboard_post_reply_hint">Write your reply…</string>
+    <string name="dashboard_post_reply_send">Send</string>
+    <string name="dashboard_post_reply_empty">Please write a reply before sending.</string>
+    <string name="dashboard_post_reply_error">Could not post reply, please try again.</string>
+    <string name="dashboard_post_reply_success">Reply posted successfully.</string>
+    <string name="dashboard_post_reply_missing_credentials">Missing credentials to post reply.</string>
+    <string name="dashboard_post_reply_preview_label">@string/create_voice_preview_label</string>
+    <string name="dashboard_post_reply_preview_placeholder">Your reply preview will appear here.</string>
+    <string name="dashboard_post_replying_to">Replying to @%1$s</string>
+    <string name="dashboard_post_action_edit_toast">Edit voice action coming soon.</string>
+    <string name="dashboard_post_action_delete_toast">Delete voice action coming soon.</string>
+    <string name="dashboard_post_action_share_toast">Share voice action coming soon.</string>
+    <string name="dashboard_comment_edit_hint">Update your comment</string>
+    <string name="dashboard_comment_edit_helper">Editing existing comment</string>
+    <string name="dashboard_comment_edit_send">Update</string>
+    <string name="dashboard_comment_edit_success">Comment updated.</string>
+    <string name="dashboard_comment_edit_error">Unable to update comment.</string>
+    <string name="dashboard_comment_delete_success">Comment deleted.</string>
+    <string name="dashboard_comment_delete_error">Unable to delete comment.</string>
+    <string name="dashboard_post_delete_success">Voice deleted successfully.</string>
+    <string name="dashboard_post_delete_error">Unable to delete this voice. Please try again.</string>
+    <string name="dashboard_share_post_title">Voice - Planet - %1$s</string>
+    <string name="dashboard_share_post_server_fallback">MyPlanetLite</string>
+    <string name="share_post">Share post</string>
+    <string name="dashboard_share_post_chooser_title">Share voice</string>
+    <string name="dashboard_share_post_fallback">Shared from MyPlanetLite</string>
+    <string name="dashboard_relative_time_seconds">a few seconds ago</string>
+    <string name="dashboard_relative_time_minute">1 minute ago</string>
+    <string name="dashboard_relative_time_minutes">%1$d minutes ago</string>
+    <string name="dashboard_relative_time_hour">1 hour ago</string>
+    <string name="dashboard_relative_time_hours">%1$d hours ago</string>
+    <string name="dashboard_relative_time_day">1 day ago</string>
+    <string name="dashboard_relative_time_days">%1$d days ago</string>
+    <string name="dashboard_relative_time_month">1 month ago</string>
+    <string name="dashboard_relative_time_months">%1$d months ago</string>
+    <string name="dashboard_relative_time_year">1 year ago</string>
+    <string name="dashboard_relative_time_years">%1$d years ago</string>
+
+    <string name="search_hint">Search</string>
+    <string name="add_member_button_description">Add member</string>
+    <string name="dashboard_courses_title">Courses</string>
+    <string name="dashboard_courses_tab_mine">My courses</string>
+    <string name="dashboard_courses_tab_all">Courses</string>
+    <string name="dashboard_courses_tab_team">Team courses</string>
+    <string name="dashboard_courses_content_description_icon">Course icon</string>
+    <string name="dashboard_course_progress_value">Progress: %1$d%%</string>
+    <string name="dashboard_courses_sample_name_creativity">Creative thinking</string>
+    <string name="dashboard_courses_sample_name_digital_marketing">Digital marketing</string>
+    <string name="dashboard_courses_sample_name_leadership">Leadership essentials</string>
+    <string name="dashboard_courses_sample_name_data">Data fundamentals</string>
+    <string name="dashboard_courses_sample_name_communication">Effective communication</string>
+    <string name="dashboard_courses_sample_name_finance">Finance basics</string>
+    <string name="dashboard_courses_sample_name_english">English for work</string>
+    <string name="dashboard_courses_sample_name_coding">Intro to coding</string>
+    <string name="dashboard_courses_header_title">What would you like to learn today?</string>
+    <string name="dashboard_courses_header_subtitle">Search below.</string>
+    <string name="dashboard_courses_search_hint">Search courses</string>
+    <string name="dashboard_courses_category_all">All courses</string>
+    <string name="dashboard_courses_category_uiux">UI/UX design</string>
+    <string name="dashboard_courses_category_development">Development</string>
+    <string name="dashboard_courses_category_basic">Basics</string>
+    <string name="dashboard_courses_author_format">By: %1$s</string>
+    <string name="dashboard_courses_lessons_format">%1$d steps</string>
+    <string name="dashboard_courses_rating_format">%1$.1f ★</string>
+    <string name="dashboard_courses_price_format">$%1$.0f</string>
+    <string name="dashboard_course_lessons_title">All lessons of %1$s</string>
+    <string name="dashboard_course_lessons_summary">Here %1$d lessons and complete %2$d</string>
+    <string name="dashboard_course_lessons_progress">%1$d of %2$d steps completed</string>
+    <string name="dashboard_course_lesson_duration">%1$d min</string>
+    <string name="dashboard_course_lessons_topic_intro">What is %1$s?</string>
+    <string name="dashboard_course_lessons_topic_why">Why is %1$s necessary?</string>
+    <string name="dashboard_course_lessons_topic_definitions">What are the definitions of %1$s?</string>
+    <string name="dashboard_course_lessons_topic_types">What are the 4 types of %1$s?</string>
+    <string name="dashboard_course_lessons_topic_basics">Basics of %1$s</string>
+    <string name="dashboard_course_lessons_open_course">Go to course</string>
+    <string name="dashboard_course_lessons_join_course">Join course</string>
+    <string name="dashboard_course_leave_course">Leave course</string>
+    <string name="course_wizard_close">Close course</string>
+    <string name="course_wizard_previous">Previous</string>
+    <string name="course_wizard_next">Next</string>
+    <string name="course_wizard_finish">Finish course</string>
+    <string name="course_wizard_step_position">Step %1$d of %2$d</string>
+    <string name="course_wizard_open_survey">Open survey</string>
+    <string name="course_wizard_open_exam">Open exam</string>
+    <string name="dashboard_exam_title">Exam</string>
+    <string name="dashboard_exam_incorrect_answers">Some answers are incorrect. Please try again.</string>
+    <string name="dashboard_exam_completed">Exam completed.</string>
+    <string name="course_wizard_attachments_title">Attachments</string>
+    <string name="course_wizard_attachment_video">Video</string>
+    <string name="course_wizard_attachment_image">Image</string>
+    <string name="course_wizard_attachment_audio">Audio</string>
+    <string name="course_wizard_attachment_pdf">PDF</string>
+    <string name="course_wizard_play_error">Couldn\'t open the attachment</string>
+    <string name="course_wizard_fullscreen">Toggle fullscreen</string>
+    <string name="course_wizard_play_video">Play video</string>
+    <string name="course_wizard_open_image">Open image</string>
+    <string name="course_wizard_open_pdf">Open PDF</string>
+    <string name="course_wizard_pdf_page_counter">Page %1$d/%2$d</string>
+    <string name="course_wizard_exit_fullscreen">Exit fullscreen</string>
+    <string name="dashboard_course_leave_confirm">Do you want to leave this course?</string>
+    <string name="dashboard_course_details_close">Close</string>
+    <string name="dashboard_course_details_description" />
+    <string name="dashboard_courses_missing_credentials">Missing server configuration or credentials</string>
+    <string name="dashboard_courses_loading_error">Unable to load courses</string>
+    <string name="create_voice_image_options_title">Image options</string>
+    <string name="create_voice_image_option_view">View image</string>
+    <string name="create_voice_image_option_delete">Delete image</string>
+</resources>
