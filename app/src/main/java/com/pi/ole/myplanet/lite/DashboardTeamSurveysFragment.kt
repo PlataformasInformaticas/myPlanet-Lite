@@ -6,8 +6,8 @@
 
 package com.pi.ole.myplanet.lite
 
-import android.os.Bundle
 import android.content.Intent
+import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -21,26 +21,26 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.pi.ole.myplanet.lite.SurveyWizardActivity
 import com.pi.ole.myplanet.lite.auth.AuthDependencies
 import com.pi.ole.myplanet.lite.dashboard.DashboardOfflineSurveyStore
+import com.pi.ole.myplanet.lite.dashboard.DashboardOutboxDetailActivity
 import com.pi.ole.myplanet.lite.dashboard.DashboardServerPreferences
-import com.pi.ole.myplanet.lite.dashboard.DashboardSurveyStatusStore
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveyOutboxStore
+import com.pi.ole.myplanet.lite.dashboard.DashboardSurveyOutboxStore.OutboxEntry
+import com.pi.ole.myplanet.lite.dashboard.DashboardSurveyStatusStore
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveysRepository
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveysRepository.SurveyDocument
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveysRepository.SurveyQuestion
-import com.pi.ole.myplanet.lite.dashboard.DashboardSurveyOutboxStore.OutboxEntry
-import com.pi.ole.myplanet.lite.dashboard.DashboardOutboxDetailActivity
 import com.pi.ole.myplanet.lite.dashboard.SurveyStatus
 import com.pi.ole.myplanet.lite.profile.ProfileCredentialsStore
 import com.pi.ole.myplanet.lite.profile.StoredCredentials
-import com.pi.ole.myplanet.lite.SurveyWizardActivity
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import java.text.DateFormat
 import java.util.Date
 import java.util.Locale
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class DashboardTeamSurveysFragment : Fragment(R.layout.fragment_dashboard_team_surveys) {
 

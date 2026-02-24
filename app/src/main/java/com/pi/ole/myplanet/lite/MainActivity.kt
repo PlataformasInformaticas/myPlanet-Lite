@@ -38,20 +38,22 @@ import androidx.core.view.doOnLayout
 import androidx.core.view.doOnPreDraw
 import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
-import androidx.lifecycle.lifecycleScope
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
+import androidx.lifecycle.lifecycleScope
 import com.blongho.country_data.World
-import com.google.android.material.button.MaterialButton
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import com.pi.ole.myplanet.lite.profile.ProfileCredentialsStore
-import com.pi.ole.myplanet.lite.profile.StoredCredentials
 import com.pi.ole.myplanet.lite.auth.AuthDependencies
 import com.pi.ole.myplanet.lite.auth.AuthResult
+import com.pi.ole.myplanet.lite.profile.ProfileCredentialsStore
+import com.pi.ole.myplanet.lite.profile.StoredCredentials
 import com.pi.ole.myplanet.lite.profile.UserProfileDatabase
 import com.pi.ole.myplanet.lite.profile.UserProfileSync
+import java.util.ArrayList
+import java.util.Locale
+import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.isActive
@@ -65,9 +67,6 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
-import java.util.ArrayList
-import java.util.Locale
-import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
 

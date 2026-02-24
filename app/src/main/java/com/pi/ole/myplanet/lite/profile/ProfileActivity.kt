@@ -6,7 +6,6 @@
 
 package com.pi.ole.myplanet.lite.profile
 
-import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -29,39 +28,38 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
 import androidx.core.view.updatePadding
 import androidx.lifecycle.lifecycleScope
-import com.google.android.material.button.MaterialButton
-import com.pi.ole.myplanet.lite.BuildConfig
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.android.material.textfield.TextInputEditText
+import com.pi.ole.myplanet.lite.BuildConfig
 import com.pi.ole.myplanet.lite.R
 import com.pi.ole.myplanet.lite.auth.AuthDependencies
 import com.pi.ole.myplanet.lite.auth.AuthResult
 import com.pi.ole.myplanet.lite.dashboard.DashboardServerPreferences
 import com.yalantis.ucrop.UCrop
-import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.security.MessageDigest
 import java.text.SimpleDateFormat
 import java.time.Instant
 import java.time.LocalDate
-import java.time.ZoneId
+import java.time.Period
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
-import java.time.Period
+import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
-import java.util.Calendar
 import kotlin.math.min
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 
 class ProfileActivity : AppCompatActivity() {

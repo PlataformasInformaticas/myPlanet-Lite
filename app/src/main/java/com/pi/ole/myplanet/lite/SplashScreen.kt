@@ -10,10 +10,10 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import android.os.Build
-import android.os.Bundle
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.os.Build
+import android.os.Bundle
 import android.provider.Settings
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
@@ -28,13 +28,13 @@ import androidx.lifecycle.lifecycleScope
 import com.pi.ole.myplanet.lite.auth.AuthDependencies
 import com.pi.ole.myplanet.lite.profile.UserProfileDatabase
 import com.pi.ole.myplanet.lite.profile.UserProfileSync
+import java.util.UUID
+import kotlin.text.Charsets
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
-import java.util.UUID
-import kotlin.text.Charsets
 
 class SplashScreen : AppCompatActivity() {
 

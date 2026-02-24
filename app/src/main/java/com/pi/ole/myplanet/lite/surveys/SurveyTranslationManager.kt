@@ -10,13 +10,6 @@ import android.content.Context
 import com.google.mlkit.nl.languageid.LanguageIdentification
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveysRepository.SurveyDocument
 import com.pi.ole.myplanet.lite.dashboard.ServerConfigurationRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.suspendCancellableCoroutine
-import kotlinx.coroutines.withContext
-import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
@@ -25,6 +18,13 @@ import java.io.IOException
 import java.util.Locale
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlinx.coroutines.withContext
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 
 class SurveyTranslationManager(
     private val appContext: Context,

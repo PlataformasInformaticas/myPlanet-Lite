@@ -11,6 +11,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Rect
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -20,14 +21,13 @@ import android.text.TextWatcher
 import android.view.MotionEvent
 import android.view.TouchDelegate
 import android.view.View
-import android.graphics.Rect
+import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import android.widget.Toast
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -46,9 +46,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputLayout
-import com.google.android.material.appbar.MaterialToolbar
 import com.pi.ole.myplanet.lite.R
 import com.pi.ole.myplanet.lite.auth.AuthDependencies
 import com.pi.ole.myplanet.lite.dashboard.DashboardNewsActionsRepository
@@ -70,11 +70,11 @@ import java.util.Date
 import java.util.LinkedHashMap
 import java.util.LinkedHashSet
 import java.util.Locale
+import kotlin.math.max
+import kotlin.math.min
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import kotlin.math.max
-import kotlin.math.min
 import okhttp3.OkHttpClient
 import okhttp3.Request
 

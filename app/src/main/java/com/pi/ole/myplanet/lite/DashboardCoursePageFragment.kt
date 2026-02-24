@@ -10,10 +10,10 @@ import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import android.view.inputmethod.InputMethodManager
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -26,17 +26,17 @@ import com.google.android.material.color.MaterialColors
 import com.pi.ole.myplanet.lite.CourseWizardActivity
 import com.pi.ole.myplanet.lite.auth.AuthDependencies
 import com.pi.ole.myplanet.lite.dashboard.DashboardCoursesRepository
-import com.pi.ole.myplanet.lite.dashboard.DashboardServerPreferences
 import com.pi.ole.myplanet.lite.dashboard.DashboardCoursesRepository.CourseDocument
 import com.pi.ole.myplanet.lite.dashboard.DashboardPostImageLoader
-import com.pi.ole.myplanet.lite.dashboard.DashboardTeamSelectionPreferences
+import com.pi.ole.myplanet.lite.dashboard.DashboardServerPreferences
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveysRepository.SurveyDocument
+import com.pi.ole.myplanet.lite.dashboard.DashboardTeamSelectionPreferences
 import com.pi.ole.myplanet.lite.profile.ProfileCredentialsStore
 import com.pi.ole.myplanet.lite.profile.StoredCredentials
+import kotlin.random.Random
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import kotlin.random.Random
 
 class DashboardCoursePageFragment : Fragment(R.layout.fragment_dashboard_courses_page) {
 

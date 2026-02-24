@@ -6,24 +6,24 @@
 
 package com.pi.ole.myplanet.lite.dashboard
 
-import com.pi.ole.myplanet.lite.dashboard.DashboardSurveysRepository.SurveyDocument
+import android.util.Log
 import com.pi.ole.myplanet.lite.BuildConfig
+import com.pi.ole.myplanet.lite.dashboard.DashboardSurveysRepository.SurveyDocument
 import com.pi.ole.myplanet.lite.profile.StoredCredentials
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import java.io.IOException
+import java.util.ArrayList
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import android.util.Log
 import okhttp3.Credentials
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.logging.HttpLoggingInterceptor
-import java.io.IOException
-import java.util.ArrayList
 
 class DashboardCoursesRepository {
     companion object {

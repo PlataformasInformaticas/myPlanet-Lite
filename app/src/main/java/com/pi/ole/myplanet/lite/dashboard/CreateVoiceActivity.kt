@@ -14,8 +14,8 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.text.InputType
 import android.text.Editable
+import android.text.InputType
 import android.text.TextWatcher
 import android.util.TypedValue
 import android.view.ViewGroup
@@ -66,7 +66,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import org.json.JSONArray
 import org.json.JSONObject
 
 class CreateVoiceActivity : AppCompatActivity() {

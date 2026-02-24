@@ -14,6 +14,8 @@ import androidx.core.widget.ImageViewCompat
 import com.pi.ole.myplanet.lite.R
 import com.pi.ole.myplanet.lite.profile.AvatarUpdateNotifier
 import com.pi.ole.myplanet.lite.profile.StoredCredentials
+import java.io.IOException
+import java.util.Locale
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -21,8 +23,6 @@ import kotlinx.coroutines.withContext
 import okhttp3.Credentials
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import java.io.IOException
-import java.util.Locale
 
 class DashboardAvatarLoader(
     private val baseUrl: String,
