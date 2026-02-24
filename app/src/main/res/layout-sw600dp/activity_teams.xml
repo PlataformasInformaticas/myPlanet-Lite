@@ -23,7 +23,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/teamsFragmentContainer"
-        android:name="com.pi.ole.myplanet.lite.TeamsFragment"
+        android:name="org.ole.planet.myplanet.lite.TeamsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
