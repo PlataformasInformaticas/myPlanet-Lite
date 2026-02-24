@@ -4,7 +4,7 @@
  * Creation date: 2025-12-28
  */
 
-package com.pi.ole.myplanet.lite
+package org.ole.planet.myplanet.lite
 
 import android.content.Context
 import android.content.Intent
