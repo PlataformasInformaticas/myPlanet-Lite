@@ -15,8 +15,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.appbar.MaterialToolbar
@@ -29,13 +29,13 @@ import com.pi.ole.myplanet.lite.profile.GenderTranslator
 import com.pi.ole.myplanet.lite.profile.LearningLevelTranslator
 import com.pi.ole.myplanet.lite.profile.ProfileCredentialsStore
 import com.pi.ole.myplanet.lite.profile.StoredCredentials
-import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneOffset
-import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.TimeZone
+import kotlinx.coroutines.launch
 
 class DashboardTeamMemberProfileActivity : AppCompatActivity() {
 

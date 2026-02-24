@@ -7,9 +7,9 @@
 package com.pi.ole.myplanet.lite
 
 import android.content.res.ColorStateList
-import android.os.Bundle
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -17,7 +17,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.Toast
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
@@ -28,6 +27,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.pi.ole.myplanet.lite.auth.AuthDependencies
 import com.pi.ole.myplanet.lite.dashboard.DashboardAvatarLoader
 import com.pi.ole.myplanet.lite.dashboard.DashboardServerPreferences
@@ -42,10 +42,10 @@ import com.pi.ole.myplanet.lite.databinding.ItemInviteMemberBinding
 import com.pi.ole.myplanet.lite.databinding.ItemTeamMemberBinding
 import com.pi.ole.myplanet.lite.profile.ProfileCredentialsStore
 import com.pi.ole.myplanet.lite.profile.StoredCredentials
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import kotlin.math.abs
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class DashboardTeamMembersFragment : Fragment() {
 

@@ -6,38 +6,38 @@
 
 package com.pi.ole.myplanet.lite.dashboard
 
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.os.Bundle
+import android.widget.CheckBox
 import android.widget.LinearLayout
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
-import com.google.android.material.button.MaterialButton
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.pi.ole.myplanet.lite.R
 import com.pi.ole.myplanet.lite.auth.AuthDependencies
+import com.pi.ole.myplanet.lite.dashboard.DashboardServerPreferences
+import com.pi.ole.myplanet.lite.profile.ProfileCredentialsStore
 import java.text.DateFormat
 import java.util.Date
 import java.util.Locale
-import kotlinx.coroutines.launch
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.CheckBox
-import android.net.ConnectivityManager
-import android.net.NetworkCapabilities
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import kotlinx.coroutines.withContext
 import kotlinx.coroutines.Dispatchers
-import okhttp3.Request
-import okhttp3.OkHttpClient
-import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.RequestBody.Companion.toRequestBody
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import okhttp3.Credentials
-import org.json.JSONObject
-import com.pi.ole.myplanet.lite.dashboard.DashboardServerPreferences
-import com.pi.ole.myplanet.lite.profile.ProfileCredentialsStore
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONArray
+import org.json.JSONObject
 
 class DashboardOutboxDetailActivity : AppCompatActivity() {
 

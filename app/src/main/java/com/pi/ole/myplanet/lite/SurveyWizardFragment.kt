@@ -8,12 +8,12 @@ package com.pi.ole.myplanet.lite
 
 import android.app.Activity
 import android.content.Intent
-import android.os.Bundle
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.os.Bundle
 import android.text.InputType
 import android.view.View
 import android.view.ViewGroup
@@ -30,29 +30,28 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.os.BundleCompat
 import androidx.core.content.ContextCompat
+import androidx.core.os.BundleCompat
 import androidx.core.view.ViewCompat
-import androidx.core.view.isVisible
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.squareup.moshi.Json
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.pi.ole.myplanet.lite.auth.AuthDependencies
 import com.pi.ole.myplanet.lite.dashboard.DashboardServerPreferences
+import com.pi.ole.myplanet.lite.dashboard.DashboardSurveyOutboxStore
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveyStatusStore
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveySubmissionsRepository
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveySubmissionsRepository.SubmissionAnswer
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveySubmissionsRepository.SubmissionParent
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveySubmissionsRepository.SubmissionTeam
-import com.pi.ole.myplanet.lite.dashboard.DashboardSurveyOutboxStore
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveySubmissionsRepository.SurveySubmission
-import com.pi.ole.myplanet.lite.dashboard.DashboardSurveysRepository.SurveyDocument
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveysRepository.SurveyChoice
+import com.pi.ole.myplanet.lite.dashboard.DashboardSurveysRepository.SurveyDocument
 import com.pi.ole.myplanet.lite.dashboard.DashboardSurveysRepository.SurveyQuestion
 import com.pi.ole.myplanet.lite.profile.LearningLevelTranslator
 import com.pi.ole.myplanet.lite.profile.ProfileCredentialsStore
@@ -60,7 +59,7 @@ import com.pi.ole.myplanet.lite.profile.StoredCredentials
 import com.pi.ole.myplanet.lite.profile.UserProfileDatabase
 import com.pi.ole.myplanet.lite.surveys.SurveyTranslationManager
 import com.pi.ole.myplanet.lite.surveys.SurveyTranslationManager.TranslatedQuestion
-import kotlinx.coroutines.launch
+import com.squareup.moshi.Json
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -68,6 +67,7 @@ import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
 import kotlin.math.roundToInt
+import kotlinx.coroutines.launch
 
 class SurveyWizardFragment : Fragment(R.layout.fragment_survey_wizard) {
 

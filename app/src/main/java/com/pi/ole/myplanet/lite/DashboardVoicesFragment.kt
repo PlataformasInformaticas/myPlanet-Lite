@@ -14,13 +14,13 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.MotionEvent
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.widget.AppCompatImageView
 import android.widget.Toast
-import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -30,6 +30,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.pi.ole.myplanet.lite.auth.AuthDependencies
+import com.pi.ole.myplanet.lite.dashboard.CreateVoiceActivity
 import com.pi.ole.myplanet.lite.dashboard.DashboardAvatarLoader
 import com.pi.ole.myplanet.lite.dashboard.DashboardImagePreviewActivity
 import com.pi.ole.myplanet.lite.dashboard.DashboardNewsActionsRepository
@@ -38,22 +39,21 @@ import com.pi.ole.myplanet.lite.dashboard.DashboardNewsRepository.NewsDocument
 import com.pi.ole.myplanet.lite.dashboard.DashboardNewsRepository.NewsPage
 import com.pi.ole.myplanet.lite.dashboard.DashboardPostDetailActivity
 import com.pi.ole.myplanet.lite.dashboard.DashboardPostImageLoader
-import com.pi.ole.myplanet.lite.dashboard.PostShareHelper
 import com.pi.ole.myplanet.lite.dashboard.DashboardServerPreferences
-import com.pi.ole.myplanet.lite.dashboard.CreateVoiceActivity
 import com.pi.ole.myplanet.lite.dashboard.DashboardTeamMemberProfileActivity
+import com.pi.ole.myplanet.lite.dashboard.PostShareHelper
 import com.pi.ole.myplanet.lite.profile.AvatarUpdateNotifier
 import com.pi.ole.myplanet.lite.profile.ProfileCredentialsStore
 import com.pi.ole.myplanet.lite.profile.StoredCredentials
 import com.pi.ole.myplanet.lite.profile.UserProfile
 import com.pi.ole.myplanet.lite.profile.UserProfileDatabase
 import io.noties.markwon.Markwon
+import java.text.DecimalFormat
+import java.util.ArrayList
+import kotlin.math.max
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import kotlin.math.max
-import java.text.DecimalFormat
-import java.util.ArrayList
 
 class DashboardVoicesFragment : Fragment(R.layout.fragment_dashboard_voices) {
 

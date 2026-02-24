@@ -8,21 +8,21 @@ package com.pi.ole.myplanet.lite
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.widget.ImageButton
-import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.media3.common.MediaItem
+import androidx.media3.datasource.DefaultHttpDataSource
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import androidx.media3.ui.PlayerView
 import com.pi.ole.myplanet.lite.dashboard.DashboardServerPreferences
 import com.pi.ole.myplanet.lite.profile.ProfileCredentialsStore
 import okhttp3.Credentials
-import androidx.media3.datasource.DefaultHttpDataSource
 
 class FullscreenPlayerActivity : AppCompatActivity() {
 
