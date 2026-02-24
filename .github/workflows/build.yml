@@ -1,0 +1,26 @@
+name: myPlanet-Lite build
+
+on:
+  push:
+    branches:
+      - '**'
+      - '!master'
+
+jobs:
+  build:
+    name: myPlanet-Lite build
+    runs-on: ubuntu-24.04
+    steps:
+      - name: checkout repository code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: setup gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: wrapper
+
+      - name: build debug
+        run: |
+          ./gradlew assembleDebug --configuration-cache-problems=warn --warning-mode all --stacktrace --parallel --max-workers=4
