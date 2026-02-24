@@ -26,6 +26,7 @@ import android.widget.EditText
 import android.widget.Toast
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.annotation.SuppressLint
 import android.widget.TextView
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
@@ -1818,6 +1819,7 @@ class DashboardPostDetailActivity : AppCompatActivity() {
                 bindActions(item)
             }
 
+            @SuppressLint("RestrictedApi")
             private fun bindActions(item: PostDetailItem.Header) {
                 val hasActions = item.canReply || item.canEdit || item.canDelete || item.canShare
                 overflowMenu.isVisible = hasActions
@@ -1964,6 +1966,7 @@ class DashboardPostDetailActivity : AppCompatActivity() {
                 dividerView.isVisible = !isLast
             }
 
+            @SuppressLint("RestrictedApi")
             private fun bindActions(item: PostDetailItem.Comment) {
                 val hasActions = item.canEdit || item.canDelete
                 overflowMenu.isVisible = hasActions

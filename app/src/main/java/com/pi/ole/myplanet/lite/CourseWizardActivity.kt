@@ -561,6 +561,7 @@ class CourseWizardActivity : AppCompatActivity() {
         }
     }
 
+    @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
     private fun bindAudioPlayer(
         itemView: View,
         resource: DashboardCoursePageFragment.CourseItem.LessonResource
@@ -583,6 +584,7 @@ class CourseWizardActivity : AppCompatActivity() {
         audioPlayers.add(player)
     }
 
+    @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
     private fun buildAudioDataSourceFactory(authorizationHeader: String?): DefaultHttpDataSource.Factory {
         val factory = DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(true)
         authorizationHeader?.let { factory.setDefaultRequestProperties(mapOf("Authorization" to it)) }

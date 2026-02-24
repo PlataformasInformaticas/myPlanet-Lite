@@ -20,6 +20,7 @@ import android.widget.RadioGroup
 import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -183,6 +184,12 @@ class SignupActivity : AppCompatActivity() {
         applyDeviceOrientationLock()
         enableEdgeToEdge()
         setContentView(R.layout.activity_signup)
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                navigateBack()
+            }
+        })
 
         birthDateSelection = savedInstanceState?.getLong(STATE_BIRTH_DATE_SELECTION)
         currentStepIndex = savedInstanceState?.getInt(STATE_STEP_INDEX) ?: 0
@@ -510,11 +517,6 @@ class SignupActivity : AppCompatActivity() {
     override fun onDestroy() {
         serverCheckJob?.cancel()
         super.onDestroy()
-    }
-
-    @Deprecated("Deprecated in AndroidX")
-    override fun onBackPressed() {
-        navigateBack()
     }
 
     private fun navigateBack() {
