@@ -5,14 +5,14 @@ plugins {
 }
 
 android {
-    namespace = "com.pi.ole.myplanet.lite"
+    namespace = "org.ole.planet.myplanet.lite"
     compileSdk = 36
     buildFeatures {
         buildConfig = true
         viewBinding = true
     }
     defaultConfig {
-        applicationId = "com.pi.ole.myplanet.lite"
+        applicationId = "org.ole.planet.myplanet.lite"
         minSdk = 28
         targetSdk = 36
         versionCode = 8
@@ -70,6 +70,7 @@ dependencies {
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.mockwebserver)
+    testImplementation(libs.json)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.espresso.intents)

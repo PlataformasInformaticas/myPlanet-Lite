@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".MyPlanetLite">
 
 
     <ImageView
@@ -60,7 +60,7 @@
                     android:id="@+id/appNamePrefixTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
+                    app:fontFamily="@font/poppins_semibold"
                     android:letterSpacing="0.02"
                     android:text="@string/app_name_prefix"
                     android:textColor="@color/darkOle"
@@ -72,7 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:fontFamily="@font/poppins_semibold"
+                    app:fontFamily="@font/poppins_semibold"
                     android:letterSpacing="0.02"
                     android:text="@string/app_name_suffix"
                     android:textColor="@color/greenOleLogo"
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="44dp"
-                android:fontFamily="@font/poppins_regular"
+                app:fontFamily="@font/poppins_regular"
                 android:text="@string/app_version"
                 android:textColor="@color/darkOle"
                 android:textSize="14sp"
@@ -113,7 +113,7 @@
                         android:id="@+id/serverUrlInput"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
-                        android:fontFamily="@font/poppins_regular"
+                        app:fontFamily="@font/poppins_regular"
                         android:popupBackground="@color/white"
                         android:padding="15dp"
                         android:hint="@string/login_server_label" />
@@ -142,7 +142,7 @@
                     android:id="@+id/usernameInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
+                    app:fontFamily="@font/poppins_regular"
                     android:hint="@string/login_username_label"
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"
@@ -162,7 +162,7 @@
                     android:id="@+id/passwordInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
+                    app:fontFamily="@font/poppins_regular"
                     android:hint="@string/login_password_label"
                     android:imeOptions="actionDone"
                     android:inputType="textPassword"
@@ -173,7 +173,7 @@
                 android:id="@+id/errorText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_regular"
+                app:fontFamily="@font/poppins_regular"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                 android:textColor="@android:color/holo_red_dark"
                 android:visibility="gone"
@@ -202,7 +202,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:fontFamily="@font/poppins_semibold"
+                app:fontFamily="@font/poppins_semibold"
                 android:text="@string/login_action" />
             <TextView
                 android:id="@+id/signupPrompt"
@@ -218,7 +218,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/poppins_semibold"
+                app:fontFamily="@font/poppins_semibold"
                 android:text="@string/login_signup_action" />
 
         </LinearLayout>
@@ -242,7 +242,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:fontFamily="@font/poppins_regular"
+        app:fontFamily="@font/poppins_regular"
         android:linksClickable="true"
         android:text="@string/powered_by_plataformas_informaticas"
         android:textColor="@color/darkOle"

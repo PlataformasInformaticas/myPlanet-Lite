@@ -1,1 +1,0 @@
-# myPlanet-Lite
