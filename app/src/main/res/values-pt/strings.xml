@@ -37,7 +37,6 @@
     <string name="server_configuration_url_error">Digite um endereço de servidor</string>
     <string name="server_configuration_name_error">Insira um nome do servidor</string>
     <string name="server_configuration_country_error">Selecione uma bandeira</string>
-    <string name="server_configuration_add_button">Adicionar</string>
     <string name="server_configuration_added">Servidor adicionado à lista</string>
     <string name="server_configuration_duplicate_error">O servidor já existe na lista</string>
     <string name="server_option_configure">Adicionar servidor…</string>
@@ -102,7 +101,6 @@
     <string name="dashboard_outbox_unknown_team">Equipe</string>
     <string name="dashboard_outbox_detail_intro">Estas são as respostas que você preencheu. Revise-as e toque em enviar quando estiver pronto.</string>
     <string name="dashboard_outbox_send">Enviar</string>
-    <string name="dashboard_outbox_send_placeholder">A sincronização estará disponível em breve.</string>
     <string name="dashboard_outbox_no_answers">Nenhuma resposta foi capturada.</string>
     <string name="dashboard_outbox_no_answer">Sem resposta</string>
     <string name="dashboard_outbox_preview_title">Pré-visualização</string>
@@ -127,7 +125,6 @@
     <string name="dashboard_outbox_deleted">Submissão excluída.</string>
     <string name="dashboard_outbox_delete_confirm_message">Excluir esta resposta de pesquisa pendente? Esta ação não pode ser desfeita.</string>
     <string name="dashboard_outbox_delete_failed">Não foi possível excluir a submissão. Tente novamente.</string>
-    <string name="dashboard_outbox_back">Voltar</string>
 
     <string name="signup_step_username_title">Escolha um nome de usuário</string>
     <string name="signup_step_username_subtitle">Comece com uma letra. Use apenas letras e números.</string>
@@ -531,7 +528,6 @@ Se você não concordar, deve selecionar "Cancelar" e parar de usar o aplicativo
     <string name="create_voice_format_placeholder">texto</string>
     <string name="create_voice_image_processing_error">Não foi possível processar essa imagem. Tente outro arquivo.</string>
     <string name="create_voice_image_upload_error">Não foi possível enviar suas imagens. Tente novamente.</string>
-    <string name="permission_required_message">As permissões de internet, foto e câmera são necessárias para continuar.</string>
     <string name="create_voice_confirm_title">@string/create_voice_primary_action</string>
     <string name="create_voice_confirm_message">Deseja publicar esta voz?</string>
     <string name="create_voice_confirm_positive">Publicar</string>
@@ -603,38 +599,16 @@ Se você não concordar, deve selecionar "Cancelar" e parar de usar o aplicativo
     <string name="dashboard_courses_tab_team">Cursos da equipe</string>
     <string name="dashboard_courses_content_description_icon">Ícone do curso</string>
     <string name="dashboard_course_progress_value">Progresso: %1$d%%</string>
-    <string name="dashboard_courses_sample_name_creativity">Pensamento criativo</string>
-    <string name="dashboard_courses_sample_name_digital_marketing">Marketing digital</string>
-    <string name="dashboard_courses_sample_name_leadership">Fundamentos de liderança</string>
-    <string name="dashboard_courses_sample_name_data">Fundamentos de dados</string>
-    <string name="dashboard_courses_sample_name_communication">Comunicação eficaz</string>
-    <string name="dashboard_courses_sample_name_finance">Fundamentos de finanças</string>
-    <string name="dashboard_courses_sample_name_english">Inglês para o trabalho</string>
-    <string name="dashboard_courses_sample_name_coding">Introdução à programação</string>
     <string name="dashboard_courses_header_title">O que você gostaria de aprender hoje?</string>
     <string name="dashboard_courses_header_subtitle">Pesquise abaixo.</string>
     <string name="dashboard_courses_search_hint">Pesquisar cursos</string>
     <string name="dashboard_courses_category_all">Todos os cursos</string>
-    <string name="dashboard_courses_category_uiux">Design UI/UX</string>
-    <string name="dashboard_courses_category_development">Desenvolvimento</string>
-    <string name="dashboard_courses_category_basic">Básico</string>
-    <string name="dashboard_courses_author_format">Por: %1$s</string>
     <string name="dashboard_courses_lessons_format">%1$d etapas</string>
     <string name="dashboard_courses_rating_format">%1$.1f ★</string>
-    <string name="dashboard_courses_price_format">$%1$.0f</string>
     <string name="dashboard_course_lessons_title">Todas as lições de %1$s</string>
-    <string name="dashboard_course_lessons_summary">Aqui %1$d lições e complete %2$d</string>
-    <string name="dashboard_course_lessons_progress">%1$d de %2$d etapas concluídas</string>
-    <string name="dashboard_course_lesson_duration">%1$d min</string>
-    <string name="dashboard_course_lessons_topic_intro">O que é %1$s?</string>
-    <string name="dashboard_course_lessons_topic_why">Por que %1$s é necessário?</string>
-    <string name="dashboard_course_lessons_topic_definitions">Quais são as definições de %1$s?</string>
-    <string name="dashboard_course_lessons_topic_types">Quais são os 4 tipos de %1$s?</string>
-    <string name="dashboard_course_lessons_topic_basics">Fundamentos de %1$s</string>
     <string name="dashboard_course_lessons_open_course">Ir para o curso</string>
     <string name="dashboard_course_lessons_join_course">Entrar no curso</string>
     <string name="dashboard_course_leave_course">Sair do curso</string>
-    <string name="course_wizard_close">Fechar curso</string>
     <string name="course_wizard_previous">Anterior</string>
     <string name="course_wizard_next">Próximo</string>
     <string name="course_wizard_finish">Concluir curso</string>
@@ -650,7 +624,6 @@ Se você não concordar, deve selecionar "Cancelar" e parar de usar o aplicativo
     <string name="course_wizard_attachment_audio">Áudio</string>
     <string name="course_wizard_attachment_pdf">PDF</string>
     <string name="course_wizard_play_error">Não foi possível abrir o anexo</string>
-    <string name="course_wizard_fullscreen">Alternar tela cheia</string>
     <string name="course_wizard_play_video">Reproduzir vídeo</string>
     <string name="course_wizard_open_image">Abrir imagem</string>
     <string name="course_wizard_open_pdf">Abrir PDF</string>
@@ -658,7 +631,6 @@ Se você não concordar, deve selecionar "Cancelar" e parar de usar o aplicativo
     <string name="course_wizard_exit_fullscreen">Sair da tela cheia</string>
     <string name="dashboard_course_leave_confirm">Deseja sair deste curso?</string>
     <string name="dashboard_course_details_close">Fechar</string>
-    <string name="dashboard_course_details_description" />
     <string name="dashboard_courses_missing_credentials">Configuração do servidor ou credenciais ausentes</string>
     <string name="dashboard_courses_loading_error">Não foi possível carregar cursos</string>
     <string name="create_voice_image_options_title">Opções da imagem</string>

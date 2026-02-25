@@ -37,7 +37,6 @@
     <string name="server_configuration_url_error">Enter a server address</string>
     <string name="server_configuration_name_error">Enter a server name</string>
     <string name="server_configuration_country_error">Select a flag</string>
-    <string name="server_configuration_add_button">Add</string>
     <string name="server_configuration_added">Server added to list</string>
     <string name="server_configuration_duplicate_error">The server already exists in the list</string>
     <string name="server_option_configure">Add server…</string>
@@ -102,7 +101,6 @@
     <string name="dashboard_outbox_unknown_team">Team</string>
     <string name="dashboard_outbox_detail_intro">These are the answers you filled. Review them and tap send when you are ready.</string>
     <string name="dashboard_outbox_send">Send</string>
-    <string name="dashboard_outbox_send_placeholder">Sync will be available soon.</string>
     <string name="dashboard_outbox_no_answers">No answers were captured.</string>
     <string name="dashboard_outbox_no_answer">No answer</string>
     <string name="dashboard_outbox_preview_title">Preview</string>
@@ -127,7 +125,6 @@
     <string name="dashboard_outbox_deleted">Submission deleted.</string>
     <string name="dashboard_outbox_delete_confirm_message">Delete this pending survey response? This action cannot be undone.</string>
     <string name="dashboard_outbox_delete_failed">Couldn\'t delete the submission. Try again.</string>
-    <string name="dashboard_outbox_back">Back</string>
 
     <string name="signup_step_username_title">Choose a username</string>
     <string name="signup_step_username_subtitle">Start with a letter. Use only letters and numbers.</string>
@@ -531,7 +528,6 @@ If you do not agree, you must select "Cancel" and stop using the application.</s
     <string name="create_voice_format_placeholder">text</string>
     <string name="create_voice_image_processing_error">We couldn\'t process that image. Please try another file.</string>
     <string name="create_voice_image_upload_error">We couldn\'t upload your images. Try again.</string>
-    <string name="permission_required_message">Internet, photo, and camera permissions are required to continue.</string>
     <string name="create_voice_confirm_title">@string/create_voice_primary_action</string>
     <string name="create_voice_confirm_message">Do you want to publish this voice?</string>
     <string name="create_voice_confirm_positive">Publish</string>
@@ -603,38 +599,16 @@ If you do not agree, you must select "Cancel" and stop using the application.</s
     <string name="dashboard_courses_tab_team">Team courses</string>
     <string name="dashboard_courses_content_description_icon">Course icon</string>
     <string name="dashboard_course_progress_value">Progress: %1$d%%</string>
-    <string name="dashboard_courses_sample_name_creativity">Creative thinking</string>
-    <string name="dashboard_courses_sample_name_digital_marketing">Digital marketing</string>
-    <string name="dashboard_courses_sample_name_leadership">Leadership essentials</string>
-    <string name="dashboard_courses_sample_name_data">Data fundamentals</string>
-    <string name="dashboard_courses_sample_name_communication">Effective communication</string>
-    <string name="dashboard_courses_sample_name_finance">Finance basics</string>
-    <string name="dashboard_courses_sample_name_english">English for work</string>
-    <string name="dashboard_courses_sample_name_coding">Intro to coding</string>
     <string name="dashboard_courses_header_title">What would you like to learn today?</string>
     <string name="dashboard_courses_header_subtitle">Search below.</string>
     <string name="dashboard_courses_search_hint">Search courses</string>
     <string name="dashboard_courses_category_all">All courses</string>
-    <string name="dashboard_courses_category_uiux">UI/UX design</string>
-    <string name="dashboard_courses_category_development">Development</string>
-    <string name="dashboard_courses_category_basic">Basics</string>
-    <string name="dashboard_courses_author_format">By: %1$s</string>
     <string name="dashboard_courses_lessons_format">%1$d steps</string>
     <string name="dashboard_courses_rating_format">%1$.1f ★</string>
-    <string name="dashboard_courses_price_format">$%1$.0f</string>
     <string name="dashboard_course_lessons_title">All lessons of %1$s</string>
-    <string name="dashboard_course_lessons_summary">Here %1$d lessons and complete %2$d</string>
-    <string name="dashboard_course_lessons_progress">%1$d of %2$d steps completed</string>
-    <string name="dashboard_course_lesson_duration">%1$d min</string>
-    <string name="dashboard_course_lessons_topic_intro">What is %1$s?</string>
-    <string name="dashboard_course_lessons_topic_why">Why is %1$s necessary?</string>
-    <string name="dashboard_course_lessons_topic_definitions">What are the definitions of %1$s?</string>
-    <string name="dashboard_course_lessons_topic_types">What are the 4 types of %1$s?</string>
-    <string name="dashboard_course_lessons_topic_basics">Basics of %1$s</string>
     <string name="dashboard_course_lessons_open_course">Go to course</string>
     <string name="dashboard_course_lessons_join_course">Join course</string>
     <string name="dashboard_course_leave_course">Leave course</string>
-    <string name="course_wizard_close">Close course</string>
     <string name="course_wizard_previous">Previous</string>
     <string name="course_wizard_next">Next</string>
     <string name="course_wizard_finish">Finish course</string>
@@ -650,7 +624,6 @@ If you do not agree, you must select "Cancel" and stop using the application.</s
     <string name="course_wizard_attachment_audio">Audio</string>
     <string name="course_wizard_attachment_pdf">PDF</string>
     <string name="course_wizard_play_error">Couldn\'t open the attachment</string>
-    <string name="course_wizard_fullscreen">Toggle fullscreen</string>
     <string name="course_wizard_play_video">Play video</string>
     <string name="course_wizard_open_image">Open image</string>
     <string name="course_wizard_open_pdf">Open PDF</string>
@@ -658,7 +631,6 @@ If you do not agree, you must select "Cancel" and stop using the application.</s
     <string name="course_wizard_exit_fullscreen">Exit fullscreen</string>
     <string name="dashboard_course_leave_confirm">Do you want to leave this course?</string>
     <string name="dashboard_course_details_close">Close</string>
-    <string name="dashboard_course_details_description" />
     <string name="dashboard_courses_missing_credentials">Missing server configuration or credentials</string>
     <string name="dashboard_courses_loading_error">Unable to load courses</string>
     <string name="create_voice_image_options_title">Image options</string>
