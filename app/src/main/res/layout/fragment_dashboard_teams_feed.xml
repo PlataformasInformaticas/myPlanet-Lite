@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -47,7 +48,7 @@
             android:contentDescription="@string/dashboard_voices_title"
             android:padding="8dp"
             android:src="@drawable/ic_comment_24"
-            android:tint="?attr/colorOnSurface" />
+            app:tint="?attr/colorOnSurface" />
 
         <Space
             android:layout_width="16dp"
@@ -62,7 +63,7 @@
             android:contentDescription="@string/dashboard_surveys_title"
             android:padding="8dp"
             android:src="@drawable/ic_surveys_24"
-            android:tint="?attr/colorOnSurface" />
+            app:tint="?attr/colorOnSurface" />
     </LinearLayout>
 
 </LinearLayout>

@@ -282,7 +282,7 @@
                             android:background="?attr/selectableItemBackgroundBorderless"
                             android:contentDescription="@string/dashboard_team_member_profile_email_action"
                             android:padding="4dp"
-                            android:tint="?attr/colorPrimary"
+                            app:tint="?attr/colorPrimary"
                             android:clickable="true"
                             android:focusable="true"
                             android:src="@drawable/ic_contact_email_24" />
@@ -329,7 +329,7 @@
                             android:background="?attr/selectableItemBackgroundBorderless"
                             android:contentDescription="@string/dashboard_team_member_profile_phone_action"
                             android:padding="4dp"
-                            android:tint="?attr/colorPrimary"
+                            app:tint="?attr/colorPrimary"
                             android:clickable="true"
                             android:focusable="true"
                             android:src="@drawable/ic_contact_phone_24" />

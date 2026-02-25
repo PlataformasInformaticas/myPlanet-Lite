@@ -21,6 +21,7 @@ import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -488,6 +489,12 @@ class SignupActivity : AppCompatActivity() {
         serverParentCode = serverPreferences.getString(KEY_SERVER_PARENT_CODE, null)
         serverCode = serverPreferences.getString(KEY_SERVER_CODE, null)
 
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                navigateBack()
+            }
+        })
+
         updateStepVisibility()
     }
 
@@ -518,10 +525,6 @@ class SignupActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-    @Deprecated("Deprecated in AndroidX")
-    override fun onBackPressed() {
-        navigateBack()
-    }
 
     private fun navigateBack() {
         if (currentStepIndex == 0) {

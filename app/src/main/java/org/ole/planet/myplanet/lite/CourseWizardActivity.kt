@@ -48,6 +48,7 @@ import kotlinx.coroutines.launch
 import java.util.ArrayList
 import java.util.Locale
 
+@androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
 class CourseWizardActivity : AppCompatActivity() {
 
     private lateinit var markwon: Markwon

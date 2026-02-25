@@ -13,7 +13,7 @@
         android:layout_gravity="center_horizontal"
         android:padding="8dp"
         android:src="@drawable/ic_group_join_24"
-        android:tint="@color/login_primary" />
+        app:tint="@color/login_primary" />
 
     <TextView
         android:id="@+id/inviteMembersTitle"

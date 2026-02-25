@@ -14,7 +14,7 @@
         android:contentDescription="@string/dashboard_team_members_avatar_content_description"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_person_placeholder_24"
-        android:tint="@color/white"
+        app:tint="@color/white"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyPlanet.Circle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

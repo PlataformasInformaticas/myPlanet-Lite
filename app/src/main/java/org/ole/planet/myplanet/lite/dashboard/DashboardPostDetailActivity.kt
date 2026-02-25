@@ -6,6 +6,7 @@
 
 package org.ole.planet.myplanet.lite.dashboard
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -1824,6 +1825,7 @@ class DashboardPostDetailActivity : AppCompatActivity() {
                 bindActions(item)
             }
 
+            @SuppressLint("RestrictedApi")
             private fun bindActions(item: PostDetailItem.Header) {
                 val hasActions = item.canReply || item.canEdit || item.canDelete || item.canShare
                 overflowMenu.isVisible = hasActions
@@ -1970,6 +1972,7 @@ class DashboardPostDetailActivity : AppCompatActivity() {
                 dividerView.isVisible = !isLast
             }
 
+            @SuppressLint("RestrictedApi")
             private fun bindActions(item: PostDetailItem.Comment) {
                 val hasActions = item.canEdit || item.canDelete
                 overflowMenu.isVisible = hasActions

@@ -27,6 +27,7 @@ import org.ole.planet.myplanet.lite.profile.ProfileCredentialsStore
 
 import okhttp3.Credentials
 
+@androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
 class FullscreenPlayerActivity : AppCompatActivity() {
 
     private var player: ExoPlayer? = null

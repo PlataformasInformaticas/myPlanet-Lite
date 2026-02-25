@@ -19,7 +19,7 @@
             android:layout_height="24dp"
             android:contentDescription="@string/course_wizard_attachment_audio"
             android:src="@drawable/ic_course_step_audio_24"
-            android:tint="@color/black" />
+            app:tint="@color/black" />
 
         <LinearLayout
             android:layout_width="0dp"
