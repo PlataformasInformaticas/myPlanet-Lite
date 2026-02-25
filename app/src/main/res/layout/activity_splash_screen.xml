@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SplashScreen"
+    tools:context="org.ole.planet.myplanet.lite.SplashScreen"
     android:gravity="center"
     android:background="@drawable/splash_background">
     <ImageView

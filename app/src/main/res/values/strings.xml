@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name">myPlanet Lite</string>
     <string name="app_name_prefix">myPlanet</string>
     <string name="app_name_suffix">Lite</string>

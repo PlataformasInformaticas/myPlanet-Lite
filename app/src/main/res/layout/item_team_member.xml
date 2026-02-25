@@ -57,5 +57,5 @@
         android:contentDescription="@string/dashboard_team_members_remove_content_description"
         android:padding="4dp"
         android:src="@drawable/ic_team_member_remove_24"
-        android:tint="?attr/colorOnSurface" />
+        app:tint="?attr/colorOnSurface" />
 </LinearLayout>

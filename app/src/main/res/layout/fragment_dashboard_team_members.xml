@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".DashboardTeamMembersFragment">
+    tools:context="org.ole.planet.myplanet.lite.DashboardTeamMembersFragment">
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/dashboardTeamMembersSearchInput"
