@@ -63,8 +63,6 @@ dependencies {
     implementation(libs.photoview)
     implementation(libs.worldcountrydata)
     implementation(libs.ucrop)
-    implementation(libs.circleimageview)
-    implementation(libs.glide)
     implementation(libs.language.id)
     implementation("io.noties.markwon:ext-tables:4.6.2")
     testImplementation(libs.junit)
