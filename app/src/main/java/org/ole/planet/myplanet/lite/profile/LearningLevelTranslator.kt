@@ -42,13 +42,6 @@ object LearningLevelTranslator {
                 return englishValues.getOrNull(index)
             }
         }
-        val defaultValues = context.resources.getStringArray(R.array.signup_level_options)
-        val defaultIndex = defaultValues.indexOfFirst { option ->
-            option.trim().lowercase(Locale.ROOT) == normalized
-        }
-        if (defaultIndex >= 0) {
-            return englishValues.getOrNull(defaultIndex) ?: trimmed
-        }
         return trimmed
     }
 

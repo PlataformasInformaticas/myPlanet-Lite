@@ -37,7 +37,6 @@
     <string name="server_configuration_url_error">أدخل عنوان الخادم</string>
     <string name="server_configuration_name_error">أدخل اسم الخادم</string>
     <string name="server_configuration_country_error">اختر علماً</string>
-    <string name="server_configuration_add_button">إضافة</string>
     <string name="server_configuration_added">تمت إضافة الخادم إلى القائمة</string>
     <string name="server_configuration_duplicate_error">الخادم موجود بالفعل في القائمة</string>
     <string name="server_option_configure">إضافة خادم…</string>
@@ -102,7 +101,6 @@
     <string name="dashboard_outbox_unknown_team">فريق</string>
     <string name="dashboard_outbox_detail_intro">هذه هي الإجابات التي أدخلتها. راجعها واضغط إرسال عندما تكون جاهزًا.</string>
     <string name="dashboard_outbox_send">إرسال</string>
-    <string name="dashboard_outbox_send_placeholder">سيكون المزامنة متاحة قريبًا.</string>
     <string name="dashboard_outbox_no_answers">لم يتم تسجيل أي إجابات.</string>
     <string name="dashboard_outbox_no_answer">لا توجد إجابة</string>
     <string name="dashboard_outbox_preview_title">معاينة</string>
@@ -127,7 +125,6 @@
     <string name="dashboard_outbox_deleted">تم حذف الإرسال.</string>
     <string name="dashboard_outbox_delete_confirm_message">هل تريد حذف هذا الرد المعلّق؟ لا يمكن التراجع عن هذا الإجراء.</string>
     <string name="dashboard_outbox_delete_failed">تعذّر حذف الإرسال. حاول مرة أخرى.</string>
-    <string name="dashboard_outbox_back">رجوع</string>
 
     <string name="signup_step_username_title">اختر اسم المستخدم</string>
     <string name="signup_step_username_subtitle">ابدأ بحرف. استخدم الأحرف والأرقام فقط.</string>
@@ -209,10 +206,6 @@
         <item>महिला</item>
     </string-array>
 
-    <string name="signup_level_option_beginner">مبتدئ</string>
-    <string name="signup_level_option_intermediate">متوسط</string>
-    <string name="signup_level_option_advanced">متقدم</string>
-    <string name="signup_level_option_expert">خبير</string>
 
     <string-array name="signup_language_options">
         <item>@string/language_name_english</item>
@@ -225,12 +218,6 @@
         <item>@string/language_name_hindi</item>
     </string-array>
 
-    <string-array name="signup_level_options">
-        <item>@string/signup_level_option_beginner</item>
-        <item>@string/signup_level_option_intermediate</item>
-        <item>@string/signup_level_option_advanced</item>
-        <item>@string/signup_level_option_expert</item>
-    </string-array>
     <string-array name="signup_level_options_language_en">
         <item>Beginner</item>
         <item>Intermediate</item>
@@ -481,7 +468,6 @@
     <string name="create_voice_format_placeholder">نص</string>
     <string name="create_voice_image_processing_error">تعذّر معالجة هذه الصورة. جرّب ملفًا آخر.</string>
     <string name="create_voice_image_upload_error">تعذّر تحميل صورك. حاول مرة أخرى.</string>
-    <string name="permission_required_message">مطلوبة أذونات الإنترنت والصور والكاميرا للمتابعة.</string>
     <string name="create_voice_confirm_title">@string/create_voice_primary_action</string>
     <string name="create_voice_confirm_message">هل تريد نشر هذا الصوت؟</string>
     <string name="create_voice_confirm_positive">نشر</string>
@@ -553,41 +539,18 @@
     <string name="dashboard_courses_tab_team">دورات الفريق</string>
     <string name="dashboard_courses_content_description_icon">أيقونة الدورة</string>
     <string name="dashboard_course_progress_value">التقدّم: %1$d%%</string>
-    <string name="dashboard_courses_sample_name_creativity">التفكير الإبداعي</string>
-    <string name="dashboard_courses_sample_name_digital_marketing">التسويق الرقمي</string>
-    <string name="dashboard_courses_sample_name_leadership">أساسيات القيادة</string>
-    <string name="dashboard_courses_sample_name_data">مبادئ البيانات</string>
-    <string name="dashboard_courses_sample_name_communication">التواصل الفعّال</string>
-    <string name="dashboard_courses_sample_name_finance">أساسيات التمويل</string>
-    <string name="dashboard_courses_sample_name_english">الإنجليزية للعمل</string>
-    <string name="dashboard_courses_sample_name_coding">مقدمة في البرمجة</string>
     <string name="dashboard_courses_header_title">ماذا تريد أن تتعلم اليوم؟</string>
     <string name="dashboard_courses_header_subtitle">ابحث في الأسفل.</string>
     <string name="dashboard_courses_search_hint">ابحث عن الدورات</string>
     <string name="dashboard_courses_category_all">كل الدورات</string>
-    <string name="dashboard_courses_category_uiux">تصميم UI/UX</string>
-    <string name="dashboard_courses_category_development">التطوير</string>
-    <string name="dashboard_courses_category_basic">الأساسيات</string>
-    <string name="dashboard_courses_author_format">بواسطة: %1$s</string>
     <string name="dashboard_courses_lessons_format">%1$d خطوة</string>
     <string name="dashboard_courses_rating_format">%1$.1f ★</string>
-    <string name="dashboard_courses_price_format">$%1$.0f</string>
     <string name="dashboard_course_lessons_title">كل دروس %1$s</string>
-    <string name="dashboard_course_lessons_summary">هنا %1$d درسًا وتم إكمال %2$d</string>
-    <string name="dashboard_course_lessons_progress">%1$d من أصل %2$d خطوات مكتملة</string>
-    <string name="dashboard_course_lesson_duration">%1$d دقيقة</string>
-    <string name="dashboard_course_lessons_topic_intro">ما هو %1$s؟</string>
-    <string name="dashboard_course_lessons_topic_why">لماذا يعد %1$s ضروريًا؟</string>
-    <string name="dashboard_course_lessons_topic_definitions">ما هي تعريفات %1$s؟</string>
-    <string name="dashboard_course_lessons_topic_types">ما هي الأنواع الأربعة لـ %1$s؟</string>
-    <string name="dashboard_course_lessons_topic_basics">أساسيات %1$s</string>
     <string name="dashboard_course_lessons_open_course">اذهب إلى الدورة</string>
     <string name="dashboard_course_lessons_join_course">الانضمام إلى الدورة</string>
     <string name="dashboard_course_leave_course">غادر الدورة</string>
     <string name="dashboard_course_details_close">إغلاق</string>
-    <string name="dashboard_course_details_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus efficitur, urna non sollicitudin sollicitudin, ante ex cursus massa, sit amet rhoncus elit neque id urna.</string>
     <string name="dashboard_course_leave_confirm">هل تريد مغادرة هذه الدورة؟</string>
-    <string name="course_wizard_close">إغلاق الدورة</string>
     <string name="course_wizard_previous">السابق</string>
     <string name="course_wizard_next">التالي</string>
     <string name="course_wizard_finish">إنهاء الدورة</string>
@@ -606,7 +569,6 @@
     <string name="course_wizard_open_image">فتح الصورة</string>
     <string name="course_wizard_open_pdf">فتح ملف PDF</string>
     <string name="course_wizard_pdf_page_counter">الصفحة %1$d/%2$d</string>
-    <string name="course_wizard_fullscreen">تبديل وضع ملء الشاشة</string>
     <string name="course_wizard_play_video">تشغيل الفيديو</string>
     <string name="course_wizard_exit_fullscreen">الخروج من ملء الشاشة</string>
     <string name="create_voice_image_options_title">خيارات الصورة</string>

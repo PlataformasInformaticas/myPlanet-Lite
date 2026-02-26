@@ -252,7 +252,10 @@ class ProfileActivity : AppCompatActivity() {
         val languageAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, languageLabels)
         languageInput.setAdapter(languageAdapter)
 
-        val defaultLevelOptions = resources.getStringArray(R.array.signup_level_options).toMutableList()
+        val currentLang = Locale.getDefault().language.lowercase(Locale.ROOT)
+        val initialLevelRes = languageOptions.find { it.languageTag == currentLang }?.levelArrayRes
+            ?: R.array.signup_level_options_language_en
+        val defaultLevelOptions = resources.getStringArray(initialLevelRes).toMutableList()
         val levelAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, defaultLevelOptions)
         levelInput.setAdapter(levelAdapter)
 
