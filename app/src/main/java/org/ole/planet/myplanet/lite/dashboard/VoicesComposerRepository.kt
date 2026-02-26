@@ -6,13 +6,15 @@
 
 package org.ole.planet.myplanet.lite.dashboard
 
-import org.ole.planet.myplanet.lite.network.BaseRepository
 import org.ole.planet.myplanet.lite.profile.StoredCredentials
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 
 import okhttp3.Credentials
 import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 
@@ -21,8 +23,12 @@ import kotlinx.coroutines.withContext
 
 import java.io.IOException
 
-class VoicesComposerRepository : BaseRepository() {
+class VoicesComposerRepository {
 
+    private val client: OkHttpClient = OkHttpClient.Builder().build()
+    private val moshi: Moshi = Moshi.Builder()
+        .addLast(KotlinJsonAdapterFactory())
+        .build()
     private val requestAdapter = moshi.adapter(CreateVoiceRequest::class.java)
     private val responseAdapter = moshi.adapter(CreateVoiceResponse::class.java)
     private val resourceMetadataAdapter = moshi.adapter(ResourceMetadataRequest::class.java)
@@ -45,7 +51,10 @@ class VoicesComposerRepository : BaseRepository() {
     ): Result<CreateVoiceResponse> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = normalizeUrl(baseUrl)
+                val normalizedBase = baseUrl.trim().trimEnd('/')
+                if (normalizedBase.isEmpty()) {
+                    throw IOException("Missing server base URL")
+                }
                 val timestamp = System.currentTimeMillis()
                 val payload = CreateVoiceRequest(
                     chat = false,
@@ -64,11 +73,17 @@ class VoicesComposerRepository : BaseRepository() {
                     user = userPayload,
                     news = buildNewsMetadata(userPayload?.id ?: userPayload?.name, timestamp)
                 )
+                val requestBody = requestAdapter.toJson(payload)
+                    .toRequestBody(JSON_MEDIA_TYPE)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/news")
-                    .post(payload.toJsonRequestBody(requestAdapter))
-                    .addAuth(credentials, sessionCookie)
-
+                    .post(requestBody)
+                credentials?.let {
+                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
+                }
+                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
+                    requestBuilder.addHeader("Cookie", cookie)
+                }
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${'$'}{response.code}")
@@ -87,11 +102,16 @@ class VoicesComposerRepository : BaseRepository() {
         metadata: ResourceMetadataRequest
     ): ResourceCreationResponse {
         return withContext(Dispatchers.IO) {
-            val normalizedBase = normalizeUrl(baseUrl)
+            val normalizedBase = baseUrl.trim().trimEnd('/')
+            if (normalizedBase.isEmpty()) {
+                throw IOException("Missing server base URL")
+            }
+            val requestBody = resourceMetadataAdapter.toJson(metadata)
+                .toRequestBody(JSON_MEDIA_TYPE)
             val request = Request.Builder()
                 .url("$normalizedBase/db/resources")
-                .post(metadata.toJsonRequestBody(resourceMetadataAdapter))
-                .addAuth(credentials, null)
+                .post(requestBody)
+                .addHeader("Authorization", Credentials.basic(credentials.username, credentials.password))
                 .build()
             val creationResponse = client.newCall(request).execute().use { response ->
                 if (!response.isSuccessful) {
@@ -114,12 +134,15 @@ class VoicesComposerRepository : BaseRepository() {
         bytes: ByteArray
     ): ResourceUploadResponse {
         return withContext(Dispatchers.IO) {
-            val normalizedBase = normalizeUrl(baseUrl)
+            val normalizedBase = baseUrl.trim().trimEnd('/')
+            if (normalizedBase.isEmpty()) {
+                throw IOException("Missing server base URL")
+            }
             val url = "$normalizedBase/db/resources/${resourceId.trim()}/${fileName.trim()}"
             val request = Request.Builder()
                 .url(url)
                 .put(bytes.toRequestBody(OCTET_STREAM_MEDIA_TYPE))
-                .addAuth(credentials, null)
+                .addHeader("Authorization", Credentials.basic(credentials.username, credentials.password))
                 .addHeader("If-Match", revision)
                 .build()
             val uploadResponse = client.newCall(request).execute().use { response ->
@@ -250,6 +273,7 @@ class VoicesComposerRepository : BaseRepository() {
     )
 
     companion object {
+        private val JSON_MEDIA_TYPE = "application/json; charset=utf-8".toMediaType()
         private val OCTET_STREAM_MEDIA_TYPE = "application/octet-stream".toMediaType()
     }
 

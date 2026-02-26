@@ -6,20 +6,29 @@
 
 package org.ole.planet.myplanet.lite.dashboard
 
-import org.ole.planet.myplanet.lite.network.BaseRepository
 import org.ole.planet.myplanet.lite.profile.StoredCredentials
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 
+import okhttp3.Credentials
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.OkHttpClient
 import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 import java.io.IOException
 
-class DashboardSurveysRepository : BaseRepository() {
+class DashboardSurveysRepository {
 
+    private val client: OkHttpClient = OkHttpClient.Builder().build()
+    private val moshi: Moshi = Moshi.Builder()
+        .addLast(KotlinJsonAdapterFactory())
+        .build()
     private val findRequestAdapter = moshi.adapter(SurveysFindRequest::class.java)
     private val findResponseAdapter = moshi.adapter(SurveysFindResponse::class.java)
     private val completionsRequestAdapter = moshi.adapter(SurveyCompletionsRequest::class.java)
@@ -33,7 +42,10 @@ class DashboardSurveysRepository : BaseRepository() {
     ): Result<List<SurveyDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = normalizeUrl(baseUrl)
+                val normalizedBase = baseUrl.trim().trimEnd('/')
+                if (normalizedBase.isEmpty()) {
+                    throw IOException("Missing server base URL")
+                }
                 if (teamId.isBlank()) {
                     throw IOException("Missing team id")
                 }
@@ -42,12 +54,16 @@ class DashboardSurveysRepository : BaseRepository() {
                     teamId = teamId,
                     isArchived = mapOf("\$exists" to false),
                 )
-                val payload = SurveysFindRequest(selector)
+                val payload = findRequestAdapter.toJson(SurveysFindRequest(selector))
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/exams/_find")
-                    .post(payload.toJsonRequestBody(findRequestAdapter))
-                    .addAuth(credentials, sessionCookie)
-
+                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
+                credentials?.let { creds ->
+                    requestBuilder.addHeader("Authorization", Credentials.basic(creds.username, creds.password))
+                }
+                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
+                    requestBuilder.addHeader("Cookie", cookie)
+                }
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${response.code}")
@@ -115,7 +131,10 @@ class DashboardSurveysRepository : BaseRepository() {
     ): Result<Int> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = normalizeUrl(baseUrl)
+                val normalizedBase = baseUrl.trim().trimEnd('/')
+                if (normalizedBase.isEmpty()) {
+                    throw IOException("Missing server base URL")
+                }
                 if (teamId.isBlank() || surveyId.isBlank()) {
                     throw IOException("Missing survey lookup parameters")
                 }
@@ -128,14 +147,20 @@ class DashboardSurveysRepository : BaseRepository() {
                         mapOf("parentId" to mapOf("\$regex" to "^${surveyId}@")),
                     ),
                 )
-                val payload = SurveyCompletionsRequest(
-                    selector = selector,
+                val payload = completionsRequestAdapter.toJson(
+                    SurveyCompletionsRequest(
+                        selector = selector,
+                    ),
                 )
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/submissions/_find")
-                    .post(payload.toJsonRequestBody(completionsRequestAdapter))
-                    .addAuth(credentials, sessionCookie)
-
+                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
+                credentials?.let { creds ->
+                    requestBuilder.addHeader("Authorization", Credentials.basic(creds.username, creds.password))
+                }
+                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
+                    requestBuilder.addHeader("Cookie", cookie)
+                }
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${response.code}")
@@ -167,4 +192,7 @@ class DashboardSurveysRepository : BaseRepository() {
         @param:Json(name = "docs") val docs: List<Map<String, Any?>> = emptyList(),
     )
 
+    companion object {
+        private val JSON_MEDIA_TYPE = "application/json; charset=utf-8".toMediaType()
+    }
 }
