@@ -6,15 +6,11 @@
 
 package org.ole.planet.myplanet.lite.dashboard
 
+import org.ole.planet.myplanet.lite.network.BaseRepository
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 
-import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.OkHttpClient
 import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -22,12 +18,8 @@ import kotlinx.coroutines.withContext
 import java.io.IOException
 import java.io.Serializable
 
-class DashboardNewsRepository {
+class DashboardNewsRepository : BaseRepository() {
 
-    private val client: OkHttpClient = OkHttpClient.Builder().build()
-    private val moshi: Moshi = Moshi.Builder()
-        .addLast(KotlinJsonAdapterFactory())
-        .build()
     private val requestAdapter = moshi.adapter(NewsFindRequest::class.java)
     private val responseAdapter = moshi.adapter(NewsFindResponse::class.java)
 
@@ -43,10 +35,7 @@ class DashboardNewsRepository {
     ): Result<NewsPage> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 val requestUrl = "$normalizedBase/db/news/_find"
                 val selector = mutableMapOf<String, Any>()
                 createdOn?.takeIf { it.isNotBlank() }?.let { code ->
@@ -76,14 +65,11 @@ class DashboardNewsRepository {
                     skip = skip,
                     bookmark = bookmark
                 )
-                val json = requestAdapter.toJson(payload)
-                val mediaType = "application/json; charset=utf-8".toMediaType()
                 val requestBuilder = Request.Builder()
                     .url(requestUrl)
-                    .post(json.toRequestBody(mediaType))
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(requestAdapter))
+                    .addAuth(null, sessionCookie)
+
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${'$'}{response.code}")
@@ -125,10 +111,7 @@ class DashboardNewsRepository {
     ): Result<List<NewsDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (postId.isBlank()) {
                     throw IOException("Missing post id")
                 }
@@ -159,14 +142,11 @@ class DashboardNewsRepository {
                     limit = limit,
                     sort = listOf(mapOf("time" to "desc"))
                 )
-                val json = requestAdapter.toJson(payload)
-                val mediaType = "application/json; charset=utf-8".toMediaType()
                 val requestBuilder = Request.Builder()
                     .url(requestUrl)
-                    .post(json.toRequestBody(mediaType))
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(requestAdapter))
+                    .addAuth(null, sessionCookie)
+
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${'$'}{response.code}")

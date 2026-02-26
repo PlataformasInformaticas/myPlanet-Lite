@@ -10,18 +10,12 @@ import android.util.Log
 
 import org.ole.planet.myplanet.lite.BuildConfig
 import org.ole.planet.myplanet.lite.dashboard.DashboardSurveysRepository.SurveyDocument
+import org.ole.planet.myplanet.lite.network.BaseRepository
 import org.ole.planet.myplanet.lite.profile.StoredCredentials
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 
-import okhttp3.Credentials
-import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.OkHttpClient
 import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
-import okhttp3.logging.HttpLoggingInterceptor
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -29,26 +23,11 @@ import kotlinx.coroutines.withContext
 import java.io.IOException
 import java.util.ArrayList
 
-class DashboardCoursesRepository {
+class DashboardCoursesRepository : BaseRepository() {
     companion object {
         private const val TAG = "DashboardCoursesRepo"
     }
 
-    private val client: OkHttpClient = OkHttpClient.Builder()
-        .addInterceptor(
-            HttpLoggingInterceptor().apply {
-                redactHeader("Authorization")
-                level = if (BuildConfig.DEBUG) {
-                    HttpLoggingInterceptor.Level.BODY
-                } else {
-                    HttpLoggingInterceptor.Level.NONE
-                }
-            }
-        )
-        .build()
-    private val moshi: Moshi = Moshi.Builder()
-        .addLast(KotlinJsonAdapterFactory())
-        .build()
     private val findRequestAdapter = moshi.adapter(ShelfFindRequest::class.java)
     private val findResponseAdapter = moshi.adapter(ShelfFindResponse::class.java)
     private val shelfDocumentAdapter = moshi.adapter(ShelfDocument::class.java)
@@ -74,21 +53,15 @@ class DashboardCoursesRepository {
     ): Result<List<String>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 val requestUrl = "$normalizedBase/db/shelf/_find"
-                val payload = findRequestAdapter.toJson(
-                    ShelfFindRequest(
-                        selector = mapOf("_id" to "org.couchdb.user:${credentials.username}")
-                    )
+                val payload = ShelfFindRequest(
+                    selector = mapOf("_id" to "org.couchdb.user:${credentials.username}")
                 )
-                val mediaType = "application/json; charset=utf-8".toMediaType()
                 val request = Request.Builder()
                     .url(requestUrl)
-                    .post(payload.toRequestBody(mediaType))
-                    .addHeader("Authorization", Credentials.basic(credentials.username, credentials.password))
+                    .post(payload.toJsonRequestBody(findRequestAdapter))
+                    .addAuth(credentials, null)
                     .build()
                 client.newCall(request).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -113,16 +86,13 @@ class DashboardCoursesRepository {
     ): Result<ShelfDocument> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
 
                 val requestUrl = "$normalizedBase/db/shelf/org.couchdb.user:${credentials.username}"
                 val request = Request.Builder()
                     .url(requestUrl)
                     .get()
-                    .addHeader("Authorization", Credentials.basic(credentials.username, credentials.password))
+                    .addAuth(credentials, null)
                     .build()
 
                 client.newCall(request).execute().use { response ->
@@ -167,10 +137,7 @@ class DashboardCoursesRepository {
     ): Result<Unit> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 val sanitizedCourseId = courseId.takeIf { it.isNotBlank() }
                     ?: throw IOException("Missing course id")
 
@@ -192,12 +159,10 @@ class DashboardCoursesRepository {
                     )
 
                     val requestUrl = "$normalizedBase/db/shelf/$shelfId"
-                    val payload = shelfDocumentAdapter.toJson(updatedDocument)
-                    val mediaType = "application/json; charset=utf-8".toMediaType()
                     val request = Request.Builder()
                         .url(requestUrl)
-                        .put(payload.toRequestBody(mediaType))
-                        .addHeader("Authorization", Credentials.basic(credentials.username, credentials.password))
+                        .put(updatedDocument.toJsonRequestBody(shelfDocumentAdapter))
+                        .addAuth(credentials, null)
                         .build()
 
                     client.newCall(request).execute().use { response ->
@@ -238,10 +203,7 @@ class DashboardCoursesRepository {
     ): Result<Unit> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 val sanitizedCourseId = courseId.takeIf { it.isNotBlank() }
                     ?: throw IOException("Missing course id")
 
@@ -264,12 +226,10 @@ class DashboardCoursesRepository {
                     )
 
                     val requestUrl = "$normalizedBase/db/shelf/$shelfId"
-                    val payload = shelfDocumentAdapter.toJson(updatedDocument)
-                    val mediaType = "application/json; charset=utf-8".toMediaType()
                     val request = Request.Builder()
                         .url(requestUrl)
-                        .put(payload.toRequestBody(mediaType))
-                        .addHeader("Authorization", Credentials.basic(credentials.username, credentials.password))
+                        .put(updatedDocument.toJsonRequestBody(shelfDocumentAdapter))
+                        .addAuth(credentials, null)
                         .build()
 
                     client.newCall(request).execute().use { response ->
@@ -304,10 +264,7 @@ class DashboardCoursesRepository {
     ): Result<List<CourseDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 val sanitizedIds = courseIds.filter { it.isNotBlank() }
                 if (sanitizedIds.isEmpty()) return@runCatching emptyList()
 
@@ -322,7 +279,7 @@ class DashboardCoursesRepository {
                     val request = Request.Builder()
                         .url("$normalizedBase/db/courses/$courseId")
                         .get()
-                        .addHeader("Authorization", Credentials.basic(credentials.username, credentials.password))
+                        .addAuth(credentials, null)
                         .build()
                     client.newCall(request).execute().use { response ->
                         if (!response.isSuccessful) {
@@ -356,29 +313,23 @@ class DashboardCoursesRepository {
     ): Result<Map<String, Int>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 val sanitizedIds = courseIds.filter { it.isNotBlank() }
                 if (sanitizedIds.isEmpty()) return@runCatching emptyMap()
 
                 val progressByCourse = mutableMapOf<String, Int>()
                 sanitizedIds.chunked(10).forEach { courseChunk ->
                     val requestUrl = "$normalizedBase/db/courses_progress/_find"
-                    val payload = coursesProgressRequestAdapter.toJson(
-                        CoursesProgressFindRequest(
-                            selector = CoursesProgressSelector(
-                                userId = "org.couchdb.user:${credentials.username}",
-                                courseId = CourseInSelector(included = courseChunk)
-                            )
+                    val payload = CoursesProgressFindRequest(
+                        selector = CoursesProgressSelector(
+                            userId = "org.couchdb.user:${credentials.username}",
+                            courseId = CourseInSelector(included = courseChunk)
                         )
                     )
-                    val mediaType = "application/json; charset=utf-8".toMediaType()
                     val request = Request.Builder()
                         .url(requestUrl)
-                        .post(payload.toRequestBody(mediaType))
-                        .addHeader("Authorization", Credentials.basic(credentials.username, credentials.password))
+                        .post(payload.toJsonRequestBody(coursesProgressRequestAdapter))
+                        .addAuth(credentials, null)
                         .build()
 
                     client.newCall(request).execute().use { response ->
@@ -413,31 +364,25 @@ class DashboardCoursesRepository {
     ): Result<Map<String, CourseProgressDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 val sanitizedIds = courseIds.filter { it.isNotBlank() }
                 if (sanitizedIds.isEmpty()) return@runCatching emptyMap()
 
                 val docs = ArrayList<CourseProgressDocument>()
                 sanitizedIds.chunked(10).forEach { courseChunk ->
                     val requestUrl = "$normalizedBase/db/courses_progress/_find"
-                    val payload = coursesProgressRequestAdapter.toJson(
-                        CoursesProgressFindRequest(
-                            selector = CoursesProgressSelector(
-                                userId = "org.couchdb.user:${credentials.username}",
-                                courseId = CourseInSelector(included = courseChunk),
-                                stepNum = stepNum
-                            ),
-                            limit = stepNum?.let { 1 }
-                        )
+                    val payload = CoursesProgressFindRequest(
+                        selector = CoursesProgressSelector(
+                            userId = "org.couchdb.user:${credentials.username}",
+                            courseId = CourseInSelector(included = courseChunk),
+                            stepNum = stepNum
+                        ),
+                        limit = stepNum?.let { 1 }
                     )
-                    val mediaType = "application/json; charset=utf-8".toMediaType()
                     val request = Request.Builder()
                         .url(requestUrl)
-                        .post(payload.toRequestBody(mediaType))
-                        .addHeader("Authorization", Credentials.basic(credentials.username, credentials.password))
+                        .post(payload.toJsonRequestBody(coursesProgressRequestAdapter))
+                        .addAuth(credentials, null)
                         .build()
 
                     client.newCall(request).execute().use { response ->
@@ -473,18 +418,14 @@ class DashboardCoursesRepository {
     ): Result<List<BulkDocResult>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
 
                 val requestUrl = "$normalizedBase/db/courses_progress/_bulk_docs"
-                val payload = coursesProgressBulkAdapter.toJson(CoursesProgressBulkRequest(docs = listOf(document)))
-                val mediaType = "application/json; charset=utf-8".toMediaType()
+                val payload = CoursesProgressBulkRequest(docs = listOf(document))
                 val request = Request.Builder()
                     .url(requestUrl)
-                    .post(payload.toRequestBody(mediaType))
-                    .addHeader("Authorization", Credentials.basic(credentials.username, credentials.password))
+                    .post(payload.toJsonRequestBody(coursesProgressBulkAdapter))
+                    .addAuth(credentials, null)
                     .build()
 
                 client.newCall(request).execute().use { response ->
@@ -508,27 +449,21 @@ class DashboardCoursesRepository {
     ): Result<PagedCourses> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
 
                 val courseIdFilter = excludedCourseIds.takeIf { it.isNotEmpty() }
                     ?.let { CourseIdFilter(gt = null, notIn = it) }
 
                 val requestUrl = "$normalizedBase/db/courses/_find"
-                val payload = coursesFindRequestAdapter.toJson(
-                    CoursesFindRequest(
-                        selector = CoursesSelector(id = courseIdFilter),
-                        limit = limit,
-                        skip = skip
-                    )
+                val payload = CoursesFindRequest(
+                    selector = CoursesSelector(id = courseIdFilter),
+                    limit = limit,
+                    skip = skip
                 )
-                val mediaType = "application/json; charset=utf-8".toMediaType()
                 val request = Request.Builder()
                     .url(requestUrl)
-                    .post(payload.toRequestBody(mediaType))
-                    .addHeader("Authorization", Credentials.basic(credentials.username, credentials.password))
+                    .post(payload.toJsonRequestBody(coursesFindRequestAdapter))
+                    .addAuth(credentials, null)
                     .build()
 
                 client.newCall(request).execute().use { response ->
@@ -557,29 +492,23 @@ class DashboardCoursesRepository {
     ): Result<List<CourseDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 val sanitizedId = teamId.takeIf { it.isNotBlank() }
                     ?: throw IOException("Missing team id")
 
                 val requestUrl = "$normalizedBase/db/teams/_find"
-                val payload = teamCoursesRequestAdapter.toJson(
-                    TeamCoursesFindRequest(
-                        selector = TeamCoursesSelector(
-                            status = "active",
-                            type = "team",
-                            teamType = "local",
-                            id = TeamIdsSelector(listOf(sanitizedId))
-                        )
+                val payload = TeamCoursesFindRequest(
+                    selector = TeamCoursesSelector(
+                        status = "active",
+                        type = "team",
+                        teamType = "local",
+                        id = TeamIdsSelector(listOf(sanitizedId))
                     )
                 )
-                val mediaType = "application/json; charset=utf-8".toMediaType()
                 val request = Request.Builder()
                     .url(requestUrl)
-                    .post(payload.toRequestBody(mediaType))
-                    .addHeader("Authorization", Credentials.basic(credentials.username, credentials.password))
+                    .post(payload.toJsonRequestBody(teamCoursesRequestAdapter))
+                    .addAuth(credentials, null)
                     .build()
 
                 client.newCall(request).execute().use { response ->
@@ -601,29 +530,17 @@ class DashboardCoursesRepository {
     ): Result<List<TagDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
-                val payload = tagsFindRequestAdapter.toJson(
-                    TagsFindRequest(
-                        selector = TagsSelector(
-                            db = "courses",
-                            docType = "definition"
-                        )
+                val normalizedBase = normalizeUrl(baseUrl)
+                val payload = TagsFindRequest(
+                    selector = TagsSelector(
+                        db = "courses",
+                        docType = "definition"
                     )
                 )
                 val request = Request.Builder()
                     .url("$normalizedBase/db/tags/_find")
-                    .post(payload.toRequestBody("application/json; charset=utf-8".toMediaType()))
-                    .apply {
-                        credentials?.let {
-                            addHeader("Authorization", Credentials.basic(it.username, it.password))
-                        }
-                        sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                            addHeader("Cookie", cookie)
-                        }
-                    }
+                    .post(payload.toJsonRequestBody(tagsFindRequestAdapter))
+                    .addAuth(credentials, sessionCookie)
                     .build()
                 client.newCall(request).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -644,30 +561,18 @@ class DashboardCoursesRepository {
     ): Result<List<TagLinkDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
-                val payload = tagLinksFindRequestAdapter.toJson(
-                    TagLinksFindRequest(
-                        selector = TagLinksSelector(
-                            db = "courses",
-                            docType = "link",
-                            tagId = tagId
-                        )
+                val normalizedBase = normalizeUrl(baseUrl)
+                val payload = TagLinksFindRequest(
+                    selector = TagLinksSelector(
+                        db = "courses",
+                        docType = "link",
+                        tagId = tagId
                     )
                 )
                 val request = Request.Builder()
                     .url("$normalizedBase/db/tags/_find")
-                    .post(payload.toRequestBody("application/json; charset=utf-8".toMediaType()))
-                    .apply {
-                        credentials?.let {
-                            addHeader("Authorization", Credentials.basic(it.username, it.password))
-                        }
-                        sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                            addHeader("Cookie", cookie)
-                        }
-                    }
+                    .post(payload.toJsonRequestBody(tagLinksFindRequestAdapter))
+                    .addAuth(credentials, sessionCookie)
                     .build()
                 client.newCall(request).execute().use { response ->
                     if (!response.isSuccessful) {

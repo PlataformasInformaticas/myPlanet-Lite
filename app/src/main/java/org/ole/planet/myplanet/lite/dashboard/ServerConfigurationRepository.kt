@@ -6,13 +6,11 @@
 
 package org.ole.planet.myplanet.lite.dashboard
 
+import org.ole.planet.myplanet.lite.network.BaseRepository
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
-import okhttp3.OkHttpClient
 import okhttp3.Request
 
 import kotlinx.coroutines.Dispatchers
@@ -20,20 +18,14 @@ import kotlinx.coroutines.withContext
 
 import java.io.IOException
 
-class ServerConfigurationRepository(
-    private val client: OkHttpClient = OkHttpClient(),
-    private val moshi: Moshi = Moshi.Builder()
-        .addLast(KotlinJsonAdapterFactory())
-        .build(),
-) {
+class ServerConfigurationRepository : BaseRepository() {
 
     private val responseAdapter = moshi.adapter(ConfigurationResponse::class.java)
 
     suspend fun fetchConfiguration(baseUrl: String?): Result<ConfigurationDocument?> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalized = baseUrl?.trim()?.trimEnd('/')?.takeIf { it.isNotEmpty() }
-                    ?: throw IOException("Missing base url")
+                val normalized = normalizeUrl(baseUrl ?: "")
                 val url = normalized.toHttpUrlOrNull()?.newBuilder()
                     ?.addPathSegments("db/configurations/_all_docs")
                     ?.addQueryParameter("include_docs", "true")

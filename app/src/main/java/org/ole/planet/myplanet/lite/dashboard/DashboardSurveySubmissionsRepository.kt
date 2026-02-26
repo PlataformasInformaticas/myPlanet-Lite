@@ -7,29 +7,20 @@
 package org.ole.planet.myplanet.lite.dashboard
 
 import org.ole.planet.myplanet.lite.dashboard.DashboardSurveysRepository.SurveyQuestion
+import org.ole.planet.myplanet.lite.network.BaseRepository
 import org.ole.planet.myplanet.lite.profile.StoredCredentials
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 
-import okhttp3.Credentials
-import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.OkHttpClient
 import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 import java.io.IOException
 
-class DashboardSurveySubmissionsRepository {
+class DashboardSurveySubmissionsRepository : BaseRepository() {
 
-    private val client: OkHttpClient = OkHttpClient.Builder().build()
-    private val moshi: Moshi = Moshi.Builder()
-        .addLast(KotlinJsonAdapterFactory())
-        .build()
     private val submissionAdapter = moshi.adapter(SurveySubmission::class.java)
     private val lookupRequestAdapter = moshi.adapter(SubmissionLookupRequest::class.java)
     private val lookupResponseAdapter = moshi.adapter(SubmissionLookupResponse::class.java)
@@ -42,20 +33,12 @@ class DashboardSurveySubmissionsRepository {
     ): Result<Unit> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
-                val payload = submissionAdapter.toJson(submission)
+                val normalizedBase = normalizeUrl(baseUrl)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/submissions")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let { creds ->
-                    requestBuilder.addHeader("Authorization", Credentials.basic(creds.username, creds.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(submission.toJsonRequestBody(submissionAdapter))
+                    .addAuth(credentials, sessionCookie)
+
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${'$'}{response.code}")
@@ -77,33 +60,24 @@ class DashboardSurveySubmissionsRepository {
     ): Result<SubmissionLookup?> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (userId.isNullOrBlank() && userName.isNullOrBlank()) {
                     throw IOException("Missing user identifier")
                 }
-                val payload = lookupRequestAdapter.toJson(
-                    SubmissionLookupRequest(
-                        selector = SubmissionLookupSelector(
-                            type = type,
-                            parentId = parentId,
-                            userId = userId,
-                            userName = userName,
-                            parentRev = parentRev,
-                        ),
+                val payload = SubmissionLookupRequest(
+                    selector = SubmissionLookupSelector(
+                        type = type,
+                        parentId = parentId,
+                        userId = userId,
+                        userName = userName,
+                        parentRev = parentRev,
                     ),
                 )
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/submissions/_find")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let { creds ->
-                    requestBuilder.addHeader("Authorization", Credentials.basic(creds.username, creds.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(lookupRequestAdapter))
+                    .addAuth(credentials, sessionCookie)
+
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${'$'}{response.code}")
@@ -205,7 +179,4 @@ class DashboardSurveySubmissionsRepository {
         @param:Json(name = "_rev") val rev: String? = null,
     )
 
-    companion object {
-        private val JSON_MEDIA_TYPE = "application/json; charset=utf-8".toMediaType()
-    }
 }

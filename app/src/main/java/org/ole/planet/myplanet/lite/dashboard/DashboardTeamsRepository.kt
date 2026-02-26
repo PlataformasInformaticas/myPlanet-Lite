@@ -6,6 +6,8 @@
 
 package org.ole.planet.myplanet.lite.dashboard
 
+import org.ole.planet.myplanet.lite.network.BaseRepository
+import org.ole.planet.myplanet.lite.network.NetworkClient
 import org.ole.planet.myplanet.lite.profile.StoredCredentials
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.Json
@@ -16,10 +18,7 @@ import com.squareup.moshi.ToJson
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 
 import okhttp3.Credentials
-import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.OkHttpClient
 import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -63,13 +62,11 @@ class DateStringAdapter {
     }
 }
 
-class DashboardTeamsRepository {
-
-    private val client: OkHttpClient = OkHttpClient.Builder().build()
-    private val moshi: Moshi = Moshi.Builder()
+class DashboardTeamsRepository : BaseRepository(
+    moshi = NetworkClient.moshi.newBuilder()
         .add(DateStringAdapter())
-        .addLast(KotlinJsonAdapterFactory())
         .build()
+) {
     private val membershipRequestAdapter = moshi.adapter(MembershipFindRequest::class.java)
     private val membershipResponseAdapter = moshi.adapter(MembershipFindResponse::class.java)
     private val teamMembershipRequestAdapter = moshi.adapter(TeamMembershipFindRequest::class.java)
@@ -96,21 +93,14 @@ class DashboardTeamsRepository {
     ): Result<UserDocument> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (userId.isBlank()) {
                     throw IOException("Missing user id")
                 }
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/_users/$userId")
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .addAuth(credentials, sessionCookie)
+
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${response.code}")
@@ -138,10 +128,7 @@ class DashboardTeamsRepository {
     ): Result<Unit> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (teamId.isBlank()) {
                     throw IOException("Missing team id")
                 }
@@ -155,31 +142,24 @@ class DashboardTeamsRepository {
                     throw IOException("Missing user planet code")
                 }
 
-                val payload = membershipBulkAddAdapter.toJson(
-                    BulkMembershipAddRequest(
-                        docs = listOf(
-                            BulkMembershipAddDoc(
-                                teamId = teamId,
-                                teamPlanetCode = teamPlanetCode,
-                                teamType = teamType.ifBlank { "local" },
-                                userId = userId,
-                                userPlanetCode = userPlanetCode,
-                                docType = "membership",
-                                isLeader = false,
-                            )
+                val payload = BulkMembershipAddRequest(
+                    docs = listOf(
+                        BulkMembershipAddDoc(
+                            teamId = teamId,
+                            teamPlanetCode = teamPlanetCode,
+                            teamType = teamType.ifBlank { "local" },
+                            userId = userId,
+                            userPlanetCode = userPlanetCode,
+                            docType = "membership",
+                            isLeader = false,
                         )
                     )
                 )
                 val bulkAddUrl = "$normalizedBase/db/teams/_bulk_docs"
                 val requestBuilder = Request.Builder()
                     .url(bulkAddUrl)
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(membershipBulkAddAdapter))
+                    .addAuth(credentials, sessionCookie)
 
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -234,10 +214,7 @@ class DashboardTeamsRepository {
     ): Result<List<MembershipDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (username.isBlank()) {
                     throw IOException("Missing username")
                 }
@@ -252,16 +229,12 @@ class DashboardTeamsRepository {
                         )
                     )
                 )
-                val payload = membershipRequestAdapter.toJson(MembershipFindRequest(selector))
+                val payload = MembershipFindRequest(selector)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/teams/_find")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(membershipRequestAdapter))
+                    .addAuth(credentials, sessionCookie)
+
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${response.code}")
@@ -316,10 +289,7 @@ class DashboardTeamsRepository {
     ): Result<List<MembershipDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (teamId.isBlank()) {
                     throw IOException("Missing team id")
                 }
@@ -334,16 +304,11 @@ class DashboardTeamsRepository {
                         ),
                     ),
                 )
-                val payload = teamMembershipRequestAdapter.toJson(TeamMembershipFindRequest(selector))
+                val payload = TeamMembershipFindRequest(selector)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/teams/_find")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(teamMembershipRequestAdapter))
+                    .addAuth(credentials, sessionCookie)
 
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -364,10 +329,7 @@ class DashboardTeamsRepository {
     ): Result<Unit> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
 
                 val id = membership.id?.nullIfBlank() ?: throw IOException("Missing membership id")
                 val revision = membership.revision?.nullIfBlank()
@@ -381,34 +343,27 @@ class DashboardTeamsRepository {
                 val teamType = membership.teamType?.nullIfBlank() ?: "local"
                 val docType = membership.docType?.nullIfBlank() ?: "membership"
 
-                val payload = membershipBulkDeleteAdapter.toJson(
-                    BulkMembershipDeleteRequest(
-                        docs = listOf(
-                            BulkMembershipDeleteDoc(
-                                id = id,
-                                revision = revision,
-                                teamId = teamId,
-                                teamPlanetCode = teamPlanetCode,
-                                teamType = teamType,
-                                userId = userId,
-                                userPlanetCode = userPlanetCode,
-                                docType = docType,
-                                isLeader = false,
-                                deleted = true,
-                            ),
+                val payload = BulkMembershipDeleteRequest(
+                    docs = listOf(
+                        BulkMembershipDeleteDoc(
+                            id = id,
+                            revision = revision,
+                            teamId = teamId,
+                            teamPlanetCode = teamPlanetCode,
+                            teamType = teamType,
+                            userId = userId,
+                            userPlanetCode = userPlanetCode,
+                            docType = docType,
+                            isLeader = false,
+                            deleted = true,
                         ),
                     ),
                 )
                 val bulkDeleteUrl = "$normalizedBase/db/teams/_bulk_docs"
                 val requestBuilder = Request.Builder()
                     .url(bulkDeleteUrl)
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(membershipBulkDeleteAdapter))
+                    .addAuth(credentials, sessionCookie)
 
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -427,10 +382,7 @@ class DashboardTeamsRepository {
     ): Result<List<TeamDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (teamIds.isEmpty()) {
                     return@runCatching emptyList()
                 }
@@ -440,16 +392,12 @@ class DashboardTeamsRepository {
                     teamType = "local",
                     ids = IdsInClause(ids = teamIds)
                 )
-                val payload = teamsRequestAdapter.toJson(TeamsFindRequest(selector))
+                val payload = TeamsFindRequest(selector)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/teams/_find")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(teamsRequestAdapter))
+                    .addAuth(credentials, sessionCookie)
+
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${response.code}")
@@ -471,10 +419,7 @@ class DashboardTeamsRepository {
     ): Result<List<TeamDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
 
                 val selector = NonMemberTeamsSelector(
                     ids = IdsNotInClause(ids = excludedTeamIds),
@@ -482,22 +427,16 @@ class DashboardTeamsRepository {
                     type = "team",
                     teamType = "local"
                 )
-                val payload = availableTeamsRequestAdapter.toJson(
-                    NonMemberTeamsFindRequest(
-                        selector = selector,
-                        limit = limit,
-                        skip = skip,
-                    )
+                val payload = NonMemberTeamsFindRequest(
+                    selector = selector,
+                    limit = limit,
+                    skip = skip,
                 )
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/teams/_find")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(availableTeamsRequestAdapter))
+                    .addAuth(credentials, sessionCookie)
+
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${response.code}")
@@ -517,10 +456,7 @@ class DashboardTeamsRepository {
     ): Result<List<JoinRequestDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (userId.isBlank()) {
                     throw IOException("Missing user id")
                 }
@@ -530,16 +466,11 @@ class DashboardTeamsRepository {
                     teamType = "local",
                     userId = userId,
                 )
-                val payload = joinRequestFindAdapter.toJson(JoinRequestFindRequest(selector))
+                val payload = JoinRequestFindRequest(selector)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/teams/_find")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(joinRequestFindAdapter))
+                    .addAuth(credentials, sessionCookie)
 
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -561,10 +492,7 @@ class DashboardTeamsRepository {
     ): Result<Boolean> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (teamId.isBlank()) {
                     throw IOException("Missing team id")
                 }
@@ -578,16 +506,11 @@ class DashboardTeamsRepository {
                     userId = userId,
                     teamId = teamId,
                 )
-                val payload = joinRequestFindAdapter.toJson(JoinRequestFindRequest(selector))
+                val payload = JoinRequestFindRequest(selector)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/teams/_find")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(joinRequestFindAdapter))
+                    .addAuth(credentials, sessionCookie)
 
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -609,10 +532,7 @@ class DashboardTeamsRepository {
     ): Result<Int> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (teamId.isBlank()) {
                     throw IOException("Missing team id")
                 }
@@ -627,18 +547,11 @@ class DashboardTeamsRepository {
                         )
                     )
                 )
-                val payload = memberCountRequestAdapter.toJson(
-                    MemberCountFindRequest(selector = selector, fields = listOf("_id"))
-                )
+                val payload = MemberCountFindRequest(selector = selector, fields = listOf("_id"))
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/teams/_find")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(memberCountRequestAdapter))
+                    .addAuth(credentials, sessionCookie)
 
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -660,10 +573,7 @@ class DashboardTeamsRepository {
     ): Result<Unit> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (request.teamId.isBlank()) {
                     throw IOException("Missing team id")
                 }
@@ -671,16 +581,10 @@ class DashboardTeamsRepository {
                     throw IOException("Missing user id")
                 }
 
-                val payload = joinTeamRequestAdapter.toJson(request)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/teams")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(request.toJsonRequestBody(joinTeamRequestAdapter))
+                    .addAuth(credentials, sessionCookie)
 
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -703,12 +607,7 @@ class DashboardTeamsRepository {
         val requestBuilder = Request.Builder()
             .url("$baseUrl/db/_users/org.couchdb.user:$username")
             .get()
-        credentials?.let {
-            requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-        }
-        sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-            requestBuilder.addHeader("Cookie", cookie)
-        }
+            .addAuth(credentials, sessionCookie)
 
         return try {
             client.newCall(requestBuilder.build()).execute().use { response ->
@@ -745,10 +644,7 @@ class DashboardTeamsRepository {
     ): Result<TeamMemberProfileDetails> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing base url")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 fetchUserProfile(normalizedBase, username, credentials, sessionCookie)
                     ?: throw IOException("Profile not found")
             }
@@ -764,10 +660,7 @@ class DashboardTeamsRepository {
     ): Result<Unit> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (documentId.isBlank()) {
                     throw IOException("Missing document id")
                 }
@@ -775,18 +668,11 @@ class DashboardTeamsRepository {
                     throw IOException("Missing document revision")
                 }
 
-                val payload = deleteJoinRequestAdapter.toJson(
-                    DeleteDocumentRequest(id = documentId, revision = revision, deleted = true)
-                )
+                val payload = DeleteDocumentRequest(id = documentId, revision = revision, deleted = true)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/teams")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(deleteJoinRequestAdapter))
+                    .addAuth(credentials, sessionCookie)
 
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -806,10 +692,7 @@ class DashboardTeamsRepository {
     ): Result<Unit> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (documentId.isBlank()) {
                     throw IOException("Missing document id")
                 }
@@ -817,18 +700,11 @@ class DashboardTeamsRepository {
                     throw IOException("Missing document revision")
                 }
 
-                val payload = deleteMembershipAdapter.toJson(
-                    DeleteDocumentRequest(id = documentId, revision = revision, deleted = true)
-                )
+                val payload = DeleteDocumentRequest(id = documentId, revision = revision, deleted = true)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/teams")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                credentials?.let {
-                    requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-                }
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(deleteMembershipAdapter))
+                    .addAuth(credentials, sessionCookie)
 
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -1076,10 +952,6 @@ class DashboardTeamsRepository {
         val isLeader: Boolean,
     )
 
-    companion object {
-        private val JSON_MEDIA_TYPE = "application/json; charset=utf-8".toMediaType()
-    }
-
     @JsonClass(generateAdapter = true)
     data class UserDocument(
         @param:Json(name = "_id") val _id: String?,
@@ -1118,26 +990,17 @@ class DashboardTeamsRepository {
     ): Result<List<UserDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
-                val basicAuth = credentials?.let { Credentials.basic(it.username, it.password) }
-                    ?: throw IOException("Missing credentials for basic auth")
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (userIds.isEmpty()) {
                     return@runCatching emptyList()
                 }
 
                 val selector = UserIdSelector(ids = IdsInClause(ids = userIds))
-                val payload = moshi.adapter(UsersFindRequest::class.java).toJson(UsersFindRequest(selector = selector))
+                val payload = UsersFindRequest(selector = selector)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/_users/_find")
-                    .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                    .header("Authorization", basicAuth)
-                    .header("Content-Type", "application/json")
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(moshi.adapter(UsersFindRequest::class.java)))
+                    .addAuth(credentials, sessionCookie)
 
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -1163,12 +1026,7 @@ class DashboardTeamsRepository {
     ): Result<List<UserDocument>> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
-                val basicAuth = credentials?.let { Credentials.basic(it.username, it.password) }
-                    ?: throw IOException("Missing credentials for basic auth")
+                val normalizedBase = normalizeUrl(baseUrl)
                 if (pageSize <= 0) {
                     return@runCatching emptyList()
                 }
@@ -1189,11 +1047,7 @@ class DashboardTeamsRepository {
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/_users/_find")
                     .post(payload.toRequestBody(JSON_MEDIA_TYPE))
-                    .header("Authorization", basicAuth)
-                    .header("Content-Type", "application/json")
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .addAuth(credentials, sessionCookie)
 
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
@@ -1223,16 +1077,11 @@ class DashboardTeamsRepository {
         sessionCookie: String?,
         username: String,
     ): UserDocument? {
-        val requestUrl = baseUrl.trim().trimEnd('/') + "/db/_users/org.couchdb.user:$username"
+        val requestUrl = normalizeUrl(baseUrl) + "/db/_users/org.couchdb.user:$username"
         val requestBuilder = Request.Builder()
             .url(requestUrl)
             .get()
-        credentials?.let {
-            requestBuilder.addHeader("Authorization", Credentials.basic(it.username, it.password))
-        }
-        sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-            requestBuilder.addHeader("Cookie", cookie)
-        }
+            .addAuth(credentials, sessionCookie)
         return try {
             client.newCall(requestBuilder.build()).execute().use { response ->
                 if (!response.isSuccessful) {

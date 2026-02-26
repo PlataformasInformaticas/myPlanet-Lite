@@ -6,27 +6,19 @@
 
 package org.ole.planet.myplanet.lite.dashboard
 
+import org.ole.planet.myplanet.lite.network.BaseRepository
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 
-import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.OkHttpClient
 import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 import java.io.IOException
 
-class DashboardNewsActionsRepository {
+class DashboardNewsActionsRepository : BaseRepository() {
 
-    private val client: OkHttpClient = OkHttpClient.Builder().build()
-    private val moshi: Moshi = Moshi.Builder()
-        .addLast(KotlinJsonAdapterFactory())
-        .build()
     private val deleteRequestAdapter = moshi.adapter(DeleteNewsRequest::class.java)
     private val updateRequestAdapter = moshi.adapter(UpdateNewsRequest::class.java)
     private val responseAdapter = moshi.adapter(DeleteNewsResponse::class.java)
@@ -40,10 +32,7 @@ class DashboardNewsActionsRepository {
     ): Result<DeleteNewsResponse> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 val id = document.id?.takeIf { it.isNotBlank() }
                     ?: throw IOException("Missing document id")
                 val revision = document.revision?.takeIf { it.isNotBlank() }
@@ -64,14 +53,11 @@ class DashboardNewsActionsRepository {
                     updatedDate = System.currentTimeMillis(),
                     deleted = true
                 )
-                val requestBody = deleteRequestAdapter.toJson(payload)
-                    .toRequestBody(JSON_MEDIA_TYPE)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/news/")
-                    .post(requestBody)
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(deleteRequestAdapter))
+                    .addAuth(null, sessionCookie)
+
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${'$'}{response.code}")
@@ -94,10 +80,7 @@ class DashboardNewsActionsRepository {
     ): Result<DeleteNewsResponse> {
         return withContext(Dispatchers.IO) {
             runCatching {
-                val normalizedBase = baseUrl.trim().trimEnd('/')
-                if (normalizedBase.isEmpty()) {
-                    throw IOException("Missing server base URL")
-                }
+                val normalizedBase = normalizeUrl(baseUrl)
                 val id = document.id?.takeIf { it.isNotBlank() }
                     ?: throw IOException("Missing document id")
                 val revision = document.revision?.takeIf { it.isNotBlank() }
@@ -118,14 +101,11 @@ class DashboardNewsActionsRepository {
                     images = images.takeUnless { it.isEmpty() },
                     updatedDate = System.currentTimeMillis()
                 )
-                val requestBody = updateRequestAdapter.toJson(payload)
-                    .toRequestBody(JSON_MEDIA_TYPE)
                 val requestBuilder = Request.Builder()
                     .url("$normalizedBase/db/news/")
-                    .post(requestBody)
-                sessionCookie?.takeIf { it.isNotBlank() }?.let { cookie ->
-                    requestBuilder.addHeader("Cookie", cookie)
-                }
+                    .post(payload.toJsonRequestBody(updateRequestAdapter))
+                    .addAuth(null, sessionCookie)
+
                 client.newCall(requestBuilder.build()).execute().use { response ->
                     if (!response.isSuccessful) {
                         throw IOException("Unexpected response ${'$'}{response.code}")
@@ -181,8 +161,6 @@ class DashboardNewsActionsRepository {
     )
 
     companion object {
-        private val JSON_MEDIA_TYPE = "application/json; charset=utf-8".toMediaType()
-
         private fun resolveViewInEntries(
             document: DashboardNewsRepository.NewsDocument,
             teamId: String?,
